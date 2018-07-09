@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        #testPading {
+            width: 100px;
+            height: 100px;
+            background: green;
+            background-clip: content-box;
+            padding: 10px;
+            border: 3px solid brown;
+        }
+        #testIE {
+            width: 100px;
+            height: 100px;
+            background: green;
+            background-clip: content-box;
+            padding: 10px;
+            border: 3px solid brown;
+            box-sizing: border-box;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="testPading">
+        TestPadding TestPadding TestPadding TestPadding TestPadding
+    </div>
+    <div id="testIE">
+        TestPadding TestPadding TestPadding TestPadding TestPadding
+    </div>
+
+</body>
+
+</html>
