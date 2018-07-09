@@ -1,0 +1,10 @@
+/* import导入 */
+@import url(./28_1.css);
+div
+{
+    width: 300px;
+    height: 300px;
+    color: blueviolet;
+    background: burlywood;
+}
+
