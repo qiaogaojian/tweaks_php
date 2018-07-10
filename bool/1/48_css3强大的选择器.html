@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div ul {
+            border: 1px solid black;
+        }
+
+        div>ul {
+            border: 1px solid red;
+        }
+
+        div+p {
+            color: firebrick;
+        }
+
+        div~p {
+            background: rgb(251, 212, 212);
+        }
+
+        input[name="email"] {
+            background: blueviolet;
+        }
+
+        #ji li:first-child {
+            color: blue;
+        }
+
+        #ji li:nth-child(3) {
+            color: orange;
+        }
+
+        #p p::before
+        {
+            content:"^_^";
+        }
+        #p p::after
+        {
+            content:"^ ^";
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div>
+        <ul>
+            <li>第一层</li>
+            <li>
+                <ul>
+                    <li>红</li>
+                    <li>绿</li>
+                    <li>蓝</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <p>p1</p>
+    <p>p2</p>
+
+    <input type="text" name="username">
+    <input type="text" name="email">
+
+    <ul id="ji">
+        <li>春</li>
+        <li>夏</li>
+        <li>秋</li>
+        <li>冬</li>
+    </ul>
+
+    <div id="p">
+        <p>第一段</p>
+        <p>第二段</p>
+        <p>第三段</p>
+    </div>
+
+</body>
+
+</html>
