@@ -7,11 +7,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
+        body
+        {
+            background: grey;
+        }
+
         #circle {
             width: 300px;
             height: 300px;
             border-radius: 150px;
             background: blueviolet;
+        }
+        
+        #halfcircle {
+            width: 300px;
+            height: 150px;
+            border-radius: 150px 150px 0 0;
+            background: rgb(133, 233, 75);
         }
 
         #rect {
@@ -21,12 +33,7 @@
             background: rgb(43, 226, 217);
         }
 
-        #halfcircle {
-            width: 300px;
-            height: 150px;
-            border-radius: 150px 150px 0 0;
-            background: rgb(133, 233, 75);
-        }
+     
            
 
         #taiji
@@ -35,7 +42,7 @@
             height: 600px;
             border-radius: 300px;
             border-left:300px solid black;
-            border-right:300px solid wheat;
+            border-right:300px solid rgb(255, 255, 255);
 
             clear: both;
         }
@@ -46,7 +53,7 @@
             display: block;
             width: 100px;
             height: 100px;
-            background: wheat;
+            background: rgb(255, 255, 255);
             border: 100px solid black;
             border-radius: 150px;
             margin-left: -150px;
@@ -59,7 +66,7 @@
             width: 100px;
             height: 100px;
             background: black;
-            border: 100px solid wheat;
+            border: 100px solid rgb(255, 255, 255);
             border-radius: 150px;
             margin-left: -150px;
         }
@@ -72,12 +79,12 @@
     <div id="circle">
 
     </div>
-
-    <div id="rect">
+    
+    <div id="halfcircle">
 
     </div>
 
-    <div id="halfcircle">
+    <div id="rect">
 
     </div>
 

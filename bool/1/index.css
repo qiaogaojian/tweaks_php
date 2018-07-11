@@ -1,3 +1,13 @@
+
+body
+{
+    background-image: url(../../image/default-background.jpg);
+    background-position: center  center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 header {
     padding: 20px;
 }
@@ -14,10 +24,6 @@ header h3 {
     font-size: 20px;
     width: 1366px;
     margin: 0 auto;
-}
-
-body {
-    background: #efefef;
 }
 
 nav {
@@ -59,7 +65,8 @@ nav img
 
 #main {
     width: 1366px;
-    /* background: rgb(170, 179, 189); */
+    min-height: 1600px;
+    /* background: #efefef; */
     margin: 0 auto;
 }
 
@@ -74,14 +81,14 @@ nav img
     width: 80%;
     min-height: 1200px;
     float: left;
-    background: rgb(200, 200, 200);
+    background: rgb(180, 216, 220);
 }
 
 #rside {
     width: 19%;
     min-height: 1200px;
     float: right;
-    background: rgb(200, 200, 200);
+    background:  rgb(180, 216, 220);
 }
 
 #rside #search {
@@ -99,6 +106,7 @@ aside {
     margin-bottom: 10px;
     margin-left: 10px;
     margin-right: 10px;
+    border-radius: 10px;
 }
 
 aside:first-child {
@@ -135,6 +143,7 @@ article {
     background: #efefef;
     padding: 36px;
     margin: 20px;
+    border-radius: 30px;
 }
 
 article h2 {
