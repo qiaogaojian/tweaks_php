@@ -81,14 +81,14 @@ nav img
     width: 80%;
     min-height: 1200px;
     float: left;
-    background: rgb(180, 216, 220);
+    background: rgb(163, 217, 223);
 }
 
 #rside {
     width: 19%;
     min-height: 1200px;
     float: right;
-    background:  rgb(180, 216, 220);
+    background:  rgb(163, 217, 223);
 }
 
 #rside #search {
