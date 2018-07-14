@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+    p
+    {
+        font-size: 10px;
+    }
+    </style>
+</head>
+
+<body>
+
+    <input type="button" value="Big" onclick="Big();">
+    <input type="button" value="Mid" onclick="Mid();">
+    <input type="button" value="Small" onclick="Small();">
+
+    <div>
+        <p>白日依山尽,</p>
+        <p>黄河入海流,</p>
+        <p>欲穷千里目,</p>
+        <p>更上一层楼.</p>
+    </div>
+
+</body>
+<script>
+    function Big()
+    {
+        var textp = document.getElementsByTagName("p");
+        
+        for(i=0;i<textp.length;i++)
+        {
+            textp[i].style.fontSize = "30px";
+        }
+        console.log("Big");
+    }
+
+    function Mid()
+    {
+        var textp = document.getElementsByTagName("p");
+        
+        for(i=0;i<textp.length;i++)
+        {
+            textp[i].style.fontSize = "20px";
+        }
+        console.log("Mid");
+    }
+
+    function Small()
+    {
+        var textp = document.getElementsByTagName("p");
+        
+        for(i=0;i<textp.length;i++)
+        {
+            textp[i].style.fontSize = "10px";
+        }
+        console.log("Small");
+    }
+</script>
+</html>
