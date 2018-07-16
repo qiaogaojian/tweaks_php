@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 写在标签里的style才能在对象中找到 -->
+    <div id="test" onclick="changeStyle();" style="width: 300px;height: 300px;border: 1px solid brown; background: red"></div>
+</body>
+<script>
+    function changeStyle() {
+        var div = window.document.getElementById("test");
+
+        var w = div.style.width;
+        var h = div.style.height;
+        var b = div.style.borderBottomWidth;
+
+        div.style.width = parseInt(w) + 10 + "px";
+        div.style.height = parseInt(h) + 10 + "px";
+        div.style.borderBottom = parseInt(b) + 1 + "px solid brown";
+
+        if (div.style.background == "red") {
+            div.style.background = "green";
+        }
+        else
+        {
+            div.style.background = "red";
+        }
+    }
+</script>
+
+</html>

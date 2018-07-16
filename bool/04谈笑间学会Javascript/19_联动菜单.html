@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <select name="" id="prov" onchange="liandong();">
+        <option value=-1>请选择</option>
+        <option value=0>河南</option>
+        <option value=1>辽宁</option>
+    </select>
+    <select name="" id="city"></select>
+
+</body>
+<script>
+
+
+    function liandong() {
+        var area = [
+            ["漯河", "商丘", "郑州"],
+            ["沈阳", "大连", "鞍山"]
+        ];
+        var selectProvince = window.document.getElementById("prov");
+        var selecCity = window.document.getElementById("city");
+        
+        if(selectProvince.value=="-1")
+        {
+            selecCity.innerHTML = "";
+            return;
+        }
+
+        selecCity.innerHTML = "";
+        for (var i = 0,len = area[selectProvince.value].length; i<len; i++) {
+            var optionText = "<option value =" + i + ">" + area[selectProvince.value][i] + "</option>";
+            selecCity.innerHTML += optionText;
+        }
+    }
+</script>
+
+</html>

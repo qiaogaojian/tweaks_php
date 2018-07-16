@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    /* 要获取这个style属性 通过 getComputedStyle()方法 */
+    #test
+    {
+        color:white;
+    }
+
+</style>
+<body>
+    <!-- 写在标签里的style才能在对象中找到 -->
+    <div id="test" onclick="changeStyle();" style="width: 300px;height: 300px;border: 1px solid brown; background: red">Test Get Style.</div>
+</body>
+<script>
+    //返回值是只读的.
+    function getStyle(obj,attr)
+    {
+       return window.getComputedStyle(obj,null)[attr];
+    }
+
+    function changeStyle() {
+        var div = window.document.getElementById("test");
+
+        var w = div.style.width;
+        var h = div.style.height;
+        var b = div.style.borderBottomWidth;
+
+        div.style.width = parseInt(w) + 10 + "px";
+        div.style.height = parseInt(h) + 10 + "px";
+        div.style.borderBottom = parseInt(b) + 1 + "px solid brown";
+
+        if (div.style.background == "red") {
+            div.style.background = "green";
+            var styleColor = getStyle(div,"color");
+            div.style.color = "black";
+        }
+        else
+        {
+            div.style.background = "red";
+            var styleColor = getStyle(div,"color");
+            div.style.color = "white";
+        }
+    }
+</script>
+
+</html>
