@@ -24,7 +24,7 @@ echo "y:",$y,"<br>";
 class Car
 {
     var $color;
-    function Car($color = "green")
+    function _consturct($color = "green")
     {
         $this->color = $color;
     }
