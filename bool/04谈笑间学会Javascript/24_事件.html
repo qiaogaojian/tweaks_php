@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <form action="23_SetTimeOut循环调用.html" onsubmit="Submit();">
+        姓名:
+        <input type="text" name="username" onfocus="OnFocusName();" onblur="OnFocusChange();" onmouseover="Over();">
+        <br> 
+        邮箱:
+        <input type="text" name="email" onfocus="OnFocusEmail();" onblur="OnFocusChange();" onmouseover="Over();">
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+<script>
+    function OnFocusName() {
+        document.getElementsByName("username")[0].style.border = "1px solid blue";
+    }
+
+    function OnFocusEmail() {
+        document.getElementsByName("email")[0].style.border = "1px solid blue";
+    }
+
+    function OnFocusChange() {
+        var divInputs = document.getElementsByTagName("input");
+        for (var i = 0; i < divInputs.length; i++) {
+            divInputs[i].style.border = "";
+        }
+    }
+
+    function Over() {
+        document.getElementsByName("username")[0].style.marginLeft = "3px";
+        document.getElementsByName("email")[0].style.marginLeft = "3px";
+    }
+
+    function Submit()
+    {
+        alert("Submit.");
+    }
+
+
+</script>
+
+</html>

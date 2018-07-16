@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        #change {
+            width: 300px;
+            height: 300px;
+            border: 1px solid blue;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- <div id = "change" onclick="Change();" style=" width: 300px;height: 300px; border: 1px solid blue">
+        机构 样式 行为相分离就是 html / css / js 代码分离 
+    </div> -->
+    <div id="change"></div>
+</body>
+<script>
+    // function Change() {
+    //     document.getElementById("change").style.border = "1px solid red";
+    // }
+
+    document.getElementById("change").onclick = function ()
+    {
+        this.style.border = "1px solid red";
+    };
+
+</script>
+
+</html>
