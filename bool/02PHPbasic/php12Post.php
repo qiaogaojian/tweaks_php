@@ -12,7 +12,7 @@ $messageContent = $_POST["content"];
 $message = new Message();
 $message->tittle = $messageTittle;
 $message->content = $messageContent;
-$message->time = "20".date("y/m/d/h:m");
+$message->time = "20".date("y/m/d/h:i",time());
 $messageText = json_encode($message);
 
 $fileMessage = fopen("./msg.txt", 'a');
