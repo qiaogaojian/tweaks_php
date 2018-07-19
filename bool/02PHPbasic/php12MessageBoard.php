@@ -28,12 +28,20 @@
             </form>
         </div>
 
-        <div id="down">
-            <div class="board">
+        <div id="down">     
+           
+            <?php
+            $fileMessage = file("msg.txt");
+            if (count($fileMessage) > 0) {
+                foreach ($fileMessage as $message) {
+                    $messageText = json_decode($message);
+                    echo "<div class='board'> PostTime: " . $messageText->time . "<br>";
+                    echo "Tittle: " . $messageText->tittle . "<br>";
+                    echo "Content:<br>" . $messageText->content . "<br></div>";
+                }
+            }
 
-            </div>
-        </div>
-
+            ?>
     </div>
 
 </body>
