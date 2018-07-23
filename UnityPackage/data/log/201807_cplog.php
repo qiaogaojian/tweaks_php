@@ -22,3 +22,9 @@
 <?PHP exit;?>	1532330992	admin	1	127.0.0.1	nav	GET={operation=footernav; }; POST={};
 <?PHP exit;?>	1532331002	admin	1	127.0.0.1	nav	GET={operation=mynav; }; POST={};
 <?PHP exit;?>	1532331005	admin	1	127.0.0.1	nav	GET={operation=spacenav; }; POST={};
+<?PHP exit;?>	1532332038	admin	1	127.0.0.1		GET={}; POST={};
+<?PHP exit;?>	1532332039	admin	1	127.0.0.1	index	GET={}; POST={};
+<?PHP exit;?>	1532332042	admin	1	127.0.0.1	setting	GET={operation=basic; }; POST={};
+<?PHP exit;?>	1532332044	admin	1	127.0.0.1	setting	GET={operation=basic; }; POST={};
+<?PHP exit;?>	1532332050	admin	1	127.0.0.1	setting	GET={operation=access; }; POST={};
+<?PHP exit;?>	1532332053	admin	1	127.0.0.1	nav	GET={}; POST={};
