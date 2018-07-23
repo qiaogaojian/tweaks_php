@@ -71,7 +71,7 @@ echo "<br><br>";
 //6 过路费
 $moneyAll = 100000;
 $count = 0;
-while ($moneyAll > 0) {
+while ($moneyAll >=5000) {
     if ($moneyAll > 50000) {
         $moneyAll -= $moneyAll * 0.05;
     } else {
@@ -96,15 +96,27 @@ $ji1 = 5;
 $ji2 = 3;
 $ji3 = 1 / 3;
 
+/*
 for ($i = 1; $i <= floor(100 / $ji1); $i++) {
     for ($j = 1; $j <= floor(100 / $ji2); $j++) {
-        for ($k = 1; $k <= floor(100 / $ji3); $k++) {
-            if ($i * $ji1 + $j * $ji2 + $k * $ji3 == 100) {
+        for ($k = 1; $k < 100; $k++) {
+            if ($i * $ji1 + $j * $ji2 + $k * $ji3 == 100 && $i+$j+$k==100) {
                 echo "公鸡:" . $i . "母鸡" . $j . "小鸡:" . $k . "<br>";
             }
         }
     }
 }
+*/
+for ($i = 1; $i <= 20; $i++) {
+    for ($j = 1; $j <= 33; $j++) {
+        $k = 100-$i-$j;
+            if ($i * $ji1 + $j * $ji2 + $k * $ji3 == 100 && $i+$j+$k==100) {
+                echo "公鸡:" . $i . "母鸡" . $j . "小鸡:" . $k . "<br>";
+            }
+        
+    }
+}
+
 echo "<br><br>";
 
 //9 1-100的素数
@@ -160,7 +172,6 @@ function BornSheepDiGui($n)
 
 BornSheep(20);
 
-//TODO PHP的递归好像不太好使
 echo "递归 20年后🐏的个数:" . BornSheepDiGui(20);
 
 ?>
