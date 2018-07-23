@@ -1,8 +1,8 @@
 <?php if(!defined('IN_DISCUZ')) exit('Access Denied'); 
 0
-|| checktplrefresh('./template/dean_source_170511/common/header.htm', './template/default/common/header_common.htm', 1532329940, '2', './data/template/2_2_common_header_portal_index.tpl.php', './template/dean_source_170511', 'common/header_portal_index')
-|| checktplrefresh('./template/dean_source_170511/common/header.htm', './template/default/common/header_qmenu.htm', 1532329940, '2', './data/template/2_2_common_header_portal_index.tpl.php', './template/dean_source_170511', 'common/header_portal_index')
-|| checktplrefresh('./template/dean_source_170511/common/header.htm', './template/dean_source_170511/common/pubsearchform.htm', 1532329940, '2', './data/template/2_2_common_header_portal_index.tpl.php', './template/dean_source_170511', 'common/header_portal_index')
+|| checktplrefresh('./template/dean_source_170511/common/header.htm', './template/default/common/header_common.htm', 1501342746, '2', './data/template/2_2_common_header_portal_index.tpl.php', './template/dean_source_170511', 'common/header_portal_index')
+|| checktplrefresh('./template/dean_source_170511/common/header.htm', './template/default/common/header_qmenu.htm', 1501342746, '2', './data/template/2_2_common_header_portal_index.tpl.php', './template/dean_source_170511', 'common/header_portal_index')
+|| checktplrefresh('./template/dean_source_170511/common/header.htm', './template/dean_source_170511/common/pubsearchform.htm', 1501342746, '2', './data/template/2_2_common_header_portal_index.tpl.php', './template/dean_source_170511', 'common/header_portal_index')
 ;
 block_get('166');?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

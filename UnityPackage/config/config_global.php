@@ -9,13 +9,13 @@ $_config['db']['1']['dbuser'] = 'root';
 $_config['db']['1']['dbpw'] = 'root';
 $_config['db']['1']['dbcharset'] = 'gbk';
 $_config['db']['1']['pconnect'] = '0';
-$_config['db']['1']['dbname'] = 'unitypackage';
+$_config['db']['1']['dbname'] = 'ultrax';
 $_config['db']['1']['tablepre'] = 'pre_';
 $_config['db']['slave'] = '';
 $_config['db']['common']['slave_except_table'] = '';
 
 // --------------------------  CONFIG MEMORY  --------------------------- //
-$_config['memory']['prefix'] = 'InUz3h_';
+$_config['memory']['prefix'] = 'qKMeVq_';
 $_config['memory']['redis']['server'] = '';
 $_config['memory']['redis']['port'] = 6379;
 $_config['memory']['redis']['pconnect'] = 1;
@@ -50,12 +50,12 @@ $_config['output']['ajaxvalidate'] = '0';
 $_config['output']['iecompatible'] = '0';
 
 // --------------------------  CONFIG COOKIE  --------------------------- //
-$_config['cookie']['cookiepre'] = '1wl7_';
+$_config['cookie']['cookiepre'] = 'lqcB_';
 $_config['cookie']['cookiedomain'] = '';
 $_config['cookie']['cookiepath'] = '/';
 
 // -------------------------  CONFIG SECURITY  -------------------------- //
-$_config['security']['authkey'] = 'afaf01Er7kEcV5G4';
+$_config['security']['authkey'] = '898da7xd956VByv7';
 $_config['security']['urlxssdefend'] = 1;
 $_config['security']['attackevasive'] = '0';
 $_config['security']['querysafe']['status'] = 1;

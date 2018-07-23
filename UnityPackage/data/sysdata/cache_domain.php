@@ -1,6 +1,6 @@
 <?php
 //Discuz! cache file, DO NOT modify me!
-//Identify: 278d805a15eefe366f9e1762b58154ac
+//Identify: 61dfb65e8dc939e8156f1ed9e8751af2
 
 $domain = array (
   'defaultindex' => 'portal.php',
