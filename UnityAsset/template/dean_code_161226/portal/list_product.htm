@@ -1,0 +1,112 @@
+<!--{template common/header}-->
+<!--[name][迪恩UI/CG灵感创意列表页][/name]-->
+<!--{eval $list = array();}-->
+<!--{eval $wheresql = category_get_wheresql($cat);}-->
+<!--{eval $list = category_get_list($cat, $wheresql, $page);}-->
+<style type="text/css">
+body{ background:#f3f3f3 url(./template/dean_code_161226/deancss/portal_list_view/bg.png) 0 0 repeat!important;}
+.wp, #wp{ width:100%;}
+#deanpage{ padding:0;}
+.pg{ margin-right:0!important;}
+.deanadsbanner{ display:block; width:100%; min-width:1250px; height:325px; background:url(./template/dean_code_161226/deancss/portal_list_view/aboutus.jpg) no-repeat;}
+.deanadstxt{ width:100%; position:absolute; top:170px; left:0;}
+.deanadsbanner h5{ width:602px; height:81px; margin: 50px auto;}
+
+
+.dean_designernextnav{ background:#fff; width:100%; min-width:1180px; padding:10px 0;}
+.dean_designernextnav ul{ display:table; margin:15px auto;}
+.dean_designernextnav ul li{  height:30px; line-height:30px;float:left; padding:0 15px;}
+.dean_designernextnav ul li a{ font-size:16px; color:#999;}
+.dean_designernextnav ul li a:hover{ color:#8FC31F;}
+.deanwp{ width:1180px; margin:20px auto 0 auto; }
+
+.dean_portbox{}
+.dean_portbox ul{ width:1205px;}
+.dean_portbox ul li{ float:left; width:280px; margin:0 20px 20px 0; background:#fff;-webkit-transition:all 0.3s linear;-moz-transition:all 0.3s linear;-o-transition:all 0.3s linear;-ms-transition:all 0.3s linear;transition:all 0.3s linear;}
+.dean_portbox ul li:hover{box-shadow: 0 0 15px rgba(45,50,55,.3);-webkit-transform: translateY(-5px); -moz-transform: translateY(-4px); -ms-transform: translateY(-4px); -o-transform: translateY(-4px); transform: translateY(-4px);}
+.deanpbpics{}
+.deanpbpics a{ display:block; width:260px; height:200px; position:relative; padding:10px;}
+.deanpbpics a img{width:260px; height:200px;}
+
+
+.dean_pocontent{ padding: 0px 20px 15px 20px;}
+.deanzztxfds{ width:35px; height:35px; float:left;}
+.deanzztxfds img{ width:35px; height:35px; border-radius:100%;}
+.dean_portg{ float:right; width:195px;}
+.dean_portg h2{ font-weight:normal;line-height: 22px; height: 22px; overflow: hidden;}
+.dean_portg h2 a{ color:#585858;font-size: 14px; display:block; }
+.dean_portg p{ color:#8FC31F; font-size:12px;}
+.deanartauthor{ color: #bbb; margin-top: 10px;}
+.deanfaburiqi{ width:70px; float:left; font-size:12px; color:#bbb; height:20px; line-height:20px; overflow:hidden;}
+.deanfabuxq{ float:right;}
+.deanfabuxq span{ display:block; float:left; margin-left:10px; padding-left:23px; font-size:12px; color:#999;}
+.deanfabuxq span.deanreplersx{ background:url(./template/dean_code_161226/deancss/portal_list_view/viewx.png) left center no-repeat;}
+.deanfabuxq span.deanreplersd{ background:url(./template/dean_code_161226/deancss/portal_list_view/commentsx.png) left center no-repeat;}
+</style>
+<div class="deanadsbanner deanactions fadeIn">
+    <div class="deanadstxt">
+        <h5><img src="./template/dean_code_161226/deancss/portal_list_view/bgs.png" /></h5>
+    </div>
+</div>
+<!--{if $cat[subs]}-->
+        
+        <div class="dean_designernextnav">
+        	<ul>
+            <!--{eval $i = 1;}-->
+            <!--{loop $cat[subs] $value}-->
+            <!--{if $i != 1}--><!--{/if}-->
+            <li>
+            	<a href="{$portalcategory[$value['catid']]['caturl']}">$value[catname]</a><!--{eval $i--;}-->
+            </li>
+            <!--{/loop}-->
+            <div class="clear"></div>
+            </ul>
+        </div>
+        <!--{/if}-->
+<div class="deanwp">
+    <!--{ad/text/wp a_t}-->
+    <div class="dean_portbox deanactions fadeIn">
+    	<ul>
+        	<!--{loop $list['list'] $value}-->
+            <!--{eval $highlight = article_title_style($value);}-->
+            <!--{eval $article_url = fetch_article_url($value);}-->
+        	<li>
+            	<div class="deanpbpics">
+                	<!--{if $value[pic]}-->
+                    <a href="$article_url" target="_blank">
+                        <img src="$value[pic]"/>
+                    </a>
+                    <!--{else}--><a href="$article_url" target="_blank"><img src="$_G['style'][styleimgdir]/nopic.jpg" /><span></span></a><!--{/if}-->
+                </div>
+            	<div class="dean_pocontent">
+                	<div class="dean_potop">
+                        <div class="deanzztxfds">
+                            <img src="uc_server/avatar.php?uid=$value[uid]&size=middle">
+                        </div>
+                        <div class="dean_portg">
+                        	<h2><a href="$article_url" target="_blank">$value[title]</a></h2>
+                            <p>$value[username]</p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="deanartauthor">
+                        <div class="deanfaburiqi">$value[dateline]</div>
+                        <div class="deanfabuxq">
+                        	<span class="deanreplersx">{eval $query = DB::query("SELECT t1.viewnum from ".DB::table('portal_article_count')." t1 inner join ".DB::table('portal_article_title')." t2 on t1.aid=t2.aid WHERE t2.aid=$value[aid]"); $dean = DB::fetch($query);echo $dean['viewnum'];}</span>
+                            <span class="deanreplersd">{eval $query = DB::query("SELECT t1.commentnum from ".DB::table('portal_article_count')." t1 inner join ".DB::table('portal_article_title')." t2 on t1.aid=t2.aid WHERE t2.aid=$value[aid]"); $dean = DB::fetch($query);echo $dean['commentnum'];}</span>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                        
+                    </div>
+                    
+                </div>
+            </li>
+            <!--{/loop}-->
+            <div class="clear"></div>
+        </ul>
+    </div>
+    <!--{if $list['multi']}--><div class="pgs cl" id="deanpage">{$list['multi']}</div><!--{/if}-->
+</div>
+
+<!--{template common/footer}-->
