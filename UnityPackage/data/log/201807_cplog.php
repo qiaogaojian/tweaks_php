@@ -1,0 +1,15 @@
+<?PHP exit;?>	1532369112	admin	1	127.0.0.1	tools	GET={operation=updatecache; }; POST={};
+<?PHP exit;?>	1532369114	admin	1	127.0.0.1	tools	GET={frames=yes; operation=updatecache; }; POST={};
+<?PHP exit;?>	1532369115	admin	1	127.0.0.1	tools	GET={operation=updatecache; }; POST={};
+<?PHP exit;?>	1532369118	admin	1	127.0.0.1	founder	GET={operation=perm; }; POST={};
+<?PHP exit;?>	1532369119	admin	1	127.0.0.1	tools	GET={operation=updatecache; }; POST={};
+<?PHP exit;?>	1532369120	admin	1	127.0.0.1	founder	GET={operation=perm; }; POST={};
+<?PHP exit;?>	1532369122	admin	1	127.0.0.1	db	GET={operation=export; }; POST={};
+<?PHP exit;?>	1532369125	admin	1	127.0.0.1	db	GET={operation=import; }; POST={};
+<?PHP exit;?>	1532369226	admin	1	127.0.0.1	tools	GET={operation=updatecache; }; POST={};
+<?PHP exit;?>	1532369227	admin	1	127.0.0.1	tools	GET={frames=yes; operation=updatecache; }; POST={};
+<?PHP exit;?>	1532369229	admin	1	127.0.0.1	tools	GET={operation=updatecache; }; POST={};
+<?PHP exit;?>	1532369231	admin	1	127.0.0.1	plugins	GET={}; POST={};
+<?PHP exit;?>	1532369232	admin	1	127.0.0.1	tools	GET={operation=updatecache; }; POST={};
+<?PHP exit;?>	1532369234	admin	1	127.0.0.1	tools	GET={operation=updatecache; step=2; type={0=data; 1=tpl; }; confirmed=确定; }; POST={type={0=data; 1=tpl; }; confirmed=确定; };
+<?PHP exit;?>	1532369236	admin	1	127.0.0.1	tools	GET={operation=updatecache; step=3; type=data_tpl; }; POST={};
