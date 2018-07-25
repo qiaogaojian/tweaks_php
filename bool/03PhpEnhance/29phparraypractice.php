@@ -18,28 +18,23 @@ echo "羊的个数:" . array_sum($sheep);
 echo "<br><br>";
 
 //猴子选大王
-$n = 10;
-$m = 3;
-$index = 0;
-$monkey = array();
-for ($i = 0; $i < $n; $i++) {
-    array_push($monkey, $i);
-}
-while ($m > 0) {
-
-    $m--;
-    $index++;
-    if ($m == 0) {
-        unset($monkey[$index % count($monkey)]);
-        $m = 3;
-        if(count($monkey)==1)
-        {
-            echo "大王是:".current($monkey);
-            $m = -1;
-            break;
+function FindKing($n, $m)
+{
+    $monkeys = range(1, $n);
+    $i = 1;
+    while (count($monkeys) > 1) {
+        if ($i % $m == 0) {
+            unset($monkeys[$i - 1]);
+        } else {
+            array_push($monkeys, $monkeys[$i - 1]);
+            unset($monkeys[$i - 1]);
         }
-        echo current($monkey);
+        echo "i:".$i/$m,"<br>";
+        $i++;
     }
+    return $monkeys[$i - 1];
 }
+
+print_r(FindKing(6, 5));
 
 ?>
