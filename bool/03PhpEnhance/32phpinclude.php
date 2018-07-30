@@ -1,7 +1,6 @@
 <?php
 //文件包含的意义在于代码重用
 include("./32php.php");
-
 echo "<br>$n";
 
 //include       // 引用 不存在也可以继续
