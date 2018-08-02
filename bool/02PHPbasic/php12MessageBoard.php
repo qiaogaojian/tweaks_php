@@ -45,26 +45,22 @@
                 echo "无法连接数据库." . mysqli_error();
                 exit();
             }
-            
-            mysqli_select_db($dbConnect,$dbname);
-            
+
+            mysqli_select_db($dbConnect, $dbname);
+
             $sql = "select * from $tbname";
             $res = mysqli_query($dbConnect, $sql);
 
-            if($res)
-            {
-                while(($row = mysqli_fetch_assoc($res)))
-                {               
-                    echo "<div class='board'> PostTime: " , $row['time'] , "<br>";
-                    echo "Tittle: " . $row ['tittle'] . "<br>";
+            if ($res) {
+                while (($row = mysqli_fetch_assoc($res))) {
+                    echo "<div class='board'> PostTime: ", $row['time'], "<br>";
+                    echo "Tittle: " . $row['tittle'] . "<br>";
                     echo "Content:<br>" . $row['content'] . "<br></div>";
                 }
-            }
-            else
-            {
+            } else {
                 echo "数据库查询失败.";
-            }          
-            
+            }
+
             mysqli_close($dbConnect);
 
             //文件读取法

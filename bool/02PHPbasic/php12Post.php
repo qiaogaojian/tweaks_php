@@ -13,7 +13,7 @@ $timeNow = time();
 $message = new Message();
 $message->tittle = $messageTittle;
 $message->content = $messageContent;
-$message->time = "20".date("y/m/d/h:i",time());
+$message->time = "20" . date("y/m/d/h:i", time());
 //以MySql为载体存储留言数据
 $servername = "127.0.0.1";
 $username = "root";
@@ -21,17 +21,16 @@ $password = "root";
 $dbname = "messageboard";
 $tbname = "message";
 
-$dbConnect = mysqli_connect($servername,$username,$password);
+$dbConnect = mysqli_connect($servername, $username, $password);
 
-if(!$dbConnect)
-{
-    echo "无法连接数据库.".mysqli_error();
+if (!$dbConnect) {
+    echo "无法连接数据库." . mysqli_error();
     exit();
 }
 
-mysqli_select_db($dbConnect,$dbname);
+mysqli_select_db($dbConnect, $dbname);
 $sql = "INSERT INTO $tbname(tittle,content,time) VALUES ('$messageTittle','$messageContent',$timeNow)";
-mysqli_query($dbConnect,$sql);
+mysqli_query($dbConnect, $sql);
 
 mysqli_close($dbConnect);
 

@@ -5,11 +5,10 @@ $username = "root";
 $password = "root";
 $dbname = "messageboard";
 
-$dbConnect = mysqli_connect($servername,$username,$password);
+$dbConnect = mysqli_connect($servername, $username, $password);
 
-if(!$dbConnect)
-{
-    echo "无法连接数据库.".mysqli_error();
+if (!$dbConnect) {
+    echo "无法连接数据库." . mysqli_error();
     exit();
 }
 
@@ -24,7 +23,7 @@ if(!$dbConnect)
 // }
 
 //创建数据表
-mysqli_select_db($dbConnect,$dbname);
+mysqli_select_db($dbConnect, $dbname);
 $sql = "CREATE TABLE message
 (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -32,7 +31,7 @@ $sql = "CREATE TABLE message
     content VARCHAR(1000),
     time INT
 )CHARSET GBK";
-mysqli_query($dbConnect,$sql);
+mysqli_query($dbConnect, $sql);
 
 echo "Table message has been created.";
 
