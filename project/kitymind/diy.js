@@ -1,9 +1,9 @@
 (function(){
 	var oldData;
-	var html  = '';
-	    html += '<a class="diy export" data-type="json">保存为json</a>',
+	var html = '';
+	    // html += '<a class="diy export" data-type="json">保存为json</a>',
 	    html += '<a class="diy export" data-type="md">保存为md</a>',
-	    html += '<a class="diy export" data-type="km">保存为km</a>',
+	    // html += '<a class="diy export" data-type="km">保存为km</a>',
 	    html += '<button class="diy input">',
 	    html += '导入<input type="file" id="fileInput">',
 	    html += '</button>';
@@ -23,6 +23,7 @@
 		border            : 'none',
 		'border-right'    : '1px solid #ccc',
 	});
+
 	$('.input').css({
 		'overflow': 'hidden',
 		'position': 'relative',
@@ -36,7 +37,7 @@
 		display : 'inline-block',
 		opacity : 0
 	});
-	$('.export').css('cursor','cursor');
+	$('.export').css('cursor','pointer');
 
 	$(document).on('mouseover', '.export', function(event) {
 		// 链接在hover的时候生成对应数据到链接中
@@ -84,7 +85,7 @@
 	}).on('click', '.export', function(event) {
 		// 禁止点击状态下取消跳转
 		var $this = $(this);
-		if($this.css('cursor') == 'not-allowed'){
+		if($this.css('cursor') == 'test'){
 			event.preventDefault();
 		}
 	});
