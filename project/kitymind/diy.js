@@ -1,9 +1,9 @@
 (function(){
 	var oldData;
 	var html  = '';
-	    html += '<a class="diy export" data-type="json">导出json</a>',
-	    html += '<a class="diy export" data-type="md">导出md</a>',
-	    html += '<a class="diy export" data-type="km">导出km</a>',
+	    html += '<a class="diy export" data-type="json">保存为json</a>',
+	    html += '<a class="diy export" data-type="md">保存为md</a>',
+	    html += '<a class="diy export" data-type="km">保存为km</a>',
 	    html += '<button class="diy input">',
 	    html += '导入<input type="file" id="fileInput">',
 	    html += '</button>';
