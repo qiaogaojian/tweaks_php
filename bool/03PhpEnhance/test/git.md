@@ -1,15 +1,17 @@
-### 下载 git
+# Git使用教程
+
+## 下载 git
 
 [下载地址](https://link.jianshu.com/?t=https://git-scm.com/download/win)
 
-### 设置全局配置
+## 设置全局配置
 
 ```shell
 git config --global user.name "your name"
 git config --global user.email "your email"
 ```
 
-### 初始化项目
+## 初始化项目
 
 ```shell
 cd d:/var/www/php              //首先指定到你的项目目录下
@@ -23,13 +25,13 @@ git remote add origin https://github.com/youtname/vscode.git
 git push -u origin master
 ```
 
-### 记住密码
+## 记住密码
 
 ```shell
 git config --global credential.helper store   //在Git Bash输入这个命令就可以了
 ```
 
-### VSCode 使用 Git
+## VSCode 使用 Git
 
 - 修改文件
 
@@ -37,7 +39,7 @@ git config --global credential.helper store   //在Git Bash输入这个命令就
 
 - 切换到 git 标签
 
-![](https://upload-images.jianshu.io/upload_images/12122594-349ebdd6bf782e30.png?imageMogr2/auto-orient/)
+![img](https://upload-images.jianshu.io/upload_images/12122594-349ebdd6bf782e30.png?imageMogr2/auto-orient/)
 
 - 暂存更改
 
