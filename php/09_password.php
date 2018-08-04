@@ -5,10 +5,16 @@ $password = "qiao";
 
 $hashpw = password_hash($password, PASSWORD_DEFAULT);
 
-echo "hashpw: " . $hashpw;
+echo "hashpw: ".$hashpw;
 
-if (password_verify($password, $hashpw)) {
+
+if(password_verify($password,$hashpw))
+{
     echo "密码正确";
-} else {
+}
+else
+{
     echo "密码错误";
 }
+
+?>

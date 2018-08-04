@@ -12,16 +12,16 @@
 
 <?php
 
-//序列化
-// $testArray = array(1,1,2,3,5,8);
-// echo json_encode($testArray);
+    //序列化
+    // $testArray = array(1,1,2,3,5,8);
+    // echo json_encode($testArray);
 
-//反序列化
-$jsonTxt = '{"a":1,"b":2,"c":3,"d":4,"e":5}';
-var_dump(json_decode($jsonTxt));
-echo "<br>";
-var_dump(json_decode($jsonTxt, true));
+    //反序列化
+    $jsonTxt = '{"a":1,"b":2,"c":3,"d":4,"e":5}';
+    var_dump(json_decode($jsonTxt));
+    echo "<br>";
+    var_dump(json_decode($jsonTxt,true));
 ?>
-
+    
 </body>
 </html>
