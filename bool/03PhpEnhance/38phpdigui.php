@@ -2,73 +2,73 @@
 
 function AddAdd($n)
 {
-    if($n==1)
-    {
+    if ($n == 1) {
         return 1;
     }
-    return AddAdd($n-1)+$n;
+    return AddAdd($n - 1) + $n;
 }
 
-echo AddAdd(100),"<br>";
+echo AddAdd(100), "<br>";
 
 $rootPath = ".";
 
-function DisplayDir($path,$level)
+function DisplayDir($path, $level)
 {
     $pathInfo = opendir($path);
-    if($pathInfo!==false)
-    {
-        while(($item = readdir($pathInfo))!==false)
-        {
-            echo str_repeat("----",$level),$item,"<br>";
+    if ($pathInfo !== false) {
+        while (($item = readdir($pathInfo)) !== false) {
+            echo str_repeat("----", $level), $item, "<br>";
 
-            if($item=='.'||$item=='..')
-            {
+            if ($item == '.' || $item == '..') {
                 continue;
             }
-            if(is_dir($path."/".$item))
-            {
-                DisplayDir($path."/".$item,$level+1);
-            }          
+            if (is_dir($path . "/" . $item)) {
+                DisplayDir($path . "/" . $item, $level + 1);
+            }
         }
-    }
-    else
-    {
+    } else {
         echo "无法读取目录.";
         exit();
     }
     closedir($pathInfo);
 }
 
-DisplayDir($rootPath,1);
+DisplayDir($rootPath, 1);
 
 function StaticR()
 {
     static $a = 0;
     $a++;
-    echo $a,"<br>";
+    echo $a, "<br>";
 }
 
 StaticR();
 StaticR();
 StaticR();
 
-$arra = array(1,2,3,array(4,5,6));
+$arra = array(1, 2, 3, array(4, 5, 6));
 function Sum($arr)
 {
     static $sumArr = 0;
-    foreach($arr as $v)
-    {
-        if(is_array($v))
-        {
+    foreach ($arr as $v) {
+        if (is_array($v)) {
             Sum($v);
-        }
-        else
-        {
+        } else {
             $sumArr += $v;
         }
     }
     return $sumArr;
 }
 echo Sum($arra);
-?>
+
+$arr = array(1, 2, 3, 4, 5, 6);
+function SumArray($array)
+{
+    $sum = 0;
+    foreach ($arr as $n) {
+        $sum += $n;
+    }
+    return $sum;
+}
+
+echo SumArray($arr);
