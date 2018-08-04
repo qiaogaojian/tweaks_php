@@ -24,23 +24,27 @@
     </form>
 </body>
 <script>
-    document.getElementsByTagName("form")[0].onsubmit = function () {
+    document.getElementsByTagName("form")[0].onsubmit = function ()
+    {
         var patternName = /^[a-zA-Z0-9]{6,12}$/;
-        if (!patternName.test(document.getElementsByTagName("input")[0].value)) {
+        if (!patternName.test(document.getElementsByTagName("input")[0].value))
+        {
             alert("用户名不合法,请重新输入:");
             return false;
         }
-        
+
         // 最少6位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符
         // var passPW = /^.*(?=.{6,20})(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*? ]).*$/;
         var passPW = /^.*(?=.{6,20})(?=.*\d)(?=.*[a-z]).*$/;
-        if (!passPW.test(document.getElementsByTagName("input")[1].value)) {
+        if (!passPW.test(document.getElementsByTagName("input")[1].value))
+        {
             alert("密码不合法,请重新输入:");
             return false;
         }
 
         var patternEmail = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/;
-        if (!patternEmail.test(document.getElementsByTagName("input")[2].value)) {
+        if (!patternEmail.test(document.getElementsByTagName("input")[2].value))
+        {
             alert("邮箱不合法,请重新输入:");
             return false;
         }

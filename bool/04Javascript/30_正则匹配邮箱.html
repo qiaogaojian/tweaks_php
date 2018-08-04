@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
     <li>1</li>
     <li>2&lt;qiaogaojian@vip.qq.com&gt;</li>
@@ -15,17 +17,18 @@
     function findEmail()
     {
         var li = document.getElementsByTagName("li");
-        var patternEmail =/^.*(?=.{6,20})(?=.*\d)(?=.*[a-z]).*$/;
-        for(var i =0;i<li.length;i++)
+        var patternEmail = /^.*(?=.{6,20})(?=.*\d)(?=.*[a-z]).*$/;
+        for (var i = 0; i < li.length; i++)
         {
-            console.log(patternEmail.exec(li[i].innerHTML));  
-            if(patternEmail.exec(li[i].innerHTML)!=null)
+            console.log(patternEmail.exec(li[i].innerHTML));
+            if (patternEmail.exec(li[i].innerHTML) != null)
             {
-                li[i].style.background = "yellow"; 
+                li[i].style.background = "yellow";
             }
         }
     }
 
     findEmail();
 </script>
+
 </html>

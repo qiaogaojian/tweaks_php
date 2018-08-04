@@ -14,14 +14,15 @@
     </div>
 </body>
 <script>
-    var clock = window.setInterval(() => {
+    var clock = window.setInterval(() =>
+    {
         var divCount = document.getElementById("countNum");
-        var num=divCount.innerHTML-1;
+        var num = divCount.innerHTML - 1;
         divCount.innerHTML = num;
 
-        if(num<0)
+        if (num < 0)
         {
-         clearInterval(clock);   
+            clearInterval(clock);
         }
     }, 1000);
 </script>
