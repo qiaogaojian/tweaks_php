@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    
+    window.str = 'a';
+    function Var()
+    {
+        //var str ='b';
+        function varIn()
+        {
+            //var str = 'c';
+            //不加var 代表的赋值 会污染全局变量 var代表声明 
+            str = 'd';
+            alert(str);
+        }
+        varIn();
+    }
+
+    Var();
+    alert(str);
+
+</script>
+</html>

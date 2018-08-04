@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <img src="../../image/default-background1.jpg" alt="bg" >
+</body>
+<script>
+    function ChangeBg() {
+        var div = document.getElementsByTagName("img");
+        div[0].src = "../../image/default-background3.jpg";
+    }
+
+    window.setTimeout("ChangeBg()",3000);
+
+    window.setInterval(() => {
+        console.log("setInterval()");
+    }, 1000)
+ 
+</script>
+
+</html>

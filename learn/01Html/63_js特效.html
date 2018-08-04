@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        #changecolor {
+            width: 300px;
+            height: 300px;
+            background: red;
+        }
+
+        #change {
+            width: 360px;
+            height: 360px;
+            background: rgb(62, 136, 255);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="changecolor" onclick="changecolor();">
+
+    </div>
+
+</body>
+<script>
+    function change() {
+        var div = document.getElementById("changecolor");
+        // alert("change()");
+        div.id = "change"
+    }
+
+    function changecolor() {
+        var div = document.getElementById("changecolor");
+        if(div.style.backgroundColor=="red")
+        {
+            div.style.backgroundColor = "blue";
+        }
+        else
+        {
+            div.style.backgroundColor = "red";
+        }
+    }
+</script>
+
+</html>

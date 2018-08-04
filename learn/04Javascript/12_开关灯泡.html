@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <img src="../image/logo.jpg" alt="Logo" onclick="Toggle();">
+</body>
+<script>
+function Toggle()
+{
+    var divImg = document.getElementsByTagName("img");
+    if(divImg[0].src.indexOf("logo")!=-1)
+    {
+        divImg[0].src = ""
+    }
+    else
+    {
+        divImg[0].src = "../image/logo.jpg"
+    }
+    
+}
+</script>
+</html>

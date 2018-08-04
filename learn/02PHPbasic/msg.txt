@@ -1,0 +1,9 @@
+{"tittle":"\u4e00\u4e2a\u7b80\u5355\u7684\u7559\u8a00\u677f","content":"\u901a\u8fc7form post \u5230 php \u5e8f\u5217\u5316\u4e3ajson\u5b58\u50a8\u7559\u8a00\u672c\u6570\u636e  \u53cd\u5e8f\u5217\u5316\u8bfb\u53d6\u6570\u636e\u663e\u793a\u5230\u7559\u8a00\u677f.","time":"18\/07\/20\/01\/07"}
+{"tittle":"\u65f6\u95f4\u683c\u5f0f\u4f18\u5316","content":"\u4f18\u5316\u7559\u8a00\u677f\u7684\u65f6\u95f4\u683c\u5f0f,\u4f7f\u66f4\u6613\u8bfb.","time":"2018\/07\/20\/01:07"}
+{"tittle":"\u8bd5\u4e00\u4e0b","content":"\u518d\u53d1\u51e0\u6761\u7559\u8a00\u8bd5\u4e00\u4e0b","time":"2018\/07\/20\/01:07"}
+{"tittle":"\u54c8\u54c8\u54c8","content":"\u5b8c\u4e8b\u4e86,\u505a\u597d\u4e86","time":"2018\/07\/20\/01:07"}
+{"tittle":"\u6700\u7b80\u6613\u7559\u8a00\u677f","content":"\u786e\u5b9e\u633a\u7b80\u5355\u7684","time":"2018\/07\/20\/01:07"}
+{"tittle":"\u518d\u6765\u4e00\u4e2a","content":"\u770b\u770b\u4f1a\u4e0d\u4f1a\u81ea\u52a8\u6269\u5c55","time":"2018\/07\/20\/01:07"}
+{"tittle":"\u771f\u597d","content":"\u53ef\u4ee5\u81ea\u52a8\u6269\u5c55","time":"2018\/07\/20\/01:07"}
+{"tittle":"\u6d4b\u8bd5\u65f6\u95f4\u95ee\u9898","content":"\u65f6\u95f4\u600e\u4e48\u6709\u70b9\u4e0d\u6b63\u5e38\u5462","time":"2018\/07\/20\/01:07"}
+{"tittle":"\u539f\u6765\u662f\u65f6\u95f4\u6807\u8bc6\u7b26\u5199\u9519\u4e86","content":"\u6b63\u786e\u7684\u5199\u6cd5\u662f: echo date(\u2018y-m-d h:i:s\u2019,time());","time":"2018\/07\/20\/01:35"}
