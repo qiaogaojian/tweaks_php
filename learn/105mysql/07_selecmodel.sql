@@ -1,7 +1,7 @@
 -- 查询模型where后就是一个布尔变量
 select * from user where 1;
 
--- 变量可以计算
+-- 表中的列可以视为变量 变量可以计算
 select uid,name,age+1 from user where uid>=3;
 
 -- 条件查询
