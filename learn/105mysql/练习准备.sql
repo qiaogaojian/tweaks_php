@@ -10,7 +10,8 @@ create table goods (
   click_count int(10) unsigned not null default '0'
 ) engine=myisam default charset=utf8;
 
-insert into `goods` values (1,'kd876',4,8,'ecs000000',1,1388.00,1665.60,9),
+insert into `goods` values
+(1,'kd876',4,8,'ecs000000',1,1388.00,1665.60,9),
 (4,'诺基亚n85原装充电器',8,1,'ecs000004',17,58.00,69.60,0),
 (3,'诺基亚原装5800耳机',8,1,'ecs000002',24,68.00,81.60,3),
 (5,'索爱原装m2卡读卡器',11,7,'ecs000005',8,20.00,24.00,3),
@@ -50,7 +51,7 @@ insert into `goods` values (1,'kd876',4,8,'ecs000000',1,1388.00,1665.60,9),
  )engine myisam charset utf8;
 
 
-INSERT INTO `category` VALUES 
+INSERT INTO `category` VALUES
 (1,'手机类型',0),
 (2,'CDMA手机',1),
 (3,'GSM手机',1),
@@ -113,8 +114,8 @@ create table t (
      tid int,
      tname varchar(20)
 )engine myisam charset utf8;
- 
- 
+
+
  insert into m
      values
      (1,1,2,'2:0','2006-05-21'),
@@ -122,7 +123,7 @@ create table t (
      (3,3,1,'2:5','2006-06-25'),
      (4,2,1,'3:2','2006-07-21');
 
- 
+
  insert into t
      values
      (1,'国安'),
@@ -132,7 +133,7 @@ create table t (
 
 
 create table mian ( num int) engine myisam;
-insert into mian values 
+insert into mian values
 (3),
 (12),
 (15),
@@ -157,20 +158,20 @@ age smallint unsigned not null default 0
      bname varchar(20)
  )engine myisam charset utf8;
 
- 
+
  insert into boy (bname,hid)
      values
      ('屌丝','A'),
      ('杨过','B'),
      ('陈冠希','C');
 
- 
+
  create table girl (
     hid char(1),
      gname varchar(20)
      )engine myisam charset utf8;
 
- 
+
  insert into girl(gname,hid)
      values
      ('小龙女','B'),
