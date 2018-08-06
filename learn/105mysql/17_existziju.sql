@@ -1,0 +1,1 @@
+select * from category where exists (select * from goods where goods.cat_id=category.cat_id);
