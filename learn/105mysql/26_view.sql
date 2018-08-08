@@ -5,4 +5,7 @@ select * from goodsview;
 -- 显示
 show tables;
 
+-- 删除
+deop view vuser
+
 -- 视图和物理表有一一对应关系时才可以更改
