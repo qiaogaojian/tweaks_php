@@ -22,3 +22,5 @@ $michael->SayHi();
 $michael->name = "Qiao";
 
 $michael->SayHi();
+
+// php 对象中属性的获取 $this->value  value不需要加$
