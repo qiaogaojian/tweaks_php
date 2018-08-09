@@ -1,5 +1,20 @@
 <?php
 // 声明格式
-header("Content-type:text/html;charset=gbk"); //utf-8
+header("Content-type:text/html;charset=utf-8"); //gbk
 
-echo "中国";
+echo "中国<br>";
+
+class Baby
+{
+    public $name;
+    public $weight;
+
+    public function __construct($name,$weight)
+    {
+        echo "Baby name: ".$name." weight: ".$weight."kg";
+    }
+}
+
+$baby1 = new Baby("Michael",10);
+
+$baby2 = new Baby();
