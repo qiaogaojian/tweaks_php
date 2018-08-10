@@ -20,3 +20,22 @@ values
 (14, "Git", "Git", "category", "Git使用", 0, 2, 9),
 (15, "VSCode", "VSCode", "category", "VSCode使用", 0, 3, 9),
 (16, "Tips", "Tips", "tag", NULL, 2, 0, 0);
+
+
+`cid`       int(10) unsigned NOT NULL AUTO_INCREMENT,
+`title`     varchar(150) DEFAULT NULL,
+`slug`      varchar(150) DEFAULT NULL,
+`created`   int(10) unsigned DEFAULT '0',
+`modified`  int(10) unsigned DEFAULT '0',
+`text`      longtext,
+`order`     int(10) unsigned DEFAULT '0',
+`authorId`  int(10) unsigned DEFAULT '0',
+`template`  varchar(32) DEFAULT NULL,
+`type`      varchar(16) DEFAULT 'post',
+`status`    varchar(16) DEFAULT 'publish',
+`password`  varchar(32) DEFAULT NULL,
+`commentsNum` int(10) unsigned DEFAULT '0',
+`allowComment` char(1) DEFAULT '0',
+`allowPing` char(1) DEFAULT '0',
+`allowFeed` char(1) DEFAULT '0',
+`parent`    int(10) unsigned DEFAULT '0',
