@@ -1,5 +1,5 @@
 
-//分类信息
+// 分类信息
 truncate typecho_metas;
 
 insert into typecho_metas
@@ -39,3 +39,7 @@ values
 `allowPing` char(1) DEFAULT '0',
 `allowFeed` char(1) DEFAULT '0',
 `parent`    int(10) unsigned DEFAULT '0',
+
+
+// 更新文章类别分类关系表
+update typecho_metas set mid = 1 where mid = 2;
