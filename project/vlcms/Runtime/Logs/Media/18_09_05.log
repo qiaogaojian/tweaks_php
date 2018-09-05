@@ -1,0 +1,892 @@
+[ 2018-09-05T18:01:18+08:00 ] 127.0.0.1 /project/vlcms/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+SQL: SHOW COLUMNS FROM `sys_hooks` [ RunTime:0.0064s ]
+SQL: SELECT `name`,`addons` FROM `sys_hooks`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sys_addons` [ RunTime:0.0087s ]
+SQL: SELECT `id`,`name` FROM `sys_addons` WHERE `status` = 1 AND `name` IN ('ReturnTop')  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name` FROM `sys_addons` WHERE `status` = 1 AND `name` IN ('Attachment')  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`name` FROM `sys_addons` WHERE `status` = 1 AND `name` IN ('Attachment','SocialComment')  [ RunTime:0.0006s ]
+SQL: SELECT `id`,`name` FROM `sys_addons` WHERE `status` = 1 AND `name` IN ('Attachment')  [ RunTime:0.0004s ]
+SQL: SELECT `id`,`name` FROM `sys_addons` WHERE `status` = 1 AND `name` IN ('Editor')  [ RunTime:0.0004s ]
+SQL: SELECT `id`,`name` FROM `sys_addons` WHERE `status` = 1 AND `name` IN ('EditorForAdmin')  [ RunTime:0.0004s ]
+SQL: SELECT `id`,`name` FROM `sys_addons` WHERE `status` = 1 AND `name` IN ('SiteStat','SystemInfo','DevTeam')  [ RunTime:0.0005s ]
+SQL: SELECT `id`,`name` FROM `sys_addons` WHERE `status` = 1 AND `name` IN ('Editor')  [ RunTime:0.0004s ]
+SQL: SELECT `id`,`name` FROM `sys_addons` WHERE `status` = 1 AND `name` IN ('UploadImages')  [ RunTime:0.0004s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.067890s ]
+INFO: [ app_init ] --END-- [ RunTime:0.068270s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001715s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001854s ]
+SQL: SHOW COLUMNS FROM `sys_webconfig` [ RunTime:0.0106s ]
+SQL: SELECT `type`,`name`,`values` FROM `sys_webconfig` WHERE `status` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sys_slidemanage` [ RunTime:0.0092s ]
+SQL: SELECT * FROM `sys_slidemanage` WHERE ( classify=2 ) ORDER BY level asc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0083s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 3 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sys_slidemanage` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `sys_slidemanage` WHERE ( classify=1 ) LIMIT 4   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tab_game` [ RunTime:0.0063s ]
+SQL: SELECT `id`,`game_name`,`game_appid`,`sort`,`short`,`game_type`,`category`,`and_dow_address`,`ios_dow_address`,`game_address`,`dow_num`,`version`,`game_size`,`sicon`,`icon`,`cover`,`screenshot`,`game_status`,`recommend_status`,`pay_status`,`dow_status`,`game_score`,`features`,`recommend_level`,`create_time` FROM `tab_game` WHERE `game_status` = 1 AND `recommend_status` = 1 ORDER BY sort asc LIMIT 4   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`game_name`,`game_appid`,`sort`,`short`,`game_type`,`category`,`and_dow_address`,`ios_dow_address`,`game_address`,`dow_num`,`version`,`game_size`,`sicon`,`icon`,`cover`,`screenshot`,`game_status`,`recommend_status`,`pay_status`,`dow_status`,`game_score`,`features`,`recommend_level`,`create_time` FROM `tab_game` WHERE `game_status` = 1 AND `recommend_status` = 2 ORDER BY sort asc LIMIT 9   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `tab_giftbag` [ RunTime:0.0071s ]
+SQL: SELECT tab_giftbag.id as gift_id,`game_id`,`giftbag_name`,`giftbag_type`,tab_game.icon,tab_giftbag.create_time FROM `tab_giftbag` INNER JOIN tab_game on tab_giftbag.game_id = tab_game.id  WHERE `game_status` = 1 ORDER BY create_time  LIMIT 9   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `tab_area` [ RunTime:0.0061s ]
+SQL: SELECT tab_area.id as area_id,`game_id`,`game_name`,`area_name`,`start_time`,tab_game.icon,tab_area.create_time FROM `tab_area` INNER JOIN tab_game on tab_area.game_id = tab_game.id  WHERE `game_status` = 1 ORDER BY create_time  LIMIT 9   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000177s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000207s ]
+NOTIC: [8] Undefined variable: aaa D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\2382d326250712baca3bf54c5b555904.php 第 46 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\2382d326250712baca3bf54c5b555904.php 第 56 行.
+NOTIC: [8] Use of undefined constant game_list - assumed 'game_list' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\2382d326250712baca3bf54c5b555904.php 第 57 行.
+NOTIC: [8] Use of undefined constant game_detail - assumed 'game_detail' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\2382d326250712baca3bf54c5b555904.php 第 57 行.
+NOTIC: [8] Use of undefined constant game_list - assumed 'game_list' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\2382d326250712baca3bf54c5b555904.php 第 57 行.
+NOTIC: [8] Undefined variable: search_page D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\2382d326250712baca3bf54c5b555904.php 第 57 行.
+NOTIC: [8] Use of undefined constant gift_list - assumed 'gift_list' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\2382d326250712baca3bf54c5b555904.php 第 60 行.
+NOTIC: [8] Use of undefined constant gift_list - assumed 'gift_list' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\2382d326250712baca3bf54c5b555904.php 第 60 行.
+NOTIC: [8] Undefined variable: search_page D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\2382d326250712baca3bf54c5b555904.php 第 60 行.
+NOTIC: [8] Use of undefined constant Article - assumed 'Article' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\2382d326250712baca3bf54c5b555904.php 第 63 行.
+NOTIC: [8] Use of undefined constant Service - assumed 'Service' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\2382d326250712baca3bf54c5b555904.php 第 64 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\2382d326250712baca3bf54c5b555904.php 第 70 行.
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 4 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 5 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 6 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 7 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sys_category` [ RunTime:0.0066s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `sys_category` WHERE `id` = 43 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `sys_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sys_document` [ RunTime:0.0065s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `sys_document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` = 43 AND `create_time` < 1536141678 AND ( deadline = 0 OR deadline > 1536141678 ) ORDER BY `level` DESC,`id` DESC LIMIT 2   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `sys_category` WHERE `id` = 42 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `sys_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `sys_document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` = 42 AND `create_time` < 1536141678 AND ( deadline = 0 OR deadline > 1536141678 ) ORDER BY `level` DESC,`id` DESC LIMIT 2   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `sys_category` WHERE `id` = 44 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `sys_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `sys_document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` = 44 AND `create_time` < 1536141678 AND ( deadline = 0 OR deadline > 1536141678 ) ORDER BY `level` DESC,`id` DESC LIMIT 2   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 18 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 46 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 10 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 14 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 17 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tab_classification` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `tab_classification` WHERE ( status=1 and id=7 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 20 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tab_classification` WHERE ( status=1 and id=2 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 16 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tab_classification` WHERE ( status=1 and id=3 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 33 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tab_classification` WHERE ( status=1 and id=4 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 35 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tab_classification` WHERE ( status=1 and id=6 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 37 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `tab_classification` WHERE ( status=1 and id=3 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 39 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tab_classification` WHERE ( status=1 and id=7 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 15 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tab_classification` WHERE ( status=1 and id=3 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 19 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tab_classification` WHERE ( status=1 and id=3 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 21 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 8 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 9 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 13 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 11 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 17 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 16 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 15 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 19 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 9 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 11 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 8 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 13 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 17 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 16 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 15 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 19 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 20 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `sys_category` WHERE `id` = 44 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `sys_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `sys_document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` = 44 AND `create_time` < 1536141678 AND ( deadline = 0 OR deadline > 1536141678 ) ORDER BY `level` DESC,`id` DESC LIMIT 3   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 29 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 28 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 27 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tab_links` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `tab_links` WHERE `status` = 1 AND `type` = 2  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2 LIMIT 1   [ RunTime:0.0001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.067031s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.067053s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000337s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000357s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000409s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000434s ]
+
+[ 2018-09-05T18:01:18+08:00 ] 127.0.0.1 /project/vlcms/index.php?s=/Game/dow_url_generate/game_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002410s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002758s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000400s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000442s ]
+SQL: SHOW COLUMNS FROM `sys_webconfig` [ RunTime:0.0152s ]
+SQL: SELECT `type`,`name`,`values` FROM `sys_webconfig` WHERE `status` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sys_slidemanage` [ RunTime:0.0145s ]
+SQL: SELECT * FROM `sys_slidemanage` WHERE ( classify=2 ) ORDER BY level asc LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0104s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 3 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] array_walk_recursive() expects parameter 2 to be a valid callback, function 'think_filter' not found or invalid function name D:\xampp\htdocs\project\vlcms\ThinkPHP\Library\Think\App.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000503s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000548s ]
+
+[ 2018-09-05T18:01:19+08:00 ] 127.0.0.1 /project/vlcms/index.php?s=/Game/dow_url_generate/game_id/23.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003521s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000763s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000834s ]
+SQL: SHOW COLUMNS FROM `sys_webconfig` [ RunTime:0.0129s ]
+SQL: SELECT `type`,`name`,`values` FROM `sys_webconfig` WHERE `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sys_slidemanage` [ RunTime:0.0081s ]
+SQL: SELECT * FROM `sys_slidemanage` WHERE ( classify=2 ) ORDER BY level asc LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0139s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 3 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] array_walk_recursive() expects parameter 2 to be a valid callback, function 'think_filter' not found or invalid function name D:\xampp\htdocs\project\vlcms\ThinkPHP\Library\Think\App.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000598s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000647s ]
+
+[ 2018-09-05T18:01:19+08:00 ] 127.0.0.1 /project/vlcms/index.php?s=/Game/dow_url_generate/game_id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004117s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004483s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001267s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001381s ]
+SQL: SHOW COLUMNS FROM `sys_webconfig` [ RunTime:0.0093s ]
+SQL: SELECT `type`,`name`,`values` FROM `sys_webconfig` WHERE `status` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sys_slidemanage` [ RunTime:0.0078s ]
+SQL: SELECT * FROM `sys_slidemanage` WHERE ( classify=2 ) ORDER BY level asc LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0113s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 3 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] array_walk_recursive() expects parameter 2 to be a valid callback, function 'think_filter' not found or invalid function name D:\xampp\htdocs\project\vlcms\ThinkPHP\Library\Think\App.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001760s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001807s ]
+
+[ 2018-09-05T18:01:19+08:00 ] 127.0.0.1 /project/vlcms/index.php?s=/Game/dow_url_generate/game_id/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.009498s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010258s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001575s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001648s ]
+SQL: SHOW COLUMNS FROM `sys_webconfig` [ RunTime:0.0128s ]
+SQL: SELECT `type`,`name`,`values` FROM `sys_webconfig` WHERE `status` = 1  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sys_slidemanage` [ RunTime:0.0126s ]
+SQL: SELECT * FROM `sys_slidemanage` WHERE ( classify=2 ) ORDER BY level asc LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0105s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 3 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [2] array_walk_recursive() expects parameter 2 to be a valid callback, function 'think_filter' not found or invalid function name D:\xampp\htdocs\project\vlcms\ThinkPHP\Library\Think\App.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001124s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001249s ]
+
+[ 2018-09-05T18:01:19+08:00 ] 127.0.0.1 /project/vlcms/index.php?s=/Member/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.011912s ]
+INFO: [ app_init ] --END-- [ RunTime:0.012626s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000457s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000515s ]
+SQL: SHOW COLUMNS FROM `sys_webconfig` [ RunTime:0.0076s ]
+SQL: SELECT `type`,`name`,`values` FROM `sys_webconfig` WHERE `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sys_slidemanage` [ RunTime:0.0089s ]
+SQL: SELECT * FROM `sys_slidemanage` WHERE ( classify=2 ) ORDER BY level asc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0092s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 3 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [2] imagettftext(): Invalid font filename D:\xampp\htdocs\project\vlcms\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [2] imagettftext(): Invalid font filename D:\xampp\htdocs\project\vlcms\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [2] imagettftext(): Invalid font filename D:\xampp\htdocs\project\vlcms\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [2] imagettftext(): Invalid font filename D:\xampp\htdocs\project\vlcms\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000393s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000421s ]
+
+[ 2018-09-05T18:01:19+08:00 ] 127.0.0.1 /project/vlcms/media.php/Member/is_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001509s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001778s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000270s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000296s ]
+SQL: SHOW COLUMNS FROM `sys_webconfig` [ RunTime:0.0092s ]
+SQL: SELECT `type`,`name`,`values` FROM `sys_webconfig` WHERE `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sys_slidemanage` [ RunTime:0.0079s ]
+SQL: SELECT * FROM `sys_slidemanage` WHERE ( classify=2 ) ORDER BY level asc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0118s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 3 LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2018-09-05T18:01:19+08:00 ] 127.0.0.1 /project/vlcms/favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001681s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001935s ]
+
+[ 2018-09-05T18:01:28+08:00 ] 127.0.0.1 /project/vlcms/index.php?s=/Game/gift_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001509s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001775s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000269s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000296s ]
+SQL: SHOW COLUMNS FROM `sys_webconfig` [ RunTime:0.0097s ]
+SQL: SELECT `type`,`name`,`values` FROM `sys_webconfig` WHERE `status` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sys_slidemanage` [ RunTime:0.0075s ]
+SQL: SELECT * FROM `sys_slidemanage` WHERE ( classify=2 ) ORDER BY level asc LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 3 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2] array_walk_recursive() expects parameter 2 to be a valid callback, function 'think_filter' not found or invalid function name D:\xampp\htdocs\project\vlcms\ThinkPHP\Library\Think\App.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `tab_giftbag` [ RunTime:0.0066s ]
+SQL: SELECT tab_giftbag.id,giftbag_name,game_id,game_name,desribe,start_time,end_time,icon FROM `tab_giftbag` INNER JOIN tab_game ON tab_giftbag.game_id = tab_game.id  WHERE `game_status` = 1 ORDER BY id desc  [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tab_giftbag` INNER JOIN tab_game ON tab_giftbag.game_id = tab_game.id  WHERE `game_status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: row D:\xampp\htdocs\project\vlcms\Application\Media\Controller\BaseController.class.php 第 63 行.
+NOTIC: [8] Undefined variable: row D:\xampp\htdocs\project\vlcms\Application\Media\Controller\BaseController.class.php 第 64 行.
+NOTIC: [2] Division by zero D:\xampp\htdocs\project\vlcms\ThinkPHP\Library\Think\Page.class.php 第 84 行.
+NOTIC: [8] Undefined variable: cuont D:\xampp\htdocs\project\vlcms\Application\Media\Controller\BaseController.class.php 第 68 行.
+NOTIC: [8] Undefined index: tmeplate_list D:\xampp\htdocs\project\vlcms\Application\Media\Controller\BaseController.class.php 第 70 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000149s ]
+NOTIC: [8] Undefined variable: aaa D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\a2b084bdfd53f3dd6d6a694e33712712.php 第 46 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\a2b084bdfd53f3dd6d6a694e33712712.php 第 56 行.
+NOTIC: [8] Use of undefined constant game_list - assumed 'game_list' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\a2b084bdfd53f3dd6d6a694e33712712.php 第 57 行.
+NOTIC: [8] Use of undefined constant game_detail - assumed 'game_detail' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\a2b084bdfd53f3dd6d6a694e33712712.php 第 57 行.
+NOTIC: [8] Use of undefined constant game_list - assumed 'game_list' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\a2b084bdfd53f3dd6d6a694e33712712.php 第 57 行.
+NOTIC: [8] Undefined variable: search_page D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\a2b084bdfd53f3dd6d6a694e33712712.php 第 57 行.
+NOTIC: [8] Use of undefined constant gift_list - assumed 'gift_list' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\a2b084bdfd53f3dd6d6a694e33712712.php 第 60 行.
+NOTIC: [8] Use of undefined constant Article - assumed 'Article' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\a2b084bdfd53f3dd6d6a694e33712712.php 第 63 行.
+NOTIC: [8] Use of undefined constant Service - assumed 'Service' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\a2b084bdfd53f3dd6d6a694e33712712.php 第 64 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\a2b084bdfd53f3dd6d6a694e33712712.php 第 70 行.
+NOTIC: [8] Undefined variable: game_id D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\a2b084bdfd53f3dd6d6a694e33712712.php 第 80 行.
+NOTIC: [8] Undefined variable: gift_list D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\a2b084bdfd53f3dd6d6a694e33712712.php 第 81 行.
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 21 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 21 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 19 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 15 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 16 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 17 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 11 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 13 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 9 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 8 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tab_links` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `tab_links` WHERE `status` = 1 AND `type` = 2  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2 LIMIT 1   [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022399s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022428s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000340s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000297s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000319s ]
+
+[ 2018-09-05T18:01:28+08:00 ] 127.0.0.1 /project/vlcms/index.php?s=/Member/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002881s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003259s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000731s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000768s ]
+SQL: SHOW COLUMNS FROM `sys_webconfig` [ RunTime:0.0100s ]
+SQL: SELECT `type`,`name`,`values` FROM `sys_webconfig` WHERE `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sys_slidemanage` [ RunTime:0.0071s ]
+SQL: SELECT * FROM `sys_slidemanage` WHERE ( classify=2 ) ORDER BY level asc LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0119s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 3 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2] imagettftext(): Invalid font filename D:\xampp\htdocs\project\vlcms\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [2] imagettftext(): Invalid font filename D:\xampp\htdocs\project\vlcms\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [2] imagettftext(): Invalid font filename D:\xampp\htdocs\project\vlcms\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [2] imagettftext(): Invalid font filename D:\xampp\htdocs\project\vlcms\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001028s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001069s ]
+
+[ 2018-09-05T18:01:28+08:00 ] 127.0.0.1 /project/vlcms/media.php/Member/is_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003325s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003991s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000743s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000778s ]
+SQL: SHOW COLUMNS FROM `sys_webconfig` [ RunTime:0.0070s ]
+SQL: SELECT `type`,`name`,`values` FROM `sys_webconfig` WHERE `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sys_slidemanage` [ RunTime:0.0091s ]
+SQL: SELECT * FROM `sys_slidemanage` WHERE ( classify=2 ) ORDER BY level asc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 3 LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-09-05T18:01:29+08:00 ] 127.0.0.1 /project/vlcms/index.php?s=/Article/index/category/media.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003624s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004014s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000733s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000765s ]
+SQL: SHOW COLUMNS FROM `sys_webconfig` [ RunTime:0.0083s ]
+SQL: SELECT `type`,`name`,`values` FROM `sys_webconfig` WHERE `status` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sys_slidemanage` [ RunTime:0.0075s ]
+SQL: SELECT * FROM `sys_slidemanage` WHERE ( classify=2 ) ORDER BY level asc LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0077s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 3 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sys_category` [ RunTime:0.0068s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `sys_category` WHERE `name` = 'media' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+NOTIC: [8] Undefined variable: aaa D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\4b64af2ed27d7fac04f793eef1a11024.php 第 46 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\4b64af2ed27d7fac04f793eef1a11024.php 第 56 行.
+NOTIC: [8] Use of undefined constant game_list - assumed 'game_list' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\4b64af2ed27d7fac04f793eef1a11024.php 第 57 行.
+NOTIC: [8] Use of undefined constant game_detail - assumed 'game_detail' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\4b64af2ed27d7fac04f793eef1a11024.php 第 57 行.
+NOTIC: [8] Use of undefined constant game_list - assumed 'game_list' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\4b64af2ed27d7fac04f793eef1a11024.php 第 57 行.
+NOTIC: [8] Undefined variable: search_page D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\4b64af2ed27d7fac04f793eef1a11024.php 第 57 行.
+NOTIC: [8] Use of undefined constant gift_list - assumed 'gift_list' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\4b64af2ed27d7fac04f793eef1a11024.php 第 60 行.
+NOTIC: [8] Use of undefined constant gift_list - assumed 'gift_list' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\4b64af2ed27d7fac04f793eef1a11024.php 第 60 行.
+NOTIC: [8] Undefined variable: search_page D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\4b64af2ed27d7fac04f793eef1a11024.php 第 60 行.
+NOTIC: [8] Use of undefined constant Article - assumed 'Article' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\4b64af2ed27d7fac04f793eef1a11024.php 第 63 行.
+NOTIC: [8] Use of undefined constant Service - assumed 'Service' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\4b64af2ed27d7fac04f793eef1a11024.php 第 64 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\4b64af2ed27d7fac04f793eef1a11024.php 第 70 行.
+NOTIC: [8] Undefined variable: type D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\4b64af2ed27d7fac04f793eef1a11024.php 第 74 行.
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `sys_category` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `sys_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000021s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.007927s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003878s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003918s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000620s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000642s ]
+NOTIC: [8] Undefined variable: type D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\4b64af2ed27d7fac04f793eef1a11024.php 第 80 行.
+NOTIC: [8] Undefined variable: type D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\4b64af2ed27d7fac04f793eef1a11024.php 第 81 行.
+NOTIC: [8] Undefined variable: type D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\4b64af2ed27d7fac04f793eef1a11024.php 第 82 行.
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `sys_category` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `sys_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sys_document` [ RunTime:0.0075s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `sys_document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` IN ('41','42','43','44','45','46','48','47') AND `create_time` < 1536141689 AND ( deadline = 0 OR deadline > 1536141689 ) ORDER BY `level` DESC,`id` DESC LIMIT 0,10   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tab_game` [ RunTime:0.0073s ]
+SQL: SELECT `id`,`game_name`,`game_appid`,`sort`,`short`,`game_type`,`category`,`and_dow_address`,`ios_dow_address`,`game_address`,`dow_num`,`version`,`game_size`,`sicon`,`icon`,`cover`,`screenshot`,`game_status`,`recommend_status`,`pay_status`,`dow_status`,`game_score`,`features`,`recommend_level`,`create_time` FROM `tab_game` WHERE `game_status` = 1 ORDER BY sort asc LIMIT 10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000022s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.032820s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 20 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 8 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 20 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 9 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 13 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 11 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 17 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 20 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 16 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 33 LIMIT 1   [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007092s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.021025s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000005s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.027496s ]
+SQL: SHOW COLUMNS FROM `tab_links` [ RunTime:0.0077s ]
+SQL: SELECT * FROM `tab_links` WHERE `status` = 1 AND `type` = 2  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2 LIMIT 1   [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016038s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.021025s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000006s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.036448s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001040s ]
+
+[ 2018-09-05T18:01:29+08:00 ] 127.0.0.1 /project/vlcms/index.php?s=/Member/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.011162s ]
+INFO: [ app_init ] --END-- [ RunTime:0.011638s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000657s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000686s ]
+SQL: SHOW COLUMNS FROM `sys_webconfig` [ RunTime:0.0128s ]
+SQL: SELECT `type`,`name`,`values` FROM `sys_webconfig` WHERE `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sys_slidemanage` [ RunTime:0.0108s ]
+SQL: SELECT * FROM `sys_slidemanage` WHERE ( classify=2 ) ORDER BY level asc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 3 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2] imagettftext(): Invalid font filename D:\xampp\htdocs\project\vlcms\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [2] imagettftext(): Invalid font filename D:\xampp\htdocs\project\vlcms\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [2] imagettftext(): Invalid font filename D:\xampp\htdocs\project\vlcms\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [2] imagettftext(): Invalid font filename D:\xampp\htdocs\project\vlcms\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000701s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000732s ]
+
+[ 2018-09-05T18:01:30+08:00 ] 127.0.0.1 /project/vlcms/media.php/Member/is_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002923s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003383s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001551s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001697s ]
+SQL: SHOW COLUMNS FROM `sys_webconfig` [ RunTime:0.0074s ]
+SQL: SELECT `type`,`name`,`values` FROM `sys_webconfig` WHERE `status` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sys_slidemanage` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `sys_slidemanage` WHERE ( classify=2 ) ORDER BY level asc LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0074s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 3 LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-09-05T18:01:31+08:00 ] 127.0.0.1 /project/vlcms/index.php?s=/Service/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002728s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003101s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000713s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000745s ]
+SQL: SHOW COLUMNS FROM `sys_webconfig` [ RunTime:0.0067s ]
+SQL: SELECT `type`,`name`,`values` FROM `sys_webconfig` WHERE `status` = 1  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sys_slidemanage` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `sys_slidemanage` WHERE ( classify=2 ) ORDER BY level asc LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 3 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2] array_walk_recursive() expects parameter 2 to be a valid callback, function 'think_filter' not found or invalid function name D:\xampp\htdocs\project\vlcms\ThinkPHP\Library\Think\App.class.php 第 170 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000153s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000228s ]
+NOTIC: [8] Undefined variable: aaa D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\e70e51003d19f7ffda6f393b1d0011a4.php 第 46 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\e70e51003d19f7ffda6f393b1d0011a4.php 第 56 行.
+NOTIC: [8] Use of undefined constant game_list - assumed 'game_list' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\e70e51003d19f7ffda6f393b1d0011a4.php 第 57 行.
+NOTIC: [8] Use of undefined constant game_detail - assumed 'game_detail' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\e70e51003d19f7ffda6f393b1d0011a4.php 第 57 行.
+NOTIC: [8] Use of undefined constant game_list - assumed 'game_list' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\e70e51003d19f7ffda6f393b1d0011a4.php 第 57 行.
+NOTIC: [8] Undefined variable: search_page D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\e70e51003d19f7ffda6f393b1d0011a4.php 第 57 行.
+NOTIC: [8] Use of undefined constant gift_list - assumed 'gift_list' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\e70e51003d19f7ffda6f393b1d0011a4.php 第 60 行.
+NOTIC: [8] Use of undefined constant gift_list - assumed 'gift_list' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\e70e51003d19f7ffda6f393b1d0011a4.php 第 60 行.
+NOTIC: [8] Undefined variable: search_page D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\e70e51003d19f7ffda6f393b1d0011a4.php 第 60 行.
+NOTIC: [8] Use of undefined constant Article - assumed 'Article' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\e70e51003d19f7ffda6f393b1d0011a4.php 第 63 行.
+NOTIC: [8] Use of undefined constant Service - assumed 'Service' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\e70e51003d19f7ffda6f393b1d0011a4.php 第 64 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\e70e51003d19f7ffda6f393b1d0011a4.php 第 70 行.
+NOTIC: [8] Undefined variable: sindex D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\e70e51003d19f7ffda6f393b1d0011a4.php 第 108 行.
+SQL: SHOW COLUMNS FROM `tab_links` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `tab_links` WHERE `status` = 1 AND `type` = 2  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2 LIMIT 1   [ RunTime:0.0001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035880s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035913s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000641s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000661s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000770s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000801s ]
+
+[ 2018-09-05T18:01:31+08:00 ] 127.0.0.1 /project/vlcms/index.php?s=/Member/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004577s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001281s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001404s ]
+SQL: SHOW COLUMNS FROM `sys_webconfig` [ RunTime:0.0119s ]
+SQL: SELECT `type`,`name`,`values` FROM `sys_webconfig` WHERE `status` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sys_slidemanage` [ RunTime:0.0093s ]
+SQL: SELECT * FROM `sys_slidemanage` WHERE ( classify=2 ) ORDER BY level asc LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0109s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 3 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] imagettftext(): Invalid font filename D:\xampp\htdocs\project\vlcms\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [2] imagettftext(): Invalid font filename D:\xampp\htdocs\project\vlcms\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [2] imagettftext(): Invalid font filename D:\xampp\htdocs\project\vlcms\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [2] imagettftext(): Invalid font filename D:\xampp\htdocs\project\vlcms\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000907s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000963s ]
+
+[ 2018-09-05T18:01:31+08:00 ] 127.0.0.1 /project/vlcms/media.php/Member/is_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003987s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004537s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001027s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001083s ]
+SQL: SHOW COLUMNS FROM `sys_webconfig` [ RunTime:0.0094s ]
+SQL: SELECT `type`,`name`,`values` FROM `sys_webconfig` WHERE `status` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sys_slidemanage` [ RunTime:0.0078s ]
+SQL: SELECT * FROM `sys_slidemanage` WHERE ( classify=2 ) ORDER BY level asc LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0096s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 3 LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-09-05T18:01:33+08:00 ] 127.0.0.1 /project/vlcms/index.php?s=/Game/game_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.007371s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008360s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001063s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001115s ]
+SQL: SHOW COLUMNS FROM `sys_webconfig` [ RunTime:0.0071s ]
+SQL: SELECT `type`,`name`,`values` FROM `sys_webconfig` WHERE `status` = 1  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sys_slidemanage` [ RunTime:0.0096s ]
+SQL: SELECT * FROM `sys_slidemanage` WHERE ( classify=2 ) ORDER BY level asc LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0076s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 3 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [2] array_walk_recursive() expects parameter 2 to be a valid callback, function 'think_filter' not found or invalid function name D:\xampp\htdocs\project\vlcms\ThinkPHP\Library\Think\App.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `tab_classification` [ RunTime:0.0085s ]
+SQL: SELECT * FROM `tab_classification` WHERE ( status=1 )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tab_game` [ RunTime:0.0076s ]
+SQL: SELECT * FROM `tab_game` WHERE `game_status` = 1 ORDER BY sort asc LIMIT 0,10   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tab_game` WHERE `game_status` = 1 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: cuont D:\xampp\htdocs\project\vlcms\Application\Media\Controller\BaseController.class.php 第 47 行.
+NOTIC: [8] Undefined index: tmeplate_list D:\xampp\htdocs\project\vlcms\Application\Media\Controller\BaseController.class.php 第 49 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000119s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000150s ]
+NOTIC: [8] Undefined variable: aaa D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\607b1ea0f5f510aca86cc409ad4aa677.php 第 46 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\607b1ea0f5f510aca86cc409ad4aa677.php 第 56 行.
+NOTIC: [8] Use of undefined constant game_list - assumed 'game_list' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\607b1ea0f5f510aca86cc409ad4aa677.php 第 57 行.
+NOTIC: [8] Use of undefined constant gift_list - assumed 'gift_list' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\607b1ea0f5f510aca86cc409ad4aa677.php 第 60 行.
+NOTIC: [8] Use of undefined constant gift_list - assumed 'gift_list' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\607b1ea0f5f510aca86cc409ad4aa677.php 第 60 行.
+NOTIC: [8] Undefined variable: search_page D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\607b1ea0f5f510aca86cc409ad4aa677.php 第 60 行.
+NOTIC: [8] Use of undefined constant Article - assumed 'Article' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\607b1ea0f5f510aca86cc409ad4aa677.php 第 63 行.
+NOTIC: [8] Use of undefined constant Service - assumed 'Service' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\607b1ea0f5f510aca86cc409ad4aa677.php 第 64 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\607b1ea0f5f510aca86cc409ad4aa677.php 第 70 行.
+SQL: SELECT * FROM `tab_classification` WHERE ( status=1 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 20 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tab_classification` WHERE ( status=1 and id=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tab_game_info` [ RunTime:0.0078s ]
+SQL: SELECT `introduction` FROM `tab_game_info` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 8 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `tab_classification` WHERE ( status=1 and id=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `introduction` FROM `tab_game_info` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 20 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tab_classification` WHERE ( status=1 and id=3 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `introduction` FROM `tab_game_info` WHERE `id` = 23 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 9 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tab_classification` WHERE ( status=1 and id=3 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `introduction` FROM `tab_game_info` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 13 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tab_classification` WHERE ( status=1 and id=5 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `introduction` FROM `tab_game_info` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 11 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tab_classification` WHERE ( status=1 and id=6 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `introduction` FROM `tab_game_info` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 17 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tab_classification` WHERE ( status=1 and id=7 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `introduction` FROM `tab_game_info` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 20 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tab_classification` WHERE ( status=1 and id=2 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `introduction` FROM `tab_game_info` WHERE `id` = 24 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 16 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tab_classification` WHERE ( status=1 and id=3 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `introduction` FROM `tab_game_info` WHERE `id` = 6 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 33 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tab_classification` WHERE ( status=1 and id=4 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `introduction` FROM `tab_game_info` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tab_links` [ RunTime:0.0082s ]
+SQL: SELECT * FROM `tab_links` WHERE `status` = 1 AND `type` = 2  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2 LIMIT 1   [ RunTime:0.0001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040926s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040956s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000763s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000789s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000866s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000898s ]
+
+[ 2018-09-05T18:01:33+08:00 ] 127.0.0.1 /project/vlcms/index.php?s=/Member/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002803s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003221s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002621s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003753s ]
+SQL: SHOW COLUMNS FROM `sys_webconfig` [ RunTime:0.0107s ]
+SQL: SELECT `type`,`name`,`values` FROM `sys_webconfig` WHERE `status` = 1  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `sys_slidemanage` [ RunTime:0.0139s ]
+SQL: SELECT * FROM `sys_slidemanage` WHERE ( classify=2 ) ORDER BY level asc LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0081s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 3 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [2] imagettftext(): Invalid font filename D:\xampp\htdocs\project\vlcms\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [2] imagettftext(): Invalid font filename D:\xampp\htdocs\project\vlcms\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [2] imagettftext(): Invalid font filename D:\xampp\htdocs\project\vlcms\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [2] imagettftext(): Invalid font filename D:\xampp\htdocs\project\vlcms\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001335s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001366s ]
+
+[ 2018-09-05T18:01:33+08:00 ] 127.0.0.1 /project/vlcms/media.php/Member/is_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002918s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004065s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000663s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000695s ]
+SQL: SHOW COLUMNS FROM `sys_webconfig` [ RunTime:0.0088s ]
+SQL: SELECT `type`,`name`,`values` FROM `sys_webconfig` WHERE `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sys_slidemanage` [ RunTime:0.0194s ]
+SQL: SELECT * FROM `sys_slidemanage` WHERE ( classify=2 ) ORDER BY level asc LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0087s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 3 LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-09-05T18:01:51+08:00 ] 127.0.0.1 /project/vlcms/index.php?s=/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.006547s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007257s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001364s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001398s ]
+SQL: SHOW COLUMNS FROM `sys_webconfig` [ RunTime:0.0074s ]
+SQL: SELECT `type`,`name`,`values` FROM `sys_webconfig` WHERE `status` = 1  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sys_slidemanage` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `sys_slidemanage` WHERE ( classify=2 ) ORDER BY level asc LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 3 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sys_slidemanage` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `sys_slidemanage` WHERE ( classify=1 ) LIMIT 4   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tab_game` [ RunTime:0.0077s ]
+SQL: SELECT `id`,`game_name`,`game_appid`,`sort`,`short`,`game_type`,`category`,`and_dow_address`,`ios_dow_address`,`game_address`,`dow_num`,`version`,`game_size`,`sicon`,`icon`,`cover`,`screenshot`,`game_status`,`recommend_status`,`pay_status`,`dow_status`,`game_score`,`features`,`recommend_level`,`create_time` FROM `tab_game` WHERE `game_status` = 1 AND `recommend_status` = 1 ORDER BY sort asc LIMIT 4   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`game_name`,`game_appid`,`sort`,`short`,`game_type`,`category`,`and_dow_address`,`ios_dow_address`,`game_address`,`dow_num`,`version`,`game_size`,`sicon`,`icon`,`cover`,`screenshot`,`game_status`,`recommend_status`,`pay_status`,`dow_status`,`game_score`,`features`,`recommend_level`,`create_time` FROM `tab_game` WHERE `game_status` = 1 AND `recommend_status` = 2 ORDER BY sort asc LIMIT 9   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `tab_giftbag` [ RunTime:0.0070s ]
+SQL: SELECT tab_giftbag.id as gift_id,`game_id`,`giftbag_name`,`giftbag_type`,tab_game.icon,tab_giftbag.create_time FROM `tab_giftbag` INNER JOIN tab_game on tab_giftbag.game_id = tab_game.id  WHERE `game_status` = 1 ORDER BY create_time  LIMIT 9   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tab_area` [ RunTime:0.0084s ]
+SQL: SELECT tab_area.id as area_id,`game_id`,`game_name`,`area_name`,`start_time`,tab_game.icon,tab_area.create_time FROM `tab_area` INNER JOIN tab_game on tab_area.game_id = tab_game.id  WHERE `game_status` = 1 ORDER BY create_time  LIMIT 9   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000203s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000233s ]
+NOTIC: [8] Undefined variable: aaa D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\2382d326250712baca3bf54c5b555904.php 第 46 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\2382d326250712baca3bf54c5b555904.php 第 56 行.
+NOTIC: [8] Use of undefined constant game_list - assumed 'game_list' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\2382d326250712baca3bf54c5b555904.php 第 57 行.
+NOTIC: [8] Use of undefined constant game_detail - assumed 'game_detail' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\2382d326250712baca3bf54c5b555904.php 第 57 行.
+NOTIC: [8] Use of undefined constant game_list - assumed 'game_list' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\2382d326250712baca3bf54c5b555904.php 第 57 行.
+NOTIC: [8] Undefined variable: search_page D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\2382d326250712baca3bf54c5b555904.php 第 57 行.
+NOTIC: [8] Use of undefined constant gift_list - assumed 'gift_list' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\2382d326250712baca3bf54c5b555904.php 第 60 行.
+NOTIC: [8] Use of undefined constant gift_list - assumed 'gift_list' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\2382d326250712baca3bf54c5b555904.php 第 60 行.
+NOTIC: [8] Undefined variable: search_page D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\2382d326250712baca3bf54c5b555904.php 第 60 行.
+NOTIC: [8] Use of undefined constant Article - assumed 'Article' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\2382d326250712baca3bf54c5b555904.php 第 63 行.
+NOTIC: [8] Use of undefined constant Service - assumed 'Service' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\2382d326250712baca3bf54c5b555904.php 第 64 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\xampp\htdocs\project\vlcms\Runtime\Cache\Media\2382d326250712baca3bf54c5b555904.php 第 70 行.
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 4 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 5 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 6 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 7 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sys_category` [ RunTime:0.0067s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `sys_category` WHERE `id` = 43 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `sys_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sys_document` [ RunTime:0.0067s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `sys_document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` = 43 AND `create_time` < 1536141711 AND ( deadline = 0 OR deadline > 1536141711 ) ORDER BY `level` DESC,`id` DESC LIMIT 2   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `sys_category` WHERE `id` = 42 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `sys_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `sys_document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` = 42 AND `create_time` < 1536141711 AND ( deadline = 0 OR deadline > 1536141711 ) ORDER BY `level` DESC,`id` DESC LIMIT 2   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `sys_category` WHERE `id` = 44 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `sys_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `sys_document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` = 44 AND `create_time` < 1536141711 AND ( deadline = 0 OR deadline > 1536141711 ) ORDER BY `level` DESC,`id` DESC LIMIT 2   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 18 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 46 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 10 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 14 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 17 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tab_classification` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `tab_classification` WHERE ( status=1 and id=7 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 20 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tab_classification` WHERE ( status=1 and id=2 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 16 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tab_classification` WHERE ( status=1 and id=3 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 33 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tab_classification` WHERE ( status=1 and id=4 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 35 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tab_classification` WHERE ( status=1 and id=6 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 37 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tab_classification` WHERE ( status=1 and id=3 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 39 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tab_classification` WHERE ( status=1 and id=7 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 15 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tab_classification` WHERE ( status=1 and id=3 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 19 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tab_classification` WHERE ( status=1 and id=3 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 21 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 8 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 9 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 13 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 11 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 17 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 16 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 15 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 19 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 9 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 11 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 8 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 13 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 17 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 16 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 15 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 19 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 20 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `sys_category` WHERE `id` = 44 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `sys_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `sys_document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` = 44 AND `create_time` < 1536141711 AND ( deadline = 0 OR deadline > 1536141711 ) ORDER BY `level` DESC,`id` DESC LIMIT 3   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 29 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 28 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 27 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tab_links` [ RunTime:0.0071s ]
+SQL: SELECT * FROM `tab_links` WHERE `status` = 1 AND `type` = 2  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2 LIMIT 1   [ RunTime:0.0001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.071052s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.071084s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001221s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001242s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001331s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001369s ]
+
+[ 2018-09-05T18:01:51+08:00 ] 127.0.0.1 /project/vlcms/index.php?s=/Game/dow_url_generate/game_id/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001295s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001726s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000414s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000469s ]
+SQL: SHOW COLUMNS FROM `sys_webconfig` [ RunTime:0.0095s ]
+SQL: SELECT `type`,`name`,`values` FROM `sys_webconfig` WHERE `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sys_slidemanage` [ RunTime:0.0084s ]
+SQL: SELECT * FROM `sys_slidemanage` WHERE ( classify=2 ) ORDER BY level asc LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0087s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 3 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2] array_walk_recursive() expects parameter 2 to be a valid callback, function 'think_filter' not found or invalid function name D:\xampp\htdocs\project\vlcms\ThinkPHP\Library\Think\App.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000506s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000558s ]
+
+[ 2018-09-05T18:01:51+08:00 ] 127.0.0.1 /project/vlcms/index.php?s=/Game/dow_url_generate/game_id/23.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.005786s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006495s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001478s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001567s ]
+SQL: SHOW COLUMNS FROM `sys_webconfig` [ RunTime:0.0063s ]
+SQL: SELECT `type`,`name`,`values` FROM `sys_webconfig` WHERE `status` = 1  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sys_slidemanage` [ RunTime:0.0071s ]
+SQL: SELECT * FROM `sys_slidemanage` WHERE ( classify=2 ) ORDER BY level asc LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 3 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2] array_walk_recursive() expects parameter 2 to be a valid callback, function 'think_filter' not found or invalid function name D:\xampp\htdocs\project\vlcms\ThinkPHP\Library\Think\App.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001650s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001715s ]
+
+[ 2018-09-05T18:01:51+08:00 ] 127.0.0.1 /project/vlcms/index.php?s=/Game/dow_url_generate/game_id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.005030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005762s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001214s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001275s ]
+SQL: SHOW COLUMNS FROM `sys_webconfig` [ RunTime:0.0083s ]
+SQL: SELECT `type`,`name`,`values` FROM `sys_webconfig` WHERE `status` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sys_slidemanage` [ RunTime:0.0098s ]
+SQL: SELECT * FROM `sys_slidemanage` WHERE ( classify=2 ) ORDER BY level asc LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0094s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 3 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2] array_walk_recursive() expects parameter 2 to be a valid callback, function 'think_filter' not found or invalid function name D:\xampp\htdocs\project\vlcms\ThinkPHP\Library\Think\App.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000867s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000902s ]
+
+[ 2018-09-05T18:01:51+08:00 ] 127.0.0.1 /project/vlcms/index.php?s=/Game/dow_url_generate/game_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.007350s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003545s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003669s ]
+SQL: SHOW COLUMNS FROM `sys_webconfig` [ RunTime:0.0063s ]
+SQL: SELECT `type`,`name`,`values` FROM `sys_webconfig` WHERE `status` = 1  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sys_slidemanage` [ RunTime:0.0078s ]
+SQL: SELECT * FROM `sys_slidemanage` WHERE ( classify=2 ) ORDER BY level asc LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0074s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 3 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2] array_walk_recursive() expects parameter 2 to be a valid callback, function 'think_filter' not found or invalid function name D:\xampp\htdocs\project\vlcms\ThinkPHP\Library\Think\App.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001324s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001359s ]
+
+[ 2018-09-05T18:01:51+08:00 ] 127.0.0.1 /project/vlcms/index.php?s=/Member/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003967s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004699s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000955s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000993s ]
+SQL: SHOW COLUMNS FROM `sys_webconfig` [ RunTime:0.0067s ]
+SQL: SELECT `type`,`name`,`values` FROM `sys_webconfig` WHERE `status` = 1  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sys_slidemanage` [ RunTime:0.0072s ]
+SQL: SELECT * FROM `sys_slidemanage` WHERE ( classify=2 ) ORDER BY level asc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0072s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 3 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2] imagettftext(): Invalid font filename D:\xampp\htdocs\project\vlcms\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [2] imagettftext(): Invalid font filename D:\xampp\htdocs\project\vlcms\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [2] imagettftext(): Invalid font filename D:\xampp\htdocs\project\vlcms\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [2] imagettftext(): Invalid font filename D:\xampp\htdocs\project\vlcms\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000989s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001026s ]
+
+[ 2018-09-05T18:01:51+08:00 ] 127.0.0.1 /project/vlcms/media.php/Member/is_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002841s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003224s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000656s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000684s ]
+SQL: SHOW COLUMNS FROM `sys_webconfig` [ RunTime:0.0066s ]
+SQL: SELECT `type`,`name`,`values` FROM `sys_webconfig` WHERE `status` = 1  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sys_slidemanage` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `sys_slidemanage` WHERE ( classify=2 ) ORDER BY level asc LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0073s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 3 LIMIT 1   [ RunTime:0.0002s ]
+

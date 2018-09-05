@@ -1,0 +1,337 @@
+<extend name="Public/base" />
+
+<block name="body">
+<link rel="stylesheet" type="text/css" href="__CSS__/admin_table.css" media="all">
+<script type="text/javascript" src="__STATIC__/uploadify/jquery.uploadify.min.js"></script>
+    <div class="main-title cf">
+        <h2>新增 [游戏]</h2>
+    </div>
+    <!-- 标签页导航 -->
+<div class="tab-wrap">
+    <ul class="tab-nav nav">
+        <li data-tab="tab1" class="current"><a href="javascript:void(0);">基础</a></li><li data-tab="tab2" ><a href="javascript:void(0);">扩展</a></li>
+    </ul>
+    <div class="tab-content zc_for">
+    <!-- 表单 -->
+    <form id="form" action="{:U('add')}" method="post" class="form-horizontal">
+        <!-- 基础文档模型 -->
+        <div id="tab1" class="tab-pane in tab1">
+    		<table  border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                  <tr>
+                    <td class="l">游戏名称：</td>
+                    <td class="r" colspan='3'>
+                        <input type="text" class="txt txt_title" name="game_name" value="">
+                        <input type="hidden"  name="game_appid" value="{:generate_game_appid()}">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="l">游戏类型：</td>
+                    <td class="r">
+                        <select name="game_type">
+                            <notempty name="cl">
+                            <foreach name="cl" item="vo">
+                            <option value="{$vo.id}">{$vo.name}</option>
+                            </foreach>
+                            </notempty>
+                        </select>
+                    </td>
+                    <td class="l">游戏分组：</td>
+                    <td class="r">
+                        <select name="category">
+                            <option value="1">手游</option>
+                            <option value="2">H5</option>
+                            <option value="3">页游</option>
+                        </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="l">游戏排序：</td>
+                    <td class="r">
+                        <input type="text" class="txt" name="sort" value="">
+                    </td>
+                    <td class="l">游戏简写：</td>
+                    <td class="r">
+                        <input type="text" class="txt" name="short" value="">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="l">游戏版本：</td>
+                    <td class="r">
+                        <input type="text" class="txt" name="version" value="">
+                    </td>
+                    <td class="l">游戏大小：</td>
+                    <td class="r">
+                        <input type="text" class="txt" name="game_size" value="">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="l">游戏地址：</td>
+                    <td class="r" colspan='3'>
+                        <input type="text" class="txt txt_title" name="game_address" value="">
+                    </td>
+                  </tr>
+                  <!-- <tr>
+                    <td class="l">安卓地址：</td>
+                    <td class="r">
+                        <input type="file" id="and_dow_address">
+                        <input type="hidden" name="and_dow_address" value="{$data['and_dow_address']}"/>
+                        <div class="upload-img-box">
+                            <present name="data['and_dow_address']">
+                                <div class="upload-pre-file"><span class="upload_icon_all"></span>{$data['and_dow_address']}</div>
+                            </present>
+                        </div>
+                    </td>
+                    <td class="l">苹果地址：</td>
+                    <td class="r">
+                        <input type="file" id="ios_dow_address">
+                        <input type="hidden" name="ios_dow_address" value="{$data['ios_dow_address']}"/>
+                        <div class="upload-img-box">
+                            <present name="data['ios_dow_address']">
+                                <div class="upload-pre-file"><span class="upload_icon_all"></span>{$data['ios_dow_address']}</div>
+                            </present>
+                        </div>
+                    </td>
+                  </tr> -->
+                  <tr>
+                    <td class="l">游戏图标：</td>
+                    <td class="r">
+                        <input type="file" id="upload_picture_icon">
+                        <input type="hidden" name="icon" id="cover_id_icon"/>
+                        <div class="upload-img-box">
+                        <notempty name="data['icon']">
+                            <div class="upload-pre-item"><img src="{$data['icon']|get_cover='path'}"/></div>
+                        </notempty>
+                        </div>
+                    </td>
+                    <td class="l">游戏封面：</td>
+                    <td class="r">
+                        <input type="file" id="upload_picture_cover">
+                        <input type="hidden" name="cover" id="cover_id_cover"/>
+                        <div class="upload-img-box">
+                        <notempty name="data['cover']">
+                            <div class="upload-pre-item"><img src="{$data['cover']|get_cover='path'}"/></div>
+                        </notempty>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                      <td class="l">游戏截图：</td>
+                      <td class="r" colspan='3'>
+                          {:hook('UploadImages', array('name'=>'screenshot','value'=>''))}
+                      </td>
+                  </tr>
+                  <tr>
+                    <td class="l">游戏状态：</td>
+                    <td class="r">
+                        <label class="inp_radio">
+                            <input type="radio" class="inp_radio" value="0" name="game_status">关闭
+                            <input type="radio" class="inp_radio" value="1" name="game_status" checked="checked">开启
+                        </label>
+                    </td>
+                    <td class="l">推荐状态：</td>
+                    <td class="r">
+                        <label class="inp_radio">
+                            <input type="radio" class="inp_radio" value="0" name="recommend_status">不推荐
+                            <input type="radio" class="inp_radio" value="1" name="recommend_status" checked="checked">推荐
+                            <input type="radio" class="inp_radio" value="2" name="recommend_status" >热门
+                            <input type="radio" class="inp_radio" value="3" name="recommend_status" >最新
+                        </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="l">充值状态：</td>
+                    <td class="r">
+                        <label class="inp_radio">
+                            <input type="radio" class="inp_radio" value="0" name="pay_status">关闭
+                            <input type="radio" class="inp_radio" value="1" name="pay_status" checked="checked">开启
+                        </label>
+                    </td>
+                    <td class="l">下载状态：</td>
+                    <td class="r">
+                        <label class="inp_radio">
+                            <input type="radio" class="inp_radio" value="0" name="dow_status">关&nbsp;&nbsp;&nbsp;闭
+                            <input type="radio" class="inp_radio" value="1" name="dow_status" checked="checked">开启
+                        </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="l">游戏特征：</td>
+                    <td class="r" colspan='3'>
+                        <input type="text" class="txt txt_title" name="features" value="">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="l">游戏评分：</td>
+                    <td class="r">
+                        <input type="text" class="txt" name="game_score" value="">
+                    </td>
+                    <td class="l">推荐指数：</td>
+                    <td class="r">
+                        <input type="text" class="txt" name="recommend_level" value="">
+                    </td>
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="tab2" class="tab-pane  tab2">
+            <table  border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                  <tr>
+                    <td class="l">关键字：</td>
+                    <td class="r">
+                        <input type="text" class="txt" name="keyword" value="">
+                    </td>
+                    <td class="l">合作商ID：</td>
+                    <td class="r">
+                        <input type="text" class="txt" name="coop_id" value="">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="l">游戏币名称：</td>
+                    <td class="r">
+                        <input type="text" class="txt" name="game_coin_name" value="">
+                    </td>
+                    <td class="l">游戏币比例：</td>
+                    <td class="r">
+                        <input type="text" class="txt" name="game_coin_ration" value="">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="l">游戏论坛：</td>
+                    <td class="r" colspan='3'>
+                        <input type="text" class="txt txt_title" name="game_bbs" value="">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="l">游戏官网：</td>
+                    <td class="r" colspan='3'>
+                        <input type="text" class="txt txt_title" name="game_website" value="">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="l">游戏群：</td>
+                    <td class="r">
+                        <input type="text" class="txt" name="qq_group" value="">
+                    </td>
+                    <td class="l">运营商：</td>
+                    <td class="r">
+                        <input type="text" class="txt" name="operator" value="">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="l">游戏简介：</td>
+                    <td class="r" colspan='3'>
+                        <textarea name="introduction" class="txt_area"></textarea>
+                    </td>
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="form-item cf">
+            <button class="btn submit-btn ajax-post hidden" id="submit" type="submit" target-form="form-horizontal">确 定</button>
+            <a class="btn btn-return" href="javascript:history.back(-1);">返 回</a>
+        </div>
+    </form>
+    </div>
+</div>
+</block>
+
+<block name="script">
+<script type="text/javascript" src="__STATIC__/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript">
+//alert($("#cover_id_icon").parent().find('.upload-img-box').html());
+//导航高亮
+highlight_subnav('{:U('Game/lists')}');
+$('#submit').click(function(){
+    $('#form').submit();
+});
+
+$(function(){
+    $('.date').datetimepicker({
+        format: 'yyyy-mm-dd',
+        language:"zh-CN",
+        minView:2,
+        autoclose:true
+    });
+    $('.time').datetimepicker({
+        format: 'yyyy-mm-dd hh:ii',
+        language:"zh-CN",
+        minView:2,
+        autoclose:true
+    });
+    showTab();
+
+});
+
+//上传游戏图标
+/* 初始化上传插件 */
+$("#upload_picture_icon").uploadify({
+    "height"          : 30,
+    "swf"             : "__STATIC__/uploadify/uploadify.swf",
+    "fileObjName"     : "download",
+    "buttonText"      : "上传图标",
+    "uploader"        : "{:U('File/uploadPicture',array('session_id'=>session_id()))}",
+    "width"           : 120,
+    'removeTimeout'   : 1,
+    'fileTypeExts'    : '*.jpg; *.png; *.gif;',
+    "onUploadSuccess" : upload_picture_icon{$field.name},
+    'onFallback' : function() {
+        alert('未检测到兼容版本的Flash.');
+    }
+});
+function upload_picture_icon{$field.name}(file, data){
+    var data = $.parseJSON(data);
+    var src = '';
+    if(data.status){
+        $("#cover_id_icon").val(data.id);
+        src = data.url || '__ROOT__' + data.path;
+        $("#cover_id_icon").parent().find('.upload-img-box').html(
+            '<div class="upload-pre-item"><img src="' + src + '"/></div>'
+        );
+    } else {
+        updateAlert(data.info);
+        setTimeout(function(){
+            $('#top-alert').find('button').click();
+            $(that).removeClass('disabled').prop('disabled',false);
+        },1500);
+    }
+}
+
+
+//上传游戏封面
+/* 初始化上传插件 */
+$("#upload_picture_cover").uploadify({
+    "height"          : 30,
+    "swf"             : "__STATIC__/uploadify/uploadify.swf",
+    "fileObjName"     : "download",
+    "buttonText"      : "上传封面",
+    "uploader"        : "{:U('File/uploadPicture',array('session_id'=>session_id()))}",
+    "width"           : 120,
+    'removeTimeout'   : 1,
+    'fileTypeExts'    : '*.jpg; *.png; *.gif;',
+    "onUploadSuccess" : upload_picture_cover{$field.name},
+    'onFallback' : function() {
+        alert('未检测到兼容版本的Flash.');
+    }
+});
+function upload_picture_cover{$field.name}(file, data){
+    var data = $.parseJSON(data);
+    var src = '';
+    if(data.status){
+        $("#cover_id_cover").val(data.id);
+        src = data.url || '__ROOT__' + data.path;
+        $("#cover_id_cover").parent().find('.upload-img-box').html(
+            '<div class="upload-pre-item"><img src="' + src + '"/></div>'
+        );
+    } else {
+        updateAlert(data.info);
+        setTimeout(function(){
+            $('#top-alert').find('button').click();
+            $(that).removeClass('disabled').prop('disabled',false);
+        },1500);
+    }
+}
+</script>
+</block>

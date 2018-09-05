@@ -1,0 +1,163 @@
+/** 
+ * 描述：重置页面元素并基础样式
+ * 作用范围： 全局
+ */
+
+html,body {
+	font: 14px/1.5 "microsoft yahei", Helvetica, Tahoma, Arial, sans-serif;
+	color:#404040;
+}
+body,p,pre,blockquote,
+h1,h2,h3,h4,h5,h6,			
+dl,dt,dd,ul,ol,li,			
+form,select,input,textarea,button,		
+table,caption,tr,th,td {
+	margin:0;
+	padding:0;
+}
+ol,ul {
+	list-style:none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img {
+	max-width: 100%;
+	border:0 none;
+}
+a {
+	color: #2d7200;
+	text-decoration:none;
+}
+a:hover{
+	color: #4bbd00;
+	border-bottom: 1px solid;
+}
+input,button,textarea,select,option {
+	font-family:inherit;
+	font-size:100%;	
+	outline: 0;
+}
+textarea {
+	overflow: auto;
+	resize: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/* 布局样式 */
+.cf,.nav,.container-span {
+	*zoom: 1;
+}
+.cf:before, .cf:after,
+.nav:before, .nav:after,
+.container-span:before,
+.container-span:after {
+	display: table;
+	content: "";
+}
+.cf:after,.nav:after,
+.container-span:after {
+	clear: both;
+}
+.fl{
+	float: left!important;
+}
+.fr{
+	float: right!important;
+}
+.wrapper {
+	margin-left: auto;
+	margin-right: auto;
+	width: 1000px;
+}
+.hidden {
+	display: none;
+}
+.block {
+	display: block!important;
+}
+.fixed{
+    position: fixed!important;
+}
+.container-span [class^="span"] {
+	margin: 0 1% 20px;
+}
+.container-span .span1,
+.container-span .span2,
+.container-span .span3,
+.container-span .span4 {
+    float: left;
+}
+.container-span .span1 {
+    width: 23%;
+}
+.container-span .span2 {
+    width: 48%;
+}
+.container-span .span4 {
+    width: 98%;
+}
+
+/* 排版样式 */
+.text-center{
+	text-align: center!important;
+}
+
+.text-right{
+	text-align: right!important;
+}
+
+.text-left{
+	text-align: left!important;
+}
+
+/* 导航列表 */
+.nav li {
+	float: left;
+}
+.nav li a,
+.nav li a:hover,
+.nav-list li a,
+.nav-list li a:hover {
+	display: block;
+	text-decoration: none;
+	outline: none;
+	border-bottom: 0 none;
+}
+
+
+/** 弹窗 lwx **/
+#game-down,#promote-down,#guil-ddown,#area-down,#commissioner-down{position:relative;}
+.position {position:relative;}
+.popupsbg{width:100%;height:100%;position:absolute;top:0;left:0;}
+.popups{display:none;position:absolute;top:29px;right:0;z-index:99999;border:2px solid #eaeaea;border-radius:5px;color:rgb(3,3,3);color:rgba(3,3,3,.5);}
+.popups .pc a{display:block;text-decoration:none;color:rgb(3,3,3);color:rgba(3,3,3,.5);}
+.popups .pc a:hover{border:none;cursor:pointer;}
+.popups .pc{width:600px;height:300px;overflow:hidden;padding:5px;background:rgb(255,255,255);}
+.popups .pc .ptitle{line-height:38px;border-bottom:1px solid #eaeaea;padding:5px 0;}
+.popups .pc .ptitle:after,.popups .pc .pbottom:after,.popups .pc .pbottom div:after,.popups .pc .pcotent:after,.popups .pc .pcotent ul:after{content:'';display:block;clear:both;}
+.popups .pc .ptitle .pt{font-size:16px;}
+.popups .pc .ptitle .pt1{float:left;width:120px;margin-left:20px;}
+.popups .pc .ptitle .pt2{float:right;}
+.popups .pc .ptitle .pt2 .butn{display:block;width:20px;font-size:22px;}
+.popups .pc .ptitle .pt3{float:right;margin-right:20px;}
+.popups .pc .ptitle .pt3 input{border:1px solid #ababab;line-height:24px;width:220px;padding:2px 8px;border-radius:2px;}
+.popups .pc .pcotent{padding:10px 5px 0;}
+.popups .pc .pcotent ul{border-top:1px solid #eaeaea;}
+.popups .pc .pcotent li{float:left;line-height:34px;width:140px;border-left:1px solid #eaeaea;border-bottom:1px solid #eaeaea;padding-left:6px;}
+.popups .pc .pcotent li:nth-of-type(4n){border-right:1px solid #eaeaea;}
+.popups .pc .pcotent li div{float:left;}
+.popups .pc .pcotent .pimg{width:15px;height:15px;}
+.popups .pc .pcotent .pname{width:100%;}
+.popups .pc .pbottom{line-height:38px;padding: 10px 0 5px;}
+.popups .pc .pbottom a,.popups .pc .pbottom span{display:inline-block;margin-left:-1px;padding:0 14px;height:30px;line-height:30px;color: #000;border: 1px solid #ccc;}
+.popups .pc .pbottom span.current{border-top: 3px solid #09A1B1;height:28px;line-height:26px;}
+
+#giftlists .pc .pcotent li{width:189px;}
+#giftlists .pc .pcotent li:nth-of-type(4n){border-right:none;}
+#giftlists .pc .pcotent li:nth-of-type(3n){border-right:1px solid #eaeaea;}

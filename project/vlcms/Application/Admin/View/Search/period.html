@@ -1,0 +1,21 @@
+﻿         <div class="page" style="float: left;">
+     <li style="color: #ffffff;display: inline-block;float: left;margin-left: 0px;">
+        <span>【昨日：<if condition="$yesterday eq null">0<else/>{$yesterday}</if>{$unit}】</span>
+     </li>
+     <li style="color: #ffffff;display: inline-block;float: left;margin-left: 0px;">
+        <span>【今日：<if condition="$today eq null">0<else/>{$today}</if>{$unit}】</span>
+     </li>
+     <li style="color: #ffffff;display: inline-block;float: left;margin-left: 0px;">
+        <span>【上周：<if condition="$last_week eq null">0<else/>{$last_week}</if>{$unit}】</span>
+     </li>
+     <li style="color: #ffffff;display: inline-block;float: left;margin-left: 0px;">
+        <span>【本周：<if condition="$this_week eq null">0<else/>{$this_week}</if>{$unit}】</span>
+     </li>
+     <li style="color: #ffffff;display: inline-block;float: left;margin-left: 0px;">
+        <span>【上月：<if condition="$last_moenth eq null">0<else/>{$last_moenth}</if>{$unit}】</span>
+     </li>
+     <li style="color: #ffffff;display: inline-block;float: left;margin-left: 0px;">
+        <span>【本月：<if condition="$this_mneth eq null">0<else/>{$this_mneth}</if>{$unit}】</span>
+     </li>
+</div>
+<!--  -->

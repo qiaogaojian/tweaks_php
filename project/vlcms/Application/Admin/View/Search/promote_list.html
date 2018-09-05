@@ -1,0 +1,137 @@
+﻿<div id="promote-drop-down" class="sleft position">
+	<div class="drop-down promote" style="width:240px">
+		<span id="sch-sort-promote" style="width:198px" class="sort-txt" data="{:I('promote_id')}">
+		    <if condition="I('promote_id') eq ''">
+		        请选择推广员
+		    <else/>
+		        {:get_promote_name(I('promote_id'))}
+		    </if>
+		</span>
+		<i class="arrow arrow-down"></i>
+	</div>
+	<div id="promote_lists" class="popups">
+		<div class="pc">
+			<div class="ptitle">
+				<div class="pt pt1">推广员列表</div>
+				<div class="pt pt2">
+					<a class="butn" href="javascript:;" >X</a>
+				</div>
+				<div class="pt pt3">
+					<input id="key_word_promote" type="text"   class="pinput" placeholder="推广员名称" value="" />
+					<input id='promote_id' name="promote_id"  type="hidden" class="search-input" value="{:I('promote_id')}" >
+				</div>
+			</div>
+			<div class="pcotent">
+				<ul>
+					<volist name="promote_list_data" id="vo">
+					<li>
+						<div class="pname">
+							<a href="javascript:;" value="{$vo.id}" num="{$key}" short="{$vo.short}" data="{$vo.account}" >{$vo.account}</a>
+						</div>
+					</li>
+					</volist>
+				</ul>
+			</div>
+			<div class="pbottom"></div>						
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+
+$("#promote-drop-down .drop-down").on('click',function() {
+	var record = 10;
+	var source = $.trim($('#sch-sort-promote').text());
+	if(source != '请选择推广员'){$('#key_word_promote').val(source);}
+	promote_popups('promote_lists',record);
+});
+
+function txt_promote(text) {
+	$("#sch-sort-promote").text(text).attr("data",text);
+}
+
+function promote_popups(ename,record) {
+
+	var lie = 4;
+	var row = 20,page=1;
+	var $that = $('#'+ename);
+	var n = Math.ceil(record/lie)*lie;
+	if(n>record && n > $that.find('.pcotent li').length){
+		for(var i=record;i<n;i++) {
+			$that.find('.pcotent ul').append('<li><div class="pname"><a href="javascript:;" value="" num="'+i+'" data="" >&nbsp;</a></div></li>');
+		}
+	}
+	
+	show_promote_list(ename,record,row,page);
+	$that.closest('#main-content').before('<div id="layer" class="popupsbg"></div>');
+	//$that.css({'margin-left':-$(this).width()/4,'margin-top':-$(this).height()/4}).slideDown();
+	$that.css({}).slideDown();
+	$that.find('.butn').on('click',function() {
+		//alert($(this).text());
+		if($.trim($('#key_word_promote').val()).length == 0) {
+			$('#promote_id').val('');
+			$('#sch-sort-promote').text('请选择推广员');
+		}
+		$(this).closest('.popups').removeAttr('style').slideUp().closest('#main-content').siblings('.popupsbg').remove();
+		$that.find('.pbottom').empty();
+	});
+	
+	$that.find('.pcotent li a').on('click',function() {
+		var text = $.trim($(this).text());
+		if(text == '') return;
+		$('#promote_id').val($(this).attr('value'));
+		$('#key_word_promote').val(text);
+		txt_promote(text);	
+		$that.find('.butn').click();
+	});
+	
+	$that.find('.pinput').on('keyup',function(){
+		var keyup = $.trim($(this).val());
+		if(keyup == ''){
+			show_promote_list(ename,record,row,page);
+			return;
+		}
+		$that.find('.pcotent li a').each(function() {
+			var short = $(this).attr('short');
+			var data = $(this).attr('data');
+			if(short.indexOf(keyup) != -1 || data.indexOf(keyup) != -1) {
+				$(this).closest('li').show();
+			} else {
+				$(this).closest('li').hide();
+			}
+		});
+		
+	});
+
+}
+
+function show_promote_list(ename,record,row,page) {
+	var $that = $('#'+ename);
+	$that.find('.pbottom').empty();
+	var _s=(page-1)*row,_e=page*row-1;
+	var total=Math.ceil(record/row);
+	$that.find('.pcotent li').each(function() {
+		var an = $(this).find('.pname a').attr('num');
+		if(an<=_e && an>=_s) {
+			$(this).show();
+		} else {
+			$(this).hide();
+		}
+	});
+	var pagelist = '<div>';
+	for(var i=1;i<=total;i++) {
+		if (page == i) {
+			pagelist += '<span class="current">'+i+'</span>';
+		} else {
+			pagelist += '<a href="javascript:;" page="'+i+'">'+i+'</a>';
+		}
+	}
+	pagelist += '<span class="rows">共 '+record+'条记录</span>';
+	pagelist += '</div>';
+	$that.find('.pbottom').append(pagelist).find('a').on('click',function(){
+		page = parseInt($(this).attr('page'));
+		if(isNaN(page)) page = 1;
+		$that.find('.pbottom').empty();
+		show_game_list(ename,record,row,page);
+	});
+}
+</script>

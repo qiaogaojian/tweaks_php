@@ -1,0 +1,250 @@
+<extend name="Public/base"/>
+
+<block name="sidebar"></block>
+
+<block name="style">
+    <style>
+        body{padding: 0}
+    </style>
+</block>
+
+<block name="body">
+    <link href="__CSS__/bootstrap.min.css" rel="stylesheet">
+    <link href="__CSS__/stat/group_figure.css" rel="stylesheet" media="all">
+    <link href="__CSS__/stat/echartsHome.css" rel="stylesheet">
+    <link href="__CSS__/stat/default.css" rel="stylesheet">
+    
+    <link href="__CSS__/stat/style.min.css" rel="stylesheet">
+    <script src="__JS__/stat/echarts.js"></script>
+    <div id="indexMain" class="index-main" style="height: 100%;">
+       <!-- 插件块 -->
+       <div class="container-p"> 
+       <!--右侧-->
+       <div class="cont_righ fr">
+       <div class="container-span top-columns cf">
+        <dl class="show-num-mod col_01">
+            <dt><i class="count-icon user-count-icon"></i></dt>
+            <dd>
+                <strong>{$user_count}</strong>
+                <span>用户数</span>
+            </dd>
+            <ul style="clear:both;">
+            <li>今日注册 {$user_reg}</li>
+            <li>今日登陆 {$user_login}</li>
+            <li>今日付费数 {$spend}</li>
+            </ul>
+        </dl>
+        <dl class="show-num-mod col_05">
+        <dt><i class="count-icon category-count-icon"></i></dt>
+        <dd>
+            <strong>{$game_count}</strong>
+            <span>游戏数</span>
+        </dd>
+        <ul style="clear:both;">
+        <li>新增游戏 {$new_game}</li>
+        </ul>
+    </dl>
+    <dl class="show-num-mod col_03">
+        <dt><i class="count-icon doc-modal-icon"></i></dt>
+        <dd>
+        <strong><if condition="$sum_rec neq null">{$sum_rec}<else/>0</if></strong>
+            <span>总流水</span>
+        </dd>
+        <ul style="clear:both;">
+            <li>今日流水 <if condition="$today eq ''">0<else/>{$today}</if></li>
+        <li>昨日流水 <if condition="$yesterday eq ''">0<else/>{$yesterday}</if></li>
+        <li>推广流水 <if condition="$promote_sum eq ''">0<else/>{$promote_sum}</if></li>
+        </ul>
+    </dl>
+    <dl class="show-num-mod col_02">
+        <dt><i class="count-icon user-action-icon"></i></dt>
+        <dd>
+            <strong>{$promote_count}</strong>
+            <span>推广员数量</span>
+        </dd>
+        <ul style="clear:both;">
+        <li>新增推广员 {$new_promote}</li>
+        </ul>
+    </dl>
+
+    <dl class="show-num-mod col_04">
+        <dt style="height:38px;"><img src="__IMG__/admin123.png"></dt>
+        <dd style="width:auto;font-size: 12px;">
+        <p>徐州梦创--版权所有</p>   
+        <p>网站：www.vlcms.com</p>
+        <p>地址：徐州新锐领地1301室</p> 
+        </dd>
+    </dl>
+    
+
+    
+</div>
+    <!--统计图-->  
+    <div style="width:95%;">
+    <div class="wrapper wrapper-content animated fadeInRight" style="width:auto; padding:0px;">
+        <div class="row">
+
+ <div class="tabFigureContent baseFigure" style="display: block;">
+         <div class="dashBoard dashBoardSex">
+                <div class="dashBoardContent"> 
+                    <script type="text/javascript">    
+                        // 路径配置
+                        require.config({
+                          paths: {
+                            echarts: 'http://echarts.baidu.com/build/dist'
+                          }
+                        });
+
+                        // 使用
+                        require(
+                          [
+                            'echarts',
+                            'echarts/chart/bar', // 使用柱状图就加载bar模块，按需加载
+                            'echarts/chart/line'
+                          ],
+                          function (ec) {
+                            // 基于准备好的dom，初始化echarts图表
+                            var myChart = ec.init(document.getElementById('recharge')); 
+                            //设置数据
+                            var option = {
+                                title : {text: '充值统计',subtext: ''},
+                                tooltip : {trigger: 'axis'},
+                                legend: {data:['上月', '本月']},
+                                calculable : true,
+                                xAxis : [{type : 'value',boundaryGap : [0, 0.01]}],
+                                yAxis : [{type : 'category',data : ['微信','支付宝','充值总值(元)']}],
+                                series: [
+                                    {
+                                        name:'上月',type:'bar',
+                                        data:[
+                                         "{$recharge_last_data[0]}",
+                                         "{$recharge_last_data[1]}", 
+                                         "{$recharge_last_data[2]}"
+                                        ]
+                                    },
+                                    {
+                                        name:'本月',type:'bar',
+                                        data:[
+                                            "{$recharge_this_data[0]}", 
+                                            "{$recharge_this_data[1]}", 
+                                            "{$recharge_this_data[2]}"
+                                        ]
+                                    }
+                                ]
+                            };
+                            // 为echarts对象加载数据 
+                            myChart.setOption(option); 
+                          }
+                        );        
+                    </script>
+                    <div id="recharge" class="sj"></div>
+                </div>
+            </div>
+                 <div class="dashBoard dashBoardAge">
+                <div class="dashBoardContent"> 
+                    <script type="text/javascript">
+                        // 路径配置
+                        require.config({paths: {echarts: 'http://echarts.baidu.com/build/dist'}});
+                        // 使用
+                        require(
+                          [
+                            'echarts',
+                            'echarts/chart/bar', // 使用柱状图就加载bar模块，按需加载
+                            'echarts/chart/line'
+                          ],
+                          function (ec) {
+                            // 基于准备好的dom，初始化echarts图表
+                            var myChart = ec.init(document.getElementById('recharge1')); 
+                            //设置数据
+                            var option = {
+                            title : { text: '充值统计',subtext: ''},
+                            tooltip : {trigger: 'axis'},
+                            legend: {data:['推广充值','总充值']},
+                           
+                            calculable : true,
+                            xAxis : [
+                                {
+                                    type : 'category',
+                                    data : ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月']
+                                }
+                            ],
+                            yAxis : [
+                                {type : 'value'}
+                            ],
+                            series : [
+                                {
+                                    name:'推广充值',
+                                    type:'bar',
+                                    data:[
+                                    "{$year_promote[0]['amount']}", 
+                                    "{$year_promote[1]['amount']}", 
+                                    "{$year_promote[2]['amount']}", 
+                                    "{$year_promote[3]['amount']}", 
+                                    "{$year_promote[4]['amount']}", 
+                                    "{$year_promote[5]['amount']}", 
+                                    "{$year_promote[6]['amount']}", 
+                                    "{$year_promote[7]['amount']}", 
+                                    "{$year_promote[8]['amount']}", 
+                                    "{$year_promote[9]['amount']}", 
+                                    "{$year_promote[10]['amount']}", 
+                                    "{$year_promote[11]['amount']}"
+                                    ],
+                                    markPoint : {
+                                        data : [
+                                            {type : 'max', name: '最大值'},
+                                            {type : 'min', name: '最小值'}
+                                        ]
+                                    }
+                                },
+                                {
+                                    name:'总充值',
+                                    type:'bar',
+                                    data:[
+                                    "{$year_total[0]['amount']}", 
+                                    "{$year_total[1]['amount']}", 
+                                    "{$year_total[2]['amount']}", 
+                                    "{$year_total[3]['amount']}", 
+                                    "{$year_total[4]['amount']}", 
+                                    "{$year_total[5]['amount']}", 
+                                    "{$year_total[6]['amount']}", 
+                                    "{$year_total[7]['amount']}", 
+                                    "{$year_total[8]['amount']}", 
+                                    "{$year_total[9]['amount']}", 
+                                    "{$year_total[10]['amount']}", 
+                                    "{$year_total[11]['amount']}"
+                                    ],
+                                    markPoint : {
+                                        data : [
+                                            {type : 'max', name: '最大值'},
+                                            {type : 'min', name: '最小值'}
+                                        ]
+                                    }
+                                    
+                                }
+                            ]
+                        };
+                        // 为echarts对象加载数据 
+                        myChart.setOption(option); 
+                    }
+                    );        
+                </script>
+                <div id="recharge1" class="sj1"></div>
+              </div>
+            </div>
+            </div>
+
+        </div>
+    </div>
+    </div><!--统计图结束-->  
+</div>
+</div>
+</div>
+</block>
+
+<block name="script">
+<script type="text/javascript">
+    $('.sidebar').remove();
+</script>
+<!-- <script src="__JS__/echarts-all.js"></script>
+<script src="__JS__/echarts-demo.min.js"></script> -->
+</block>

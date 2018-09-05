@@ -1,0 +1,34 @@
+﻿<style type="text/css">
+	#sch-game-type-menu li a {width: 100px;}
+</style>
+<div class="sleft">
+	<div class="drop-down" style="width:120px;">
+		<span id="sch-game-type-txt" class="sort-txt" data="{$status}" style="width: 84px">
+			<if condition="I('game_type') eq '' ">所有类型<else/>{:get_game_type(I('game_type'))}</if>
+		</span>
+		<i class="arrow arrow-down"></i>
+		<ul id="sch-game-type-menu" class="nav-list hidden">
+			<li><a href="javascript:;" value="">所有类型</a></li>
+			<foreach name="cl" item="vo">
+			<li><a href="javascript:;" value="{$vo.id}">{$vo.name}</a></li>
+			</foreach>
+		</ul>
+	</div>
+	<input type='hidden' id='game_type' name='game_type'>
+</div>
+<script type="text/javascript">
+	/* 状态搜索子菜单 */
+	$(".search-form").find(".drop-down").hover(function(){
+		$("#sch-game-type-menu").removeClass("hidden");
+	},function(){
+		$("#sch-game-type-menu").addClass("hidden");
+	});
+	$("#sch-game-type-menu li").find("a").each(function(){
+		$(this).click(function(){
+			var text = $(this).text();
+			$('#game_type').val($(this).attr("value"));
+			$("#sch-game-type-txt").text(text).attr("data",$(this).attr("value"));
+			$("#sch-game-type-menu").addClass("hidden");
+		})
+	});
+</script>

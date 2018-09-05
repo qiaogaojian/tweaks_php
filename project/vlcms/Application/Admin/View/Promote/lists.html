@@ -1,0 +1,25 @@
+<extend name="Public/base"/>
+
+<block name="sidebar"></block>
+
+<block name="style">
+    <style>
+        body{padding: 0}
+    </style>
+</block>
+
+<block name="body">
+   <div style="width: 28%;height: 80px;position:absolute;left: 36%;top: 66%" id="cli"></div><img src="__IMG__/jdgl.jpg">
+
+</block>
+
+<block name="script">
+<script type="text/javascript">
+    $('.sidebar').remove();
+     	$(function(){
+ 		$("#cli").click(function() {
+ 			window.open('http://p.qiao.baidu.com//im/index?siteid=8256295&ucid=19371157')
+ 		});
+ 	})
+</script>
+</block>
