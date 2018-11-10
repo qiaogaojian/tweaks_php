@@ -11,10 +11,12 @@ class Baby
 
     public function __construct($name,$weight)
     {
+        $this->name = $name;
+        $this->weight = $weight;
         echo "Baby name: ".$name." weight: ".$weight."kg";
     }
 }
 
 $baby1 = new Baby("Michael",10);
 
-$baby2 = new Baby();
+//$baby2 = new Baby();
