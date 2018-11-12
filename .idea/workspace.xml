@@ -2,10 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f482ffc-fbd8-40c1-b708-a82a9ec2497a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/htdocs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/htdocs.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/.composer..swp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/thinkphp/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/thinkphp/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/thinkphp/LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/thinkphp/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/application/.htaccess" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/application/command.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/application/common.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/application/index/controller/Index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/application/provider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/application/tags.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/build.php" beforeDir="false" afterPath="$PROJECT_DIR$/thinkphp/build.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/thinkphp/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/thinkphp/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/config/app.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/config/cache.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/config/console.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/config/cookie.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/config/database.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/config/log.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/config/middleware.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/config/session.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/config/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/config/trace.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/extend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/thinkphp/extend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/public/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/thinkphp/public/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/thinkphp/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/thinkphp/public/robots.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/public/router.php" beforeDir="false" afterPath="$PROJECT_DIR$/thinkphp/public/router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/public/static/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/thinkphp/public/static/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/route/route.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/runtime/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/thinkphp/runtime/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/think" beforeDir="false" afterPath="$PROJECT_DIR$/thinkphp/think" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,18 +43,18 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" doNotAsk="true">
     <pharConfigPath>$PROJECT_DIR$/thinkphp/composer.json</pharConfigPath>
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="1687533486">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.4" value="7" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.open.time.4" value="8" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -240,6 +270,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -274,12 +305,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../php/phpdbg.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/thinkphp5" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
   </component>
   <component name="RunDashboard">
@@ -346,16 +376,18 @@
       <workItem from="1541811801655" duration="1036000" />
       <workItem from="1541813261144" duration="12562000" />
       <workItem from="1541985239320" duration="663000" />
+      <workItem from="1541990183050" duration="48000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25235000" />
+    <option name="totallyTimeSpent" value="25283000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19402985" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19616205" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
