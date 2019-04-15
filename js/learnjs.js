@@ -74,17 +74,26 @@ The code above states that age is unknown or empty for some reason.*/
 //     alert('Your don\'t konw? "ECMAScript"!');
 // }
 
-let num = prompt("Input number:");
+// let num = prompt("Input number:");
 
-if (num > 0)
-{
-    alert(1);
-}
-else if (num < 0)
-{
-    alert(-1);
-}
-else if (Number(num) == 0)
-{
-    alert(0);
-}
+// if (num > 0)
+// {
+//     alert(1);
+// }
+// else if (num < 0)
+// {
+//     alert(-1);
+// }
+// else if (Number(num) == 0)
+// {
+//     alert(0);
+// }
+
+// let result = (a + b < 4) ? "Below" : "Over";
+let login = prompt("Who are you ?");
+let message =
+    (login == "Employee") ? "Hello" :
+        (login == "Director") ? "Greeting" :
+            (login == "") ? "No login" :
+                "";
+alert(message);
