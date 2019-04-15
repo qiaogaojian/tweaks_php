@@ -44,10 +44,13 @@ The code above states that age is unknown or empty for some reason.*/
 // alert(null + 1);        //1
 // alert(undefined + 1);   //nan
 
-let a = 0;
-alert( Boolean(a) ); // false
+// let a = 0;
+// alert( Boolean(a) ); // false
 
-let b = "0";
-alert( Boolean(b) ); // true
+// let b = "0";
+// alert( Boolean(b) ); // true
 
-alert(a == b); // true!
+// alert(a == b); // true!
+
+// let name = prompt("What's your name?","Michael");
+// alert(`Hello ${name}`);
