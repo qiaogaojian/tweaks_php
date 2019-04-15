@@ -54,3 +54,37 @@ The code above states that age is unknown or empty for some reason.*/
 
 // let name = prompt("What's your name?","Michael");
 // alert(`Hello ${name}`);
+
+// let year = prompt("What is his name.", " ");
+// if (year === "Michael")
+// {
+//     alert("your are right");
+// }
+// else
+// {
+//     alert("your are wrong");
+// }
+
+// let ans = prompt('What is the "official" name of JavaScript', "");
+// if (ans === "ECMAScript")
+// {
+//     alert("right");
+// } else
+// {
+//     alert('Your don\'t konw? "ECMAScript"!');
+// }
+
+let num = prompt("Input number:");
+
+if (num > 0)
+{
+    alert(1);
+}
+else if (num < 0)
+{
+    alert(-1);
+}
+else if (Number(num) == 0)
+{
+    alert(0);
+}
