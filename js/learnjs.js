@@ -164,10 +164,80 @@ The code above states that age is unknown or empty for some reason.*/
 //     () => alert("You canceled the execution.")
 // );
 
-/**
- * function document comment
- * @param {test params} params
- */
-function foo(params) {
+// /**
+//  * function document comment
+//  * @param {test params} params
+//  */
+// function foo(params) {
+// }
 
+// console.log("Hello World!");
+
+// let user = {
+//     name: "Michael",
+//     age: 18,
+//     score: 10,
+//     money: 1000,
+//     isAdmin: true,
+//     "49": "Germany",
+//     "41": "Switzerland",
+//     "+44": "Great Britain",
+// };
+
+// for (let key in user)
+// {
+//     console.log(`key:${key},\tvalue:${user[key]}`);
+// }
+
+// let user = {};
+// user.name = "John";
+// user.surname = "Smith";
+// user.name = "Pete";
+// delete user.name;
+
+// function isEmpty(obj) {
+//     for(let key in obj)
+//     {
+//         return false;
+//     }
+//     return true;
+// }
+
+// let salaries = {
+//     John: 100,
+//     Ann: 160,
+//     Pete: 130
+// }
+
+// function sumSalaries(salary) {
+//     let res = 0
+
+//     for(let key in salary)
+//     {
+//         res += salary[key];
+//     }
+
+//     return res;
+// }
+
+// let sum = sumSalaries(salaries);
+// alert(sum);
+
+let menu = {
+    width: 200,
+    height: 300,
+    title: "My menu"
+};
+
+for (const key in menu)
+{
+    if (typeof menu[key] == "number")
+    {
+        menu[key] *= 2
+    }
+}
+
+for (const key in menu)
+{
+    console.log(`key:${key},value:${menu[key]}`);
 }
