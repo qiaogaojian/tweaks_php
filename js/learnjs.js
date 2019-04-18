@@ -163,3 +163,11 @@ The code above states that age is unknown or empty for some reason.*/
 //     () => alert("You agreed."),
 //     () => alert("You canceled the execution.")
 // );
+
+/**
+ * function document comment
+ * @param {test params} params
+ */
+function foo(params) {
+
+}
