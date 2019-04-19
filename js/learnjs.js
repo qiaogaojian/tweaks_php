@@ -223,21 +223,21 @@ The code above states that age is unknown or empty for some reason.*/
 // let sum = sumSalaries(salaries);
 // alert(sum);
 
-let menu = {
-    width: 200,
-    height: 300,
-    title: "My menu"
-};
+// let menu = {
+//     width: 200,
+//     height: 300,
+//     title: "My menu"
+// };
 
-for (const key in menu)
-{
-    if (typeof menu[key] == "number")
-    {
-        menu[key] *= 2
-    }
-}
+// for (const key in menu)
+// {
+//     if (typeof menu[key] == "number")
+//     {
+//         menu[key] *= 2
+//     }
+// }
 
-for (const key in menu)
-{
-    console.log(`key:${key},value:${menu[key]}`);
-}
+// for (const key in menu)
+// {
+//     console.log(`key:${key},value:${menu[key]}`);
+// }
