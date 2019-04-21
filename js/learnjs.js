@@ -241,3 +241,31 @@ The code above states that age is unknown or empty for some reason.*/
 // {
 //     console.log(`key:${key},value:${menu[key]}`);
 // }
+
+// let id1 = Symbol("id");
+// let id2 = Symbol("id");
+// alert(id1 === id2);
+
+// let id3 = Symbol.for("id");
+// let id4 = Symbol.for("id");
+// alert(id3 === id4);
+
+// alert(Symbol.keyFor(id3));
+
+let user =
+{
+    name: "John",
+    money: 1000,
+    toString ()
+    {
+        return this.name;
+    },
+    valueOf ()
+    {
+        return this.money;
+    }
+}
+
+alert(user);
+alert(+user);
+alert(user + 500);
