@@ -252,20 +252,20 @@ The code above states that age is unknown or empty for some reason.*/
 
 // alert(Symbol.keyFor(id3));
 
-let user =
-{
-    name: "John",
-    money: 1000,
-    toString ()
-    {
-        return this.name;
-    },
-    valueOf ()
-    {
-        return this.money;
-    }
-}
+// let user =
+// {
+//     name: "John",
+//     money: 1000,
+//     toString ()
+//     {
+//         return this.name;
+//     },
+//     valueOf ()
+//     {
+//         return this.money;
+//     }
+// }
 
-alert(user);
-alert(+user);
-alert(user + 500);
+// alert(user);
+// alert(+user);
+// alert(user + 500);
