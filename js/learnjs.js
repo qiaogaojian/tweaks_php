@@ -270,24 +270,45 @@ The code above states that age is unknown or empty for some reason.*/
 // alert(+user);
 // alert(user + 500);
 
-function Calculator ()
-{
-    this.read = () =>
-    {
-        this.valueA = prompt("a?");
-        this.valueB = prompt("b?");
-    };
-    this.sum = () =>
-    {
-        return this.valueA - (-this.valueB);
-    }
-    this.mul = () =>
-    {
-        return Math.abs(this.valueA - this.valueB);
-    }
-}
+// function Calculator ()
+// {
+//     this.read = () =>
+//     {
+//         this.valueA = prompt("a?");
+//         this.valueB = prompt("b?");
+//     };
+//     this.sum = () =>
+//     {
+//         return Number(this.valueA) + Number(this.valueB);
+//     }
+//     this.mul = () =>
+//     {
+//         return Math.abs(this.valueA - this.valueB);
+//     }
+// }
 
-let calculator = new Calculator();
-calculator.read();
-alert("Sum = " + calculator.sum());
-alert("Mul = " + calculator.mul());
+// let calculator = new Calculator();
+// calculator.read();
+// alert("Sum = " + calculator.sum());
+// alert("Mul = " + calculator.mul());
+
+// function readNumber (params)
+// {
+//     while (true)
+//     {
+//         let val = prompt("Input a number please?");
+
+//         if (isFinite(val))
+//         {
+//             alert(val);
+//             return val;
+//         }
+//         if (val == null || val == "")
+//         {
+//             alert(val);
+//             return null;
+//         }
+//     }
+// }
+
+// readNumber();
