@@ -312,3 +312,12 @@ The code above states that age is unknown or empty for some reason.*/
 // }
 
 // readNumber();
+
+// function random (min, max)
+// {
+//     return Math.random() * (max - min) + min;
+// }
+
+// alert(random(1, 5));
+// alert(random(1, 5));
+// alert(random(1, 5));
