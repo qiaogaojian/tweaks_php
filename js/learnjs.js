@@ -269,3 +269,25 @@ The code above states that age is unknown or empty for some reason.*/
 // alert(user);
 // alert(+user);
 // alert(user + 500);
+
+function Calculator ()
+{
+    this.read = () =>
+    {
+        this.valueA = prompt("a?");
+        this.valueB = prompt("b?");
+    };
+    this.sum = () =>
+    {
+        return this.valueA - (-this.valueB);
+    }
+    this.mul = () =>
+    {
+        return Math.abs(this.valueA - this.valueB);
+    }
+}
+
+let calculator = new Calculator();
+calculator.read();
+alert("Sum = " + calculator.sum());
+alert("Mul = " + calculator.mul());
