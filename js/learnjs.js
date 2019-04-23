@@ -313,11 +313,58 @@ The code above states that age is unknown or empty for some reason.*/
 
 // readNumber();
 
-function random (min, max)
+// function random (min, max)
+// {
+//     return Math.floor(Math.random() * (max - min + 1) + min);
+// }
+
+// alert(random(1, 5));
+// alert(random(1, 5));
+// alert(random(1, 5));
+
+// let str = "";
+// for (let i = 65; i <= 220; i++)
+// {
+//     str += String.fromCodePoint(i);
+// }
+// alert(str);
+
+// function ucFirst (str)
+// {
+//     if (String(str).length == 0)
+//     {
+//         return "";
+//     }
+//     else
+//     {
+//         let f = str[0];
+//         let fu = String(f).toUpperCase();
+//         let last = String(str).slice(1, String(str).length);
+//         return fu + last;
+//     }
+// }
+
+// function ucFirst2 (str)
+// {
+//     if (!str)
+//     {
+//         return str;
+//     }
+//     return str[0].toUpperCase() + str.slice(1);
+// }
+
+// alert(ucFirst2("john"));
+
+function checkSpam (str)
 {
-    return Math.floor(Math.random() * (max - min + 1) + min);
+    let lowerStr = String(str).toLowerCase();
+    if (String(lowerStr).includes("viagra") || String(lowerStr).includes("xxx"))
+    {
+        return true;
+    }
+    return false;
 }
 
-alert(random(1, 5));
-alert(random(1, 5));
-alert(random(1, 5));
+alert(checkSpam('buy ViAgRA now'));
+alert(checkSpam('free xxXxx'));
+alert(checkSpam('innocent rabbit'));
