@@ -475,9 +475,36 @@ The code above states that age is unknown or empty for some reason.*/
 
 // alert(camelize("list-style-image"));
 
-function filterRange (arr, a, b)
-{
-    return arr.filter(item => (item >= a && item <= b));
-}
-let arr = [5, 3, 8, 1];
-alert(filterRange(arr, 1, 4));
+// function filterRange (arr, a, b)
+// {
+//     return arr.filter(item => (item >= a && item <= b));
+// }
+
+// function filterRangeInPlace (arr, a, b)
+// {
+//     let arrs = arr.filter(item => (item >= a && item <= b));
+//     arr.length = 0;
+//     for (let i = 0; i < arrs.length; i++)
+//     {
+//         arr.push(arrs[i]);
+//     }
+//     return arrs;
+// }
+
+// function filterRangeInPlace (arr, a, b)
+// {
+//     for (let i = 0; i < arr.length; i++)
+//     {
+//         let val = arr[i];
+
+//         // remove if outside of the interval
+//         if (val < a || val > b)
+//         {
+//             arr.splice(i, 1);
+//             i--;
+//         }
+//     }
+// }
+
+// let arr = [5, 3, 8, 1];
+// alert(filterRangeInPlace(arr, 1, 4));
