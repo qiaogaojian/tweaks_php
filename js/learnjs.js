@@ -539,3 +539,58 @@ The code above states that age is unknown or empty for some reason.*/
 
 // alert(sorted); // CSS, HTML, JavaScript
 // alert(arr); // HTML, JavaScript, CSS (no changes)
+
+function Calculator ()
+{
+    this.calculate = function (str)
+    {
+        let arr = str.split(" ");
+        if (this.hasOwnProperty(arr[1]) || isNaN(arr[0] || isNaN(arr[2])))
+        {
+            return this[arr[1]](arr[0], arr[2]);
+        }
+        else
+        {
+            return NaN;
+        }
+    }
+    this["+"] = function (a, b)
+    {
+        return Number(a) + Number(b);
+    }
+    this.addMethod = function (str, method)
+    {
+        this[str] = method;
+    }
+}
+
+function Calculator ()
+{
+    let methods = {
+        "-": (a, b) => a - b,
+        "+": (a, b) => a + b
+    };
+    this.calculate = function (str)
+    {
+        let split = str.split(' '),
+            a = +split[0],
+            op = split[1],
+            b = +split[2]
+
+        if (!methods[op] || isNaN(a) || isNaN(b))
+        {
+            return NaN;
+        }
+        return methods[op](a, b);
+    }
+    this.addMethod = function (name, func)
+    {
+        methods[name] = func;
+    };
+}
+
+let calculate = new Calculator();
+calculate.addMethod("*", (a, b) => a * b);
+calculate.addMethod("/", (a, b) => a / b);
+calculate.addMethod("**", (a, b) => a ** b);
+alert(calculate.calculate("2 - 3"));
