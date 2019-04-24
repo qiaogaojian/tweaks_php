@@ -382,24 +382,50 @@ The code above states that age is unknown or empty for some reason.*/
 // });
 // arr[2]();
 
-function sumInput (params)
+// function sumInput (params)
+// {
+//     let arr = [];
+//     while (true)
+//     {
+//         let input = prompt("input number:");
+//         if (input == null || input == "" || isNaN(input))
+//         {
+//             break;
+//         }
+//         arr.push(+input);
+//     }
+//     let sum = 0;
+//     for (let i = 0; i < arr.length; i++)
+//     {
+//         sum += arr[i];
+//     }
+//     return sum;
+// }
+
+// alert(sumInput());
+
+function getMaxSubSum (arr)
 {
-    let arr = [];
-    while (true)
-    {
-        let input = prompt("input number:");
-        if (input == null || input == "" || isNaN(input))
-        {
-            break;
-        }
-        arr.push(+input);
-    }
-    let sum = 0;
+    let sums = [];
     for (let i = 0; i < arr.length; i++)
     {
-        sum += arr[i];
+        let sum = 0;
+        for (let j = i; j < arr.length; j++)
+        {
+            sum += arr[j];
+            sums.push(sum);
+        }
     }
-    return sum;
+    let max = 0;
+    for (let i = 0; i < sums.length; i++)
+    {
+        if (sums[i] > max)
+        {
+            max = sums[i];
+        }
+    }
+    return max;
 }
 
-alert(sumInput());
+let input = [-1, -2, -3];
+alert(getMaxSubSum(input));
