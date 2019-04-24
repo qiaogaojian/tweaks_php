@@ -355,16 +355,53 @@ The code above states that age is unknown or empty for some reason.*/
 
 // alert(ucFirst2("john"));
 
-function checkSpam (str)
+// function checkSpam (str)
+// {
+//     let lowerStr = String(str).toLowerCase();
+//     if (String(lowerStr).includes("viagra") || String(lowerStr).includes("xxx"))
+//     {
+//         return true;
+//     }
+//     return false;
+// }
+
+// alert(checkSpam('buy ViAgRA now'));
+// alert(checkSpam('free xxXxx'));
+// alert(checkSpam('innocent rabbit'));
+
+// let arr = ["Jazz", "Blues"];
+// arr.push("Rock-n-Roll");
+// arr[Math.floor(arr.length / 2)] = "Classics";
+// arr.shift();
+// arr.unshift("Rap,Reggae");
+
+// let arr = ["a", "b"];
+// arr.push(function ()
+// {
+//     alert(this);
+// });
+// arr[2]();
+
+function sumInput (params)
 {
-    let lowerStr = String(str).toLowerCase();
-    if (String(lowerStr).includes("viagra") || String(lowerStr).includes("xxx"))
+    let index = 0;
+    let arr = [];
+    while (true)
     {
-        return true;
+        let input = prompt("input number:");
+        if (input == null || input == "" || isNaN(input))
+        {
+            break;
+        }
+        arr[index] = Number(input);
+        index++;
     }
-    return false;
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++)
+    {
+        sum+=arr[i];
+    }
+    return sum;
 }
 
-alert(checkSpam('buy ViAgRA now'));
-alert(checkSpam('free xxXxx'));
-alert(checkSpam('innocent rabbit'));
+alert(sumInput());
