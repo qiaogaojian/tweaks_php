@@ -465,13 +465,19 @@ The code above states that age is unknown or empty for some reason.*/
 //     return arr.join("");
 // }
 
-function camelize (str)
+// function camelize (str)
+// {
+//     return str
+//         .split('-')
+//         .map((item, index) => item = index == 0 ? item : item[0].toUpperCase() + item.slice(1))
+//         .join('');
+// }
+
+// alert(camelize("list-style-image"));
+
+function filterRange (arr, a, b)
 {
-    return str
-        .split('-')
-        .map((item, index) => item = index == 0 ? item : item[0].toUpperCase() + item.slice(1))
-        .join('');
+    return arr.filter(item => (item >= a && item <= b));
 }
-
-alert(camelize("list-style-image"));
-
+let arr = [5, 3, 8, 1];
+alert(filterRange(arr, 1, 4));
