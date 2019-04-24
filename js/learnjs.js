@@ -404,28 +404,48 @@ The code above states that age is unknown or empty for some reason.*/
 
 // alert(sumInput());
 
-function getMaxSubSum (arr)
-{
-    let sums = [];
-    for (let i = 0; i < arr.length; i++)
-    {
-        let sum = 0;
-        for (let j = i; j < arr.length; j++)
-        {
-            sum += arr[j];
-            sums.push(sum);
-        }
-    }
-    let max = 0;
-    for (let i = 0; i < sums.length; i++)
-    {
-        if (sums[i] > max)
-        {
-            max = sums[i];
-        }
-    }
-    return max;
-}
+// function getMaxSubSum (arr)
+// {
+//     let sums = [];
+//     for (let i = 0; i < arr.length; i++)
+//     {
+//         let sum = 0;
+//         for (let j = i; j < arr.length; j++)
+//         {
+//             sum += arr[j];
+//             sums.push(sum);
+//         }
+//     }
+//     let max = 0;
+//     for (let i = 0; i < sums.length; i++)
+//     {
+//         if (sums[i] > max)
+//         {
+//             max = sums[i];
+//         }
+//     }
+//     return max;
+// }
 
-let input = [-1, -2, -3];
-alert(getMaxSubSum(input));
+// function getMaxSunSumOptimize (arr)
+// {
+//     let sum = 0;
+//     let max = 0;
+//     for (let i = 0; i < arr.length; i++)
+//     {
+//         sum += arr[i];
+//         if (sum < 0)
+//         {
+//             sum = 0;
+//         }
+//         if (sum > max)
+//         {
+//             max = sum;
+//         }
+//     }
+//     return sum;
+// }
+
+// let input = [100, -9, 2, -3, 5];
+// alert(getMaxSunSumOptimize(input));
+
