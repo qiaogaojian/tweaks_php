@@ -465,4 +465,13 @@ The code above states that age is unknown or empty for some reason.*/
 //     return arr.join("");
 // }
 
-// alert(camelize("list-style-image"));
+function camelize (str)
+{
+    return str
+        .split('-')
+        .map((item, index) => item = index == 0 ? item : item[0].toUpperCase() + item.slice(1))
+        .join('');
+}
+
+alert(camelize("list-style-image"));
+
