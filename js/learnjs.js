@@ -449,3 +449,20 @@ The code above states that age is unknown or empty for some reason.*/
 // let input = [100, -9, 2, -3, 5];
 // alert(getMaxSunSumOptimize(input));
 
+// let arr = [1, 2, 5];
+// arr.splice(-1, 0, 3, 4);
+// alert(arr);
+
+// arr.forEach(alert);
+
+// function camelize (str)
+// {
+//     let arr = str.split('-');
+//     for (let i = 1; i < arr.length; i++)
+//     {
+//         arr[i] = String(arr[i]).charAt(0).toUpperCase() + String(arr[i]).substring(1);
+//     }
+//     return arr.join("");
+// }
+
+// alert(camelize("list-style-image"));
