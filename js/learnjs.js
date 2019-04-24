@@ -384,7 +384,6 @@ The code above states that age is unknown or empty for some reason.*/
 
 function sumInput (params)
 {
-    let index = 0;
     let arr = [];
     while (true)
     {
@@ -393,13 +392,12 @@ function sumInput (params)
         {
             break;
         }
-        arr[index] = Number(input);
-        index++;
+        arr.push(+input);
     }
     let sum = 0;
     for (let i = 0; i < arr.length; i++)
     {
-        sum+=arr[i];
+        sum += arr[i];
     }
     return sum;
 }
