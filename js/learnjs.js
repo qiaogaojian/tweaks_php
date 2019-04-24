@@ -496,7 +496,6 @@ The code above states that age is unknown or empty for some reason.*/
 //     for (let i = 0; i < arr.length; i++)
 //     {
 //         let val = arr[i];
-
 //         // remove if outside of the interval
 //         if (val < a || val > b)
 //         {
@@ -508,3 +507,35 @@ The code above states that age is unknown or empty for some reason.*/
 
 // let arr = [5, 3, 8, 1];
 // alert(filterRangeInPlace(arr, 1, 4));
+
+// let arr = [5, 2, 1, -10, 8];
+
+// for (let i = 0; i < arr.length - 1; i++)
+// {
+//     for (let j = i; j < arr.length - 1; j++)
+//     {
+//         if (arr[j] < arr[j + 1])
+//         {
+//             let tem = arr[j];
+//             arr[j] = arr[j + 1];
+//             arr[j + 1] = tem;
+//         }
+//     }
+// }
+
+// arr.sort((a, b) => (b - a));
+
+// alert(arr); // 8, 5, 2, 1, -10
+
+// function copySorted (str)
+// {
+//     let res = str.filter(item => item);
+//     res.sort();
+//     return res;
+// }
+
+// let arr = ["HTML", "JavaScript", "CSS"];
+// let sorted = copySorted(arr);
+
+// alert(sorted); // CSS, HTML, JavaScript
+// alert(arr); // HTML, JavaScript, CSS (no changes)
