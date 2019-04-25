@@ -726,3 +726,94 @@ usersMapped = [
 // }
 
 // alert(topSalary(salaries));
+
+// let now = new Date();
+// alert(now);
+
+// let time = new Date(2012, 1, 20, 3, 12);
+// alert(time);
+
+// let date = new Date(2012, 0, 3);  // 3 Jan 2012
+// function getWeekDay (date)
+// {
+//     switch (date.getDay())
+//     {
+//         case 0:
+//             return 'SU';
+//         case 1:
+//             return 'MO';
+//         case 2:
+//             return 'TU';
+//         case 3:
+//             return 'WE';
+//         case 4:
+//             return 'TH';
+//         case 5:
+//             return 'FR';
+//         case 6:
+//             return 'SA';
+//         default:
+//             break;
+//     }
+// }
+// alert(getWeekDay(date));        // should output "TU"
+
+// let date = new Date(2012, 0, 3);  // 3 Jan 2012
+
+// function getLocalDay (date)
+// {
+//     switch (date.getDay())
+//     {
+
+//         case 1:
+//             return 'MO';
+//         case 2:
+//             return 'TU';
+//         case 3:
+//             return 'WE';
+//         case 4:
+//             return 'TH';
+//         case 5:
+//             return 'FR';
+//         case 6:
+//             return 'SA';
+//         case 7:
+//             return 'SU';
+//     }
+// }
+
+// alert(getLocalDay(date));       // tuesday, should show 2
+
+// let date = new Date(2015, 0, 2);
+// function getDateAgo (d, day)
+// {
+//     let date = new Date(d);
+//     return new Date(date.setDate(date.getDate() - day));
+// }
+// alert(getDateAgo(date, 1)); // 1, (1 Jan 2015)
+// alert(getDateAgo(date, 2)); // 31, (31 Dec 2014)
+// alert(getDateAgo(date, 365)); // 2, (2 Jan 2014)
+
+// function getLastDayOfMonth (year, month)
+// {
+//     let date = new Date(year, month);
+//     date.setMonth(date.getMonth() + 1);
+//     date.setDate(0);
+//     return date.getDate();
+// }
+
+// function getLastDayOfMonth (year, month)
+// {
+//     let date = new Date(year, month + 1, 0);
+//     return date.getDate();
+// }
+
+// alert(getLastDayOfMonth(2012, 1));
+
+// function getSecondsToday (date)
+// {
+//     let start = new Date(date);
+//     start.setHours(0);
+//     return (date - start) / 1000;
+// }
+// alert(getSecondsToday(new Date(2019, 4, 25, 10)));
