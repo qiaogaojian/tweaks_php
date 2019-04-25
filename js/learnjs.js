@@ -669,3 +669,28 @@ usersMapped = [
 // // Error: keys.push is not a function
 // keys.push("more");
 // alert(keys);
+
+// let salaries = {
+//     "John": 100,
+//     "Pete": 300,
+//     "Mary": 250
+// };
+
+// function sumSalaries (salary)
+// {
+//     return Object.values(salary).reduce((sum,item)=>sum+item,0);
+// }
+
+// alert(sumSalaries(salaries)); // 650
+
+// let user = {
+//     name: 'John',
+//     age: 30
+// };
+
+// function count (obj)
+// {
+//     return Object.keys(obj).length;
+// }
+
+// alert(count(user)); // 2
