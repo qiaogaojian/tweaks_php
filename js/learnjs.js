@@ -624,18 +624,23 @@ usersMapped = [
 // alert(usersMapped[0].id) // 1
 // alert(usersMapped[0].fullName) // John Smith
 
-function unique (arr)
-{
-    let set = new Set();
-    for (let i = 0; i < arr.length; i++)
-    {
-        set.add(arr[i]);
-    }
-    return Array.from(set);
-}
+// function unique (arr)
+// {
+//     let set = new Set();
+//     for (let i = 0; i < arr.length; i++)
+//     {
+//         set.add(arr[i]);
+//     }
+//     return Array.from(set);
+// }
 
-let values = ["Hare", "Krishna", "Hare", "Krishna",
-    "Krishna", "Krishna", "Hare", "Hare", ":-O"
-];
+// function unique (arr)
+// {
+//     return Array.from(new Set(arr));
+// }
 
-alert(unique(values)); // Hare, Krishna, :-O
+// let values = ["Hare", "Krishna", "Hare", "Krishna",
+//     "Krishna", "Krishna", "Hare", "Hare", ":-O"
+// ];
+
+// alert(unique(values)); // Hare, Krishna, :-O
