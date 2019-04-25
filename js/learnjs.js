@@ -853,3 +853,39 @@ usersMapped = [
   "place":{"number":23}
 }
 */
+
+// function sumTo (n) { /*... your code ... */ }
+// function sumTo (n)
+// {
+//     if (n == 1)
+//     {
+//         return n;
+//     }
+//     else
+//     {
+//         return n + sumTo(n - 1);
+//     }
+// }
+// alert(sumTo(100)); // 5050
+
+// function fib (n) { /* your code */ }
+
+// function fib (n)
+// {
+//     if (n == 1)
+//     {
+//         return 1;
+//     }
+//     else if (n == 2)
+//     {
+//         return 1;
+//     }
+//     else
+//     {
+//         return fib(n - 1) + fib(n - 2)
+//     }
+// }
+
+// alert(fib(3)); // 2
+// alert(fib(7)); // 13
+// alert(fib(77)); // 5527939700884757
