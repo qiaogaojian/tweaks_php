@@ -644,3 +644,28 @@ usersMapped = [
 // ];
 
 // alert(unique(values)); // Hare, Krishna, :-O
+
+// let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+
+// function aclean (arr)
+// {
+//     let map = new Map();
+//     for (let i = 0; i < arr.length; i++)
+//     {
+//         let str = Array.from(arr[i]).sort().join("").toLowerCase();
+//         map.set(str, arr[i]);
+//     }
+//     return Array.from(map.values());
+// }
+
+// alert(aclean(arr)); // "nap,teachers,ear" or "PAN,cheaters,era"
+
+// let map = new Map();
+
+// map.set("name", "John");
+
+// let keys = Array.from(map.keys());
+
+// // Error: keys.push is not a function
+// keys.push("more");
+// alert(keys);
