@@ -694,3 +694,35 @@ usersMapped = [
 // }
 
 // alert(count(user)); // 2
+
+// let user = { name: "John", years: 30 };
+
+// // your code to the left side:
+// let { name, years: age, isAdmin = false } = user
+
+// alert(name); // John
+// alert(age); // 30
+// alert(isAdmin); // false
+
+// let salaries = {
+//     "John": 100,
+//     "Pete": 300,
+//     "Mary": 250
+// };
+
+// function topSalary (salaries)
+// {
+//     let maxName = null;
+//     let max = 0;
+//     for (const [name, salary] of Object.entries(salaries))
+//     {
+//         if (max < salary)
+//         {
+//             max = salary;
+//             maxName = name;
+//         }
+//     }
+//     return maxName;
+// }
+
+// alert(topSalary(salaries));
