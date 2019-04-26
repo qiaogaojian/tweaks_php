@@ -889,3 +889,12 @@ usersMapped = [
 // alert(fib(3)); // 2
 // alert(fib(7)); // 13
 // alert(fib(77)); // 5527939700884757
+
+let h = "HelloWorld!";
+
+function testRest (title, ...rest)
+{
+    return rest.reduce((res, item) => (res + item), title);
+}
+
+alert(testRest("test", ...h));
