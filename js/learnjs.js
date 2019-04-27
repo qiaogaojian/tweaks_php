@@ -899,14 +899,27 @@ usersMapped = [
 
 // alert(testRest("test", ...h));
 
-function makeWorker ()
-{
-    let name = "Pete";
-    return function ()
-    {
-        alert(name);
-    }
-}
-let name = "John";
-let worker = makeWorker();
-worker();
+// function makeWorker ()
+// {
+//     let name = "Pete";
+//     return function ()
+//     {
+//         alert(name);
+//     }
+// }
+// let name = "John";
+// let worker = makeWorker();
+// worker();
+
+// let value = "Surprise!";
+// function f ()
+// {
+//     let value = "the closest value";
+//     function g ()
+//     {
+//         debugger; // in console: type alert( value ); Surprise!
+//     }
+//     return g;
+// }
+// let g = f();
+// g();
