@@ -269,3 +269,15 @@ The code above states that age is unknown or empty for some reason.*/
 // alert(user);
 // alert(+user);
 // alert(user + 500);
+
+function makeWorker ()
+{
+    let name = "Pete";
+    return function ()
+    {
+        alert(name);
+    }
+}
+let name = "John";
+let worker = makeWorker();
+worker();
