@@ -983,3 +983,22 @@ usersMapped = [
 
 //     alert(phrase);
 // }
+
+// window.open("http://google.com");
+
+// function sum (a)
+// {
+//     let cur = a;
+//     function f (b)
+//     {
+//         cur += b;
+//         return f;
+//     }
+//     f.toString = () =>
+//     {
+//         return cur + "";
+//     };
+//     return f;
+// }
+
+// alert(sum(1)(2)(3));
