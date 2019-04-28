@@ -1037,24 +1037,92 @@ usersMapped = [
 // // setTimeout(testTimeOut, 3000, 1, 2);
 // let timerId = setInterval(testInterval, 1000);
 
+// let i = 0;
+
+// let start = Date.now();
+
+// function count ()
+// {
+//     // do a piece of the heavy job (*)
+//     do
+//     {
+//         i++;
+//     } while (i % 1e6 != 0);
+
+//     if (i == 1e9)
+//     {
+//         alert("Done in " + (Date.now() - start) + 'ms');
+//     } else
+//     {
+//         setTimeout(count); // schedule the new call (**)
+//     }
+// }
+// count();
+
+// function printNumbers (from, to)
+// {
+//     let cur = from;
+//     let counter = function ()
+//     {
+//         console.debug(cur++);
+//         if (cur > to)
+//         {
+//             clearInterval(timer);
+//         }
+//     }
+//     let timer = setInterval(counter, 1000);
+// }
+
+// function printNumber (from, to)
+// {
+//     let cur = from;
+//     setTimeout(function run ()
+//     {
+//         console.debug(cur++);
+//         if (cur <= to)
+//         {
+//             setTimeout(run, 1000);
+//         }
+
+//     }, 1000);
+// }
+
+// printNumbers(6, 16);
+// printNumber(1, 10);
+
 let i = 0;
-
 let start = Date.now();
-
 function count ()
 {
-    // do a piece of the heavy job (*)
-    do
+    // if (i == 1000000000)
+    // {
+    //     alert("Done in " + (Date.now() - start) + 'ms');
+    // } else
+    // {
+    //     setTimeout(count);
+    // }
+    // // a piece of heavy job
+    // for (let j = 0; j < 1000000; j++)
+    // {
+    //     i++;
+    // }
+    let j = 0;
+    let timer = setInterval(function run ()
     {
+        if (i == 10000)
+        {
+            alert("Done in " + (Date.now() - start) + 'ms');
+        }
+        if (j >= 100)
+        {
+            j = 0;
+            console.debug(i);
+            clearInterval(timer);
+            timer = setInterval(run);
+        }
         i++;
-    } while (i % 1e6 != 0);
-
-    if (i == 1e9)
-    {
-        alert("Done in " + (Date.now() - start) + 'ms');
-    } else
-    {
-        setTimeout(count); // schedule the new call (**)
-    }
+        j++;
+    });
 }
+
 count();
