@@ -923,3 +923,38 @@ usersMapped = [
 // }
 // let g = f();
 // g();
+
+// function sum (a)
+// {
+//     let num1 = a;
+//     return function (b)
+//     {
+//         return num1 + b;
+//     }
+// }
+
+// alert(sum(1)(2));
+
+function makeArmy ()
+{
+    let shooters = [];
+
+    let i = 0;
+    while (i < 10)
+    {
+        let tem = i;
+        let shooter = function ()
+        { // shooter function
+            alert(tem); // should show its number
+        };
+        shooters.push(shooter);
+        i++;
+    }
+
+    return shooters;
+}
+
+let army = makeArmy();
+
+army[0](); // the shooter number 0 shows 10
+army[5](); // and number 5 also outputs 10...
