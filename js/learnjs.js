@@ -1003,18 +1003,58 @@ usersMapped = [
 
 // alert(sum(1)(2)(3));
 
-let a = 1, b = 2;
-let sum = new Function("a", "b", "return a + b");
-alert(sum(a, b));
+// let a = 1, b = 2;
+// let sum = new Function("a", "b", "return a + b");
+// alert(sum(a, b));
 
-function testNewFunc ()
+// function testNewFunc ()
+// {
+//     let a = 1, b = 2;
+//     let sum = new Function("return a + b");
+//     alert(sum());
+// }
+// testNewFunc();
+
+// let a = 1, b = 2;
+// let sum = new Function("return a + b");
+// alert(sum());
+
+// function testTimeOut (a, b)
+// {
+//     alert(a + b);
+// }
+// let count = 0;
+// function testInterval ()
+// {
+//     if (count > 6)
+//     {
+//         clearInterval(timerId);
+//         return;
+//     }
+//     alert(count++);
+// }
+
+// // setTimeout(testTimeOut, 3000, 1, 2);
+// let timerId = setInterval(testInterval, 1000);
+
+let i = 0;
+
+let start = Date.now();
+
+function count ()
 {
-    let a = 1, b = 2;
-    let sum = new Function("return a + b");
-    alert(sum());
-}
-testNewFunc();
+    // do a piece of the heavy job (*)
+    do
+    {
+        i++;
+    } while (i % 1e6 != 0);
 
-let a = 1, b = 2;
-let sum = new Function("return a + b");
-alert(sum());
+    if (i == 1e9)
+    {
+        alert("Done in " + (Date.now() - start) + 'ms');
+    } else
+    {
+        setTimeout(count); // schedule the new call (**)
+    }
+}
+count();
