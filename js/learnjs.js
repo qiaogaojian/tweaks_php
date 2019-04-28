@@ -935,26 +935,51 @@ usersMapped = [
 
 // alert(sum(1)(2));
 
-function makeArmy ()
-{
-    let shooters = [];
+// function makeArmy ()
+// {
+//     let shooters = [];
 
-    let i = 0;
-    while (i < 10)
-    {
-        let tem = i;
-        let shooter = function ()
-        { // shooter function
-            alert(tem); // should show its number
-        };
-        shooters.push(shooter);
-        i++;
-    }
+//     let i = 0;
+//     while (i < 10)
+//     {
+//         let tem = i;
+//         let shooter = function ()
+//         { // shooter function
+//             alert(tem); // should show its number
+//         };
+//         shooters.push(shooter);
+//         i++;
+//     }
 
-    return shooters;
-}
+//     return shooters;
+// }
 
-let army = makeArmy();
+// let army = makeArmy();
 
-army[0](); // the shooter number 0 shows 10
-army[5](); // and number 5 also outputs 10...
+// army[0](); // the shooter number 0 shows 10
+// army[5](); // and number 5 also outputs 10...
+
+// function sayHi ()
+// {
+//     if (true)
+//     {
+//         var phrase = "Hello";
+//     }
+
+//     alert(phrase); // works
+// }
+
+// sayHi();
+// alert(phrase); // Error: phrase is not defined
+
+// function sayHi ()
+// {
+//     phrase = "Hello"; // (*)
+
+//     if (false)
+//     {
+//         var phrase;
+//     }
+
+//     alert(phrase);
+// }
