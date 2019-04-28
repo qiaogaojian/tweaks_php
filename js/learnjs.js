@@ -1106,23 +1106,20 @@ function count ()
     // {
     //     i++;
     // }
-    let j = 0;
-    let timer = setInterval(function run ()
-    {
-        if (i == 10000)
-        {
-            alert("Done in " + (Date.now() - start) + 'ms');
-        }
-        if (j >= 100)
-        {
-            j = 0;
-            console.debug(i);
-            clearInterval(timer);
-            timer = setInterval(run);
-        }
-        i++;
-        j++;
-    });
-}
 
-count();
+//     let timer = setInterval(function run ()
+//     {
+//         for (let j = 0; j < 100; j++)
+//         {
+//             i++;
+//         }
+
+//         if (i == 1000)
+//         {
+//             alert("Done in " + (Date.now() - start) + 'ms');
+//             clearInterval(timer);
+//         }
+//     });
+// }
+
+// count();
