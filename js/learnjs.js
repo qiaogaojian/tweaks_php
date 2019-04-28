@@ -1002,3 +1002,19 @@ usersMapped = [
 // }
 
 // alert(sum(1)(2)(3));
+
+let a = 1, b = 2;
+let sum = new Function("a", "b", "return a + b");
+alert(sum(a, b));
+
+function testNewFunc ()
+{
+    let a = 1, b = 2;
+    let sum = new Function("return a + b");
+    alert(sum());
+}
+testNewFunc();
+
+let a = 1, b = 2;
+let sum = new Function("return a + b");
+alert(sum());
