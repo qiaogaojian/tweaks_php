@@ -1090,22 +1090,22 @@ usersMapped = [
 // printNumbers(6, 16);
 // printNumber(1, 10);
 
-let i = 0;
-let start = Date.now();
-function count ()
-{
-    // if (i == 1000000000)
-    // {
-    //     alert("Done in " + (Date.now() - start) + 'ms');
-    // } else
-    // {
-    //     setTimeout(count);
-    // }
-    // // a piece of heavy job
-    // for (let j = 0; j < 1000000; j++)
-    // {
-    //     i++;
-    // }
+// let i = 0;
+// let start = Date.now();
+// function count ()
+// {
+// if (i == 1000000000)
+// {
+//     alert("Done in " + (Date.now() - start) + 'ms');
+// } else
+// {
+//     setTimeout(count);
+// }
+// // a piece of heavy job
+// for (let j = 0; j < 1000000; j++)
+// {
+//     i++;
+// }
 
 //     let timer = setInterval(function run ()
 //     {
@@ -1123,3 +1123,52 @@ function count ()
 // }
 
 // count();
+
+// function work (a, b)
+// {
+//     alert(a + b); // work is an arbitrary function or method
+// }
+
+// function spy (func)
+// {
+//     function wrapper (...args)
+//     {
+//         wrapper.calls.push(args);
+//         return func.apply(this, args);
+//     }
+//     wrapper.calls = [];
+//     return wrapper;
+// }
+
+// work = spy(work);
+
+// work(1, 2); // 3
+// work(4, 5); // 9
+
+// for (let args of work.calls)
+// {
+//     alert('call:' + args.join()); // "call:1,2", "call:4,5"
+// }
+
+function f (x)
+{
+    alert(x);
+}
+
+function delay (func, time)
+{
+    function wrapper (...args)
+    {
+        setTimeout(()=>{
+            func.apply(this,args);
+        },time);
+    }
+    return wrapper;
+}
+
+// create wrappers
+let f1000 = delay(f, 1000);
+let f1500 = delay(f, 5000);
+
+f1000("te","st"); // shows "test" after 1000ms
+f1500("test"); // shows "test" after 1500ms
