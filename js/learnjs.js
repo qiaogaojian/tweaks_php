@@ -1150,25 +1150,50 @@ usersMapped = [
 //     alert('call:' + args.join()); // "call:1,2", "call:4,5"
 // }
 
-function f (x)
-{
-    alert(x);
-}
+// function f (x)
+// {
+//     alert(x);
+// }
 
-function delay (func, time)
-{
-    function wrapper (...args)
-    {
-        setTimeout(()=>{
-            func.apply(this,args);
-        },time);
-    }
-    return wrapper;
-}
+// function delay (func, time)
+// {
+//     function wrapper (...args)
+//     {
+//         setTimeout(()=>{
+//             func.apply(this,args);
+//         },time);
+//     }
+//     return wrapper;
+// }
 
-// create wrappers
-let f1000 = delay(f, 1000);
-let f1500 = delay(f, 5000);
+// // create wrappers
+// let f1000 = delay(f, 1000);
+// let f1500 = delay(f, 5000);
 
-f1000("te","st"); // shows "test" after 1000ms
-f1500("test"); // shows "test" after 1500ms
+// f1000("te","st"); // shows "test" after 1000ms
+// f1500("test"); // shows "test" after 1500ms
+
+// function askPassword (ok, fail)
+// {
+//     let password = prompt("Password?", '');
+//     if (password == "rockstar") ok();
+//     else fail();
+// }
+
+// let user = {
+//     name: 'John',
+
+//     loginOk ()
+//     {
+//         alert(`${this.name} logged in`);
+//     },
+
+//     loginFail ()
+//     {
+//         alert(`${this.name} failed to log in`);
+//     },
+// };
+
+// user.loginOk = user.loginOk.bind(user);
+// user.loginFail = user.loginFail.bind(user);
+// askPassword(user.loginOk, user.loginFail);
