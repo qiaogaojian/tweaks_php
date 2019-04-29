@@ -1198,21 +1198,37 @@ usersMapped = [
 // user.loginFail = user.loginFail.bind(user);
 // askPassword(user.loginOk, user.loginFail);
 
-function askPassword (ok, fail)
-{
-    let password = prompt("Password?", '');
-    if (password == "rockstar") ok();
-    else fail();
-}
+// function askPassword (ok, fail)
+// {
+//     let password = prompt("Password?", '');
+//     if (password == "rockstar") ok();
+//     else fail();
+// }
 
-let user = {
-    name: 'John',
+// let user = {
+//     name: 'John',
 
-    login (result)
-    {
-        alert(this.name + (result ? ' logged in' : ' failed to log in'));
-    }
-};
+//     login (result)
+//     {
+//         alert(this.name + (result ? ' logged in' : ' failed to log in'));
+//     }
+// };
 
-askPassword(() => { user.login(true) }, () => { user.login(true) });
+// askPassword(() => { user.login(true) }, () => { user.login(true) });
 // askPassword(user.login.bind(user, true), user.login.bind(user, false));
+
+// function User (name, birth)
+// {
+//     this.name = name;
+//     this.birth = birth;
+//     Object.defineProperty(this, "age", {
+//         get ()
+//         {
+//             let today = new Date().getFullYear();
+//             return today - this.birth.getFullYear();
+//         }
+//     });
+// }
+// let michael = new User("Michael",new Date(1992,5,4));
+// alert(michael.name);
+// alert(michael.age);
