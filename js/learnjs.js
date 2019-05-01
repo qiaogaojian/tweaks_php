@@ -1253,19 +1253,18 @@ usersMapped = [
 //     money: 2000
 // };
 
-class User
-{
-    constructor(name)
-    {
-        this.name = name;
-    }
+// class User
+// {
+//     constructor(name)
+//     {
+//         this.name = name;
+//     }
+//     sayHi ()
+//     {
+//         alert(this.name);
+//     }
+// }
 
-    sayHi ()
-    {
-        alert(this.name);
-    }
-}
-
-// Usage:
-let user = new User("John");
-user.sayHi();
+// // Usage:
+// let user = new User("John");
+// user.sayHi();
