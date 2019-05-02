@@ -1268,3 +1268,50 @@ usersMapped = [
 // // Usage:
 // let user = new User("John");
 // user.sayHi();
+
+// alert("Hello World");
+
+// class Clock
+// {
+//     constructor(template)
+//     {
+//         this.template = template;
+//     }
+//     start ()
+//     {
+//         this.render();
+//         this.timer = setInterval(() => this.render(), 1000);
+//     }
+//     stop ()
+//     {
+//         clearInterval(this.timer);
+//     }
+//     render ()
+//     {
+//         this.template = "h:m:s";
+//         let date = new Date();
+//         let h = date.getHours();
+//         if (h < 10)
+//         {
+//             h = '0' + h;
+//         }
+//         let m = date.getMinutes();
+//         if (m < 10)
+//         {
+//             m = '0' + m;
+//         }
+//         let s = date.getSeconds();
+//         if (s < 10)
+//         {
+//             s = '0' + s;
+//         }
+//         this.template = this.template
+//             .replace('h', h)
+//             .replace('m', m)
+//             .replace('s', s);
+//         console.log(this.template);
+//     }
+// }
+
+// let clock = new Clock("h:m:s");
+// clock.start();
