@@ -1314,4 +1314,4 @@ usersMapped = [
 // }
 
 // let clock = new Clock("h:m:s");
-// clock.start();
+clock.start();
