@@ -1316,37 +1316,56 @@ usersMapped = [
 // let clock = new Clock("h:m:s");
 // clock.start();
 
-class Animal {
+// class Animal {
 
-    constructor(name) {
-      this.speed = 0;
-      this.name = name;
+//     constructor(name) {
+//       this.speed = 0;
+//       this.name = name;
+//     }
+
+//     run(speed) {
+//       this.speed += speed;
+//       alert(`${this.name} runs with speed ${this.speed}.`);
+//     }
+
+//     stop() {
+//       this.speed = 0;
+//       alert(`${this.name} stopped.`);
+//     }
+
+//   }
+
+//   class Rabbit extends Animal {
+//     hide() {
+//       alert(`${this.name} hides!`);
+//     }
+
+//     stop() {
+//       super.stop(); // call parent stop
+//       this.hide(); // and then hide
+//     }
+//   }
+
+//   let rabbit = new Rabbit("White Rabbit");
+
+//   rabbit.run(5); // White Rabbit runs with speed 5.
+//   rabbit.stop(); // White Rabbit stopped. White rabbit hides!
+
+class Animal
+{
+    constructor(name)
+    {
+        this.name = name;
     }
-
-    run(speed) {
-      this.speed += speed;
-      alert(`${this.name} runs with speed ${this.speed}.`);
+}
+class Rabbit extends Animal
+{
+    constructor(name)
+    {
+        super(name);
+        this.name = name;
+        this.created = Date.now();
     }
-
-    stop() {
-      this.speed = 0;
-      alert(`${this.name} stopped.`);
-    }
-
-  }
-
-  class Rabbit extends Animal {
-    hide() {
-      alert(`${this.name} hides!`);
-    }
-
-    stop() {
-      super.stop(); // call parent stop
-      this.hide(); // and then hide
-    }
-  }
-
-  let rabbit = new Rabbit("White Rabbit");
-
-  rabbit.run(5); // White Rabbit runs with speed 5.
-  rabbit.stop(); // White Rabbit stopped. White rabbit hides!
+}
+let rabbit = new Rabbit("White Rabbit"); // Error: this is not defined
+alert(rabbit.name);
