@@ -1425,27 +1425,48 @@ usersMapped = [
 // cm._waterAmount = 66;
 // alert(cm._waterAmount);
 
-class CoffeeMachine
-{
-    _waterAmount = 0;
-    set waterAmount (value)
-    {
-        if (value < 0) throw new Error("Negative water");
-        this._waterAmount = value;
-    }
-    get waterAmount ()
-    {
-        return this._waterAmount;
-    }
-    constructor(power)
-    {
-        this._power = power;
-    }
-}
+// class CoffeeMachine
+// {
+//     _waterAmount = 0;
+//     set waterAmount (value)
+//     {
+//         if (value < 0) throw new Error("Negative water");
+//         this._waterAmount = value;
+//     }
+//     get waterAmount ()
+//     {
+//         return this._waterAmount;
+//     }
+//     constructor(power)
+//     {
+//         this._power = power;
+//     }
+// }
 
-// create the coffee machine
-let coffeeMachine = new CoffeeMachine(100);
+// // create the coffee machine
+// let coffeeMachine = new CoffeeMachine(100);
 
-// add water
-coffeeMachine.waterAmount = -10; // Error: Negative water
-alert(coffeeMachine._waterAmount);
+// // add water
+// coffeeMachine.waterAmount = -10; // Error: Negative water
+// alert(coffeeMachine._waterAmount);
+
+// class CoffeeMachine
+// {
+//     #waterAmount = 0;
+
+//     get waterAmount ()
+//     {
+//         return this.#waterAmount;
+//     }
+
+//     set waterAmount (value)
+//     {
+//         if (value < 0) throw new Error("Negative water");
+//         this.#waterAmount = value;
+//     }
+// }
+
+// let machine = new CoffeeMachine();
+
+// machine.waterAmount = 666;
+// alert(machine.#waterAmount); // Error
