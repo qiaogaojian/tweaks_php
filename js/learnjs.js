@@ -1370,36 +1370,82 @@ usersMapped = [
 // let rabbit = new Rabbit("White Rabbit"); // Error: this is not defined
 // alert(rabbit.name);
 
-class Animal {
+// class Animal {
 
-  constructor(name, speed) {
-    this.speed = speed;
-    this.name = name;
-  }
+//   constructor(name, speed) {
+//     this.speed = speed;
+//     this.name = name;
+//   }
 
-  run(speed = 0) {
-    this.speed += speed;
-    alert(`${this.name} runs with speed ${this.speed}.`);
-  }
+//   run(speed = 0) {
+//     this.speed += speed;
+//     alert(`${this.name} runs with speed ${this.speed}.`);
+//   }
 
-  static compare(animalA, animalB) {
-    return animalA.speed - animalB.speed;
-  }
+//   static compare(animalA, animalB) {
+//     return animalA.speed - animalB.speed;
+//   }
 
+// }
+
+// // Inherit from Animal
+// class Rabbit extends Animal {
+//   hide() {
+//     alert(`${this.name} hides!`);
+//   }
+// }
+
+// let rabbits = [
+//   new Rabbit("White Rabbit", 10),
+//   new Rabbit("Black Rabbit", 5)
+// ];
+
+// rabbits.sort(Rabbit.compare);
+
+// rabbits[0].run(); // Black Rabbit runs with speed 5.
+
+// class CoffeeMachine
+// {
+//     _waterAmount = 0;
+
+//     setWaterAmount (value)
+//     {
+//         if (value < 0) throw new Error("Negative water");
+//         this._waterAmount = value;
+//     }
+
+//     getWaterAmount ()
+//     {
+//         return this.waterAmount;
+//     }
+// }
+
+// let cm = new CoffeeMachine();
+// // cm.setWaterAmount(100);
+// cm._waterAmount = 66;
+// alert(cm._waterAmount);
+
+class CoffeeMachine
+{
+    _waterAmount = 0;
+    set waterAmount (value)
+    {
+        if (value < 0) throw new Error("Negative water");
+        this._waterAmount = value;
+    }
+    get waterAmount ()
+    {
+        return this._waterAmount;
+    }
+    constructor(power)
+    {
+        this._power = power;
+    }
 }
 
-// Inherit from Animal
-class Rabbit extends Animal {
-  hide() {
-    alert(`${this.name} hides!`);
-  }
-}
+// create the coffee machine
+let coffeeMachine = new CoffeeMachine(100);
 
-let rabbits = [
-  new Rabbit("White Rabbit", 10),
-  new Rabbit("Black Rabbit", 5)
-];
-
-rabbits.sort(Rabbit.compare);
-
-rabbits[0].run(); // Black Rabbit runs with speed 5.
+// add water
+coffeeMachine.waterAmount = -10; // Error: Negative water
+alert(coffeeMachine._waterAmount);
