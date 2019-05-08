@@ -1538,20 +1538,34 @@ usersMapped = [
 // // triggers the event => shows Value selected: 123
 // menu.choose("123"); // value selected
 
-class FormatError extends SyntaxError
+// class FormatError extends SyntaxError
+// {
+//     constructor(msg)
+//     {
+//         super(msg);
+//         this.name = this.constructor.name;
+//     }
+// }
+
+// let err = new FormatError("formatting error");
+
+// alert( err.message ); // formatting error
+// alert( err.name ); // FormatError
+// alert( err.stack ); // stack
+
+// alert( err instanceof FormatError ); // true
+// alert( err instanceof SyntaxError ); // true (because inherits from SyntaxError)
+
+function loadScript (src, callback)
 {
-    constructor(msg)
-    {
-        super(msg);
-        this.name = this.constructor.name;
-    }
+    let script = document.createElement('script');
+    script.src = src;
+    script.onload = () => callback(script);
+    document.head.append(script);
 }
 
-let err = new FormatError("formatting error");
-
-alert( err.message ); // formatting error
-alert( err.name ); // FormatError
-alert( err.stack ); // stack
-
-alert( err instanceof FormatError ); // true
-alert( err instanceof SyntaxError ); // true (because inherits from SyntaxError)
+loadScript('https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lodash.js', script =>
+{
+    alert(`Cool, the ${script.src} is loaded`);
+    alert(_); // function declared in the loaded script
+});
