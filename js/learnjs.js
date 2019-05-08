@@ -1570,25 +1570,40 @@ usersMapped = [
 //     alert(_); // function declared in the loaded script
 // });
 
-function loadScript (src)
-{
-    return new Promise(function (resolve, reject)
-    {
-        let script = document.createElement('script');
-        script.src = src;
+// function loadScript (src)
+// {
+//     return new Promise(function (resolve, reject)
+//     {
+//         let script = document.createElement('script');
+//         script.src = src;
 
-        script.onload = () => resolve(script);
-        script.onerror = () => reject(new Error(`Script load error for ${src}`));
+//         script.onload = () => resolve(script);
+//         script.onerror = () => reject(new Error(`Script load error for ${src}`));
 
-        document.head.append(script);
-    });
-}
+//         document.head.append(script);
+//     });
+// }
 
-let promise = loadScript("https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js");
+// let promise = loadScript("https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js");
 
-promise.then(
-    script => alert(`${script.src} is loaded!`),
-    error => alert(`Error: ${error.message}`)
-);
+// promise.then(
+//     script => alert(`${script.src} is loaded!`),
+//     error => alert(`Error: ${error.message}`)
+// );
 
-promise.then(script => alert('One more handler to do something else!'));
+// promise.then(script => alert('One more handler to do something else!'));
+
+// function delay (ms)
+// {
+//     return new Promise(function (resolve, reject)
+//     {
+//         setTimeout(resolve, ms);
+//     });
+// }
+
+// // function delay (ms)
+// // {
+// //     return new Promise(resolve => setTimeout(resolve, ms));
+// // }
+
+// delay(3000).then(() => alert('runs after 3 seconds'));
