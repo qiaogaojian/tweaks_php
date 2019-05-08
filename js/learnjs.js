@@ -1556,16 +1556,39 @@ usersMapped = [
 // alert( err instanceof FormatError ); // true
 // alert( err instanceof SyntaxError ); // true (because inherits from SyntaxError)
 
-function loadScript (src, callback)
+// function loadScript (src, callback)
+// {
+//     let script = document.createElement('script');
+//     script.src = src;
+//     script.onload = () => callback(script);
+//     document.head.append(script);
+// }
+
+// loadScript('https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lodash.js', script =>
+// {
+//     alert(`Cool, the ${script.src} is loaded`);
+//     alert(_); // function declared in the loaded script
+// });
+
+function loadScript (src)
 {
-    let script = document.createElement('script');
-    script.src = src;
-    script.onload = () => callback(script);
-    document.head.append(script);
+    return new Promise(function (resolve, reject)
+    {
+        let script = document.createElement('script');
+        script.src = src;
+
+        script.onload = () => resolve(script);
+        script.onerror = () => reject(new Error(`Script load error for ${src}`));
+
+        document.head.append(script);
+    });
 }
 
-loadScript('https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lodash.js', script =>
-{
-    alert(`Cool, the ${script.src} is loaded`);
-    alert(_); // function declared in the loaded script
-});
+let promise = loadScript("https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js");
+
+promise.then(
+    script => alert(`${script.src} is loaded!`),
+    error => alert(`Error: ${error.message}`)
+);
+
+promise.then(script => alert('One more handler to do something else!'));
