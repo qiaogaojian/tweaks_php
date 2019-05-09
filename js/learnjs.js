@@ -1694,13 +1694,13 @@ usersMapped = [
 // loadJson('https://no-such-user.json') // (3)
 //     .catch(alert); // Error: 404
 
-<!doctype html>
-<script>
-  async function load() {
-    let say = await import('./say.js');
-    say.hi(); // Hello!
-    say.bye(); // Bye!
-    say.default(); // Module loaded (export default)!
-  }
-</script>
-<button onclick="load()">Click me</button>
+// <!doctype html>
+// <script>
+//   async function load() {
+//     let say = await import('./say.js');
+//     say.hi(); // Hello!
+//     say.bye(); // Bye!
+//     say.default(); // Module loaded (export default)!
+//   }
+// </script>
+// <button onclick="load()">Click me</button>
