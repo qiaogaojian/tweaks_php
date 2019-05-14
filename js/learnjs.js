@@ -7,8 +7,8 @@
 // alert(admin);
 
 // alert(1/0);
-// let age = 19;
-// alert(`My age is ${age}`);
+// let agetest = 19;
+// alert(`My age is ${agetest}`);
 
 // let age = null;
 /*In JavaScript, null is not a “reference to a non-existing object” or a “null pointer” like in some other languages.
