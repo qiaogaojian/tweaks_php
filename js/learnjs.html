@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <table id="table">
+    <!-- <table id="table">
         <tr>
             <td>one</td>
             <td>two</td>
@@ -20,11 +20,21 @@
             <td>three</td>
             <td>four</td>
         </tr>
-    </table>
+    </table> -->
+
+    <div>Users:</div>
+    <ul>
+      <li>John</li>
+      <li>Pete</li>
+    </ul>
 
     <script>
         // get the content of the first row, second cell
-        alert(table.rows[0].cells[1].innerHTML) // "two"
+        // alert(table.rows[0].cells[1].innerHTML) // "two"
+
+        alert(document.body.firstElementChild.innerHTML);
+        alert(document.body.children[1]);
+        alert(document.body.children[1].children[1].innerHTML);
     </script>
 
 </body>
