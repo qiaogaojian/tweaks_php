@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +9,24 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="./learnjs.js"></script>
 </head>
+
 <body>
-<script>
-// alert("Hello World!");
-</script>
+    <table id="table">
+        <tr>
+            <td>one</td>
+            <td>two</td>
+        </tr>
+        <tr>
+            <td>three</td>
+            <td>four</td>
+        </tr>
+    </table>
+
+    <script>
+        // get the content of the first row, second cell
+        alert(table.rows[0].cells[1].innerHTML) // "two"
+    </script>
+
 </body>
+
 </html>
