@@ -104,7 +104,13 @@
         <input type="submit" value="Search!">
     </form> -->
 
-    <div data-widget-name="menu">Choose the genre</div>
+    <!-- <div data-widget-name="menu">Choose the genre</div> -->
+
+    <ol id="ol">
+        <li>0</li>
+        <li>1</li>
+        <li>2</li>
+    </ol>
 
     <script>
         // get the content of the first row, second cell
@@ -128,8 +134,19 @@
         // let inputs = search.querySelectorAll('input');
         // let last = inputs[inputs.length - 1];
 
-        let elem = document.querySelector('[data-widget-name]');
-        alert(elem.getAttribute('data-widget-name'));
+        // let elem = document.querySelector('[data-widget-name]');
+        // alert(elem.getAttribute('data-widget-name'));
+
+        document.getElementById("ol").before("before");
+        ol.after("after");
+
+        let prepend = document.createElement('li');
+        prepend.innerHTML = 'prepend';
+        ol.prepend(prepend);
+
+        let append = document.createElement('li');
+        append.innerHTML = 'append';
+        ol.append(append);
 
     </script>
 
