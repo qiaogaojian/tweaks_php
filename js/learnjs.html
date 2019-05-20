@@ -104,6 +104,8 @@
         <input type="submit" value="Search!">
     </form> -->
 
+    <div data-widget-name="menu">Choose the genre</div>
+
     <script>
         // get the content of the first row, second cell
         // alert(table.rows[0].cells[1].innerHTML) // "two"
@@ -126,6 +128,8 @@
         // let inputs = search.querySelectorAll('input');
         // let last = inputs[inputs.length - 1];
 
+        let elem = document.querySelector('[data-widget-name]');
+        alert(elem.getAttribute('data-widget-name'));
 
     </script>
 
