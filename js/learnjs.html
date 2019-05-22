@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="./learnjs.js"></script>
     <style>
-        #field {
+        /* #field {
             width: 200px;
             height: 150px;
             border: 10px solid black;
@@ -26,6 +26,32 @@
             width: 40px;
             height: 40px;
             transition: all 1s;
+        } */
+
+        .menu ul {
+            margin: 0;
+            list-style: none;
+            padding-left: 20px;
+            display: none;
+        }
+
+        .menu .title {
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .menu .title::before {
+            content: '▶ ';
+            font-size: 80%;
+            color: green;
+        }
+
+        .menu.open .title::before {
+            content: '▼ ';
+        }
+
+        .menu.open ul {
+            display: block;
         }
     </style>
 </head>
@@ -144,6 +170,15 @@
         . . . . . . . . . .
     </div> -->
 
+    <div class="menu" id="sweeties">
+        <span class="title">Sweeties (click me)!</span>
+        <ul>
+            <li>Cake</li>
+            <li>Donut</li>
+            <li>Honey</li>
+        </ul>
+    </div>
+
     <script>
         // get the content of the first row, second cell
         // alert(table.rows[0].cells[1].innerHTML) // "two"
@@ -243,6 +278,13 @@
         //     ball.style.left = ballCoords.left+'px';
         //     ball.style.top = ballCoords.top+'px';
         // }
+
+        let menuElem = document.getElementById('sweeties');
+        let titleElem = document.querySelector('.title');
+        titleElem.onclick = function ()
+        {
+            menuElem.classList.toggle('open');
+        }
 
     </script>
 
