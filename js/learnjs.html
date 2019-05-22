@@ -8,6 +8,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="./learnjs.js"></script>
+    <style>
+        #field {
+            width: 200px;
+            height: 150px;
+            border: 10px solid black;
+            background-color: #00FF00;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        #ball {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            transition: all 1s;
+        }
+    </style>
 </head>
 
 <body>
@@ -112,8 +132,18 @@
         <li>2</li>
     </ol> -->
 
-    <button id="hider"> Click to hide the text </button>
+    <!-- <button id="hider"> Click to hide the text </button> -->
     <!-- <div id="text"> Text </div> -->
+
+    <!-- <div id="field">
+        <img src="https://en.js.cx/clipart/ball.svg" id="ball"> . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        . . . . . . . . . .
+    </div> -->
+
     <script>
         // get the content of the first row, second cell
         // alert(table.rows[0].cells[1].innerHTML) // "two"
@@ -155,34 +185,65 @@
         // {
         //     document.getElementById('text').innerHTML = '';
         // }
-        document.getElementById("hider").addEventListener("mousedown", {
-            handleEvent(event)
-            {
-                switch (event.type)
-                {
-                    case 'mousedown':
-                        document.getElementById('text').innerHTML = '';
-                        break;
-                    case 'mouseup':
-                        document.getElementById('text').innerHTML = 'Text';
-                        break;
-                }
-            }
-        });
-        document.getElementById("hider").addEventListener("mouseup", {
-            handleEvent(event)
-            {
-                switch (event.type)
-                {
-                    case 'mousedown':
-                        document.getElementById('text').innerHTML = '';
-                        break;
-                    case 'mouseup':
-                        document.getElementById('text').innerHTML = 'Text';
-                        break;
-                }
-            }
-        });
+        // document.getElementById("hider").addEventListener("mousedown", {
+        //     handleEvent(event)
+        //     {
+        //         switch (event.type)
+        //         {
+        //             case 'mousedown':
+        //                 document.getElementById('text').innerHTML = '';
+        //                 break;
+        //             case 'mouseup':
+        //                 document.getElementById('text').innerHTML = 'Text';
+        //                 break;
+        //         }
+        //     }
+        // });
+        // document.getElementById("hider").addEventListener("mouseup", {
+        //     handleEvent(event)
+        //     {
+        //         switch (event.type)
+        //         {
+        //             case 'mousedown':
+        //                 document.getElementById('text').innerHTML = '';
+        //                 break;
+        //             case 'mouseup':
+        //                 document.getElementById('text').innerHTML = 'Text';
+        //                 break;
+        //         }
+        //     }
+        // });
+
+        // document.getElementById('hider').onclick = function () {
+        //     this.hidden = 'true';
+        // };
+
+        // let field = document.getElementById('field');
+        // let ball = document.getElementById('ball');
+        // field.onclick = function(event)
+        // {
+        //     let fieldCoords = field.getBoundingClientRect();
+        //     let ballCoords = {
+        //         top: event.clientY - fieldCoords.top - field.clientTop - ball.clientHeight/2,
+        //         left: event.clientX - fieldCoords.left - field.clientLeft - ball.clientWidth/2
+        //     };
+        //     if (ballCoords.top<0) {
+        //         ballCoords.top = 0;
+        //     }
+        //     if (ballCoords.left<0) {
+        //         ballCoords.left = 0;
+        //     }
+        //     if (ballCoords.left+ball.clientWidth>field.clientWidth) {
+        //         ballCoords.left = field.clientWidth - ball.clientWidth;
+        //     }
+        //     if (ballCoords.top+ball.clientHeight>field.clientHeight) {
+        //         ballCoords.top = field.clientHeight - ball.clientHeight;
+        //     }
+
+        //     ball.style.left = ballCoords.left+'px';
+        //     ball.style.top = ballCoords.top+'px';
+        // }
+
     </script>
 
 </body>
