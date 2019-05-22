@@ -106,12 +106,14 @@
 
     <!-- <div data-widget-name="menu">Choose the genre</div> -->
 
-    <ol id="ol">
+    <!-- <ol id="ol">
         <li>0</li>
         <li>1</li>
         <li>2</li>
-    </ol>
+    </ol> -->
 
+    <button id="hider"> Click to hide the text </button>
+    <!-- <div id="text"> Text </div> -->
     <script>
         // get the content of the first row, second cell
         // alert(table.rows[0].cells[1].innerHTML) // "two"
@@ -137,17 +139,50 @@
         // let elem = document.querySelector('[data-widget-name]');
         // alert(elem.getAttribute('data-widget-name'));
 
-        document.getElementById("ol").before("before");
-        ol.after("after");
+        // document.getElementById("ol").before("before");
+        // ol.after("after");
 
-        let prepend = document.createElement('li');
-        prepend.innerHTML = 'prepend';
-        ol.prepend(prepend);
+        // let prepend = document.createElement('li');
+        // prepend.innerHTML = 'prepend';
+        // ol.prepend(prepend);
 
-        let append = document.createElement('li');
-        append.innerHTML = 'append';
-        ol.append(append);
+        // let append = document.createElement('li');
+        // append.innerHTML = 'append';
+        // ol.append(append);
 
+        // document.getElementById("hider").addEventListener("click", () => document.getElementById('text').innerHTML = "");
+        // document.getElementById('hider').onclick = function ()
+        // {
+        //     document.getElementById('text').innerHTML = '';
+        // }
+        document.getElementById("hider").addEventListener("mousedown", {
+            handleEvent(event)
+            {
+                switch (event.type)
+                {
+                    case 'mousedown':
+                        document.getElementById('text').innerHTML = '';
+                        break;
+                    case 'mouseup':
+                        document.getElementById('text').innerHTML = 'Text';
+                        break;
+                }
+            }
+        });
+        document.getElementById("hider").addEventListener("mouseup", {
+            handleEvent(event)
+            {
+                switch (event.type)
+                {
+                    case 'mousedown':
+                        document.getElementById('text').innerHTML = '';
+                        break;
+                    case 'mouseup':
+                        document.getElementById('text').innerHTML = 'Text';
+                        break;
+                }
+            }
+        });
     </script>
 
 </body>

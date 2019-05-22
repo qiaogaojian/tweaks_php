@@ -1696,7 +1696,7 @@ usersMapped = [
 
 // <!doctype html>
 // <script>
-//   async function load() {
+//   asyncfunction load() {
 //     let say = await import('./say.js');
 //     say.hi(); // Hello!
 //     say.bye(); // Bye!
