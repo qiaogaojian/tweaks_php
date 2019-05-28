@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Javascript.info</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <!-- <script src="code.jquery.com/jquery-1.11.3.min.js"></script> -->
     <script src="./learnjs.js"></script>
+    <script src="./lib/jquery.min.js"></script>
     <style>
-        /* #field {
+      /* #field {
             width: 200px;
             height: 150px;
             border: 10px solid black;
@@ -28,7 +29,7 @@
             transition: all 1s;
         } */
 
-        /* .menu ul {
+      /* .menu ul {
             margin: 0;
             list-style: none;
             padding-left: 20px;
@@ -54,9 +55,9 @@
             display: block;
         } */
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- <table id="table">
         <tr>
             <td>one</td>
@@ -198,150 +199,164 @@
         <button class="arrow next">⇨</button>
     </div> -->
 
+    <div class="testing">
+      <ul class="lang">
+        <li class="lang-javascript">JavaScript</li>
+        <li class="lang-python">Python</li>
+        <li class="lang-lua">Lua</li>
+      </ul>
+    </div>
+
     <script>
-        // get the content of the first row, second cell
-        // alert(table.rows[0].cells[1].innerHTML) // "two"
+      // get the content of the first row, second cell
+      // alert(table.rows[0].cells[1].innerHTML) // "two"
 
-        // alert(document.body.firstElementChild.innerHTML);
-        // alert(document.body.children[1]);
-        // alert(document.body.children[1].children[1].innerHTML);
+      // alert(document.body.firstElementChild.innerHTML);
+      // alert(document.body.children[1]);
+      // alert(document.body.children[1].children[1].innerHTML);
 
-        // let table = document.body.firstElementChild;
-        // for (let i = 0; i < table.rows.length; i++)
-        // {
-        //     table.rows[i].cells[i].style.backgroundColor = 'red';
-        // }
+      // let table = document.body.firstElementChild;
+      // for (let i = 0; i < table.rows.length; i++)
+      // {
+      //     table.rows[i].cells[i].style.backgroundColor = 'red';
+      // }
 
-        // let table = document.getElementById("age_table");
-        // let labels = table.getElementsByTagName("label");
-        // let td = table.rows[0].cells[0];
-        // let search = document.querySelector('form[name="search"]');
-        // let first = search.querySelector('input');
-        // let inputs = search.querySelectorAll('input');
-        // let last = inputs[inputs.length - 1];
+      // let table = document.getElementById("age_table");
+      // let labels = table.getElementsByTagName("label");
+      // let td = table.rows[0].cells[0];
+      // let search = document.querySelector('form[name="search"]');
+      // let first = search.querySelector('input');
+      // let inputs = search.querySelectorAll('input');
+      // let last = inputs[inputs.length - 1];
 
-        // let elem = document.querySelector('[data-widget-name]');
-        // alert(elem.getAttribute('data-widget-name'));
+      // let elem = document.querySelector('[data-widget-name]');
+      // alert(elem.getAttribute('data-widget-name'));
 
-        // document.getElementById("ol").before("before");
-        // ol.after("after");
+      // document.getElementById("ol").before("before");
+      // ol.after("after");
 
-        // let prepend = document.createElement('li');
-        // prepend.innerHTML = 'prepend';
-        // ol.prepend(prepend);
+      // let prepend = document.createElement('li');
+      // prepend.innerHTML = 'prepend';
+      // ol.prepend(prepend);
 
-        // let append = document.createElement('li');
-        // append.innerHTML = 'append';
-        // ol.append(append);
+      // let append = document.createElement('li');
+      // append.innerHTML = 'append';
+      // ol.append(append);
 
-        // document.getElementById("hider").addEventListener("click", () => document.getElementById('text').innerHTML = "");
-        // document.getElementById('hider').onclick = function ()
-        // {
-        //     document.getElementById('text').innerHTML = '';
-        // }
-        // document.getElementById("hider").addEventListener("mousedown", {
-        //     handleEvent(event)
-        //     {
-        //         switch (event.type)
-        //         {
-        //             case 'mousedown':
-        //                 document.getElementById('text').innerHTML = '';
-        //                 break;
-        //             case 'mouseup':
-        //                 document.getElementById('text').innerHTML = 'Text';
-        //                 break;
-        //         }
-        //     }
-        // });
-        // document.getElementById("hider").addEventListener("mouseup", {
-        //     handleEvent(event)
-        //     {
-        //         switch (event.type)
-        //         {
-        //             case 'mousedown':
-        //                 document.getElementById('text').innerHTML = '';
-        //                 break;
-        //             case 'mouseup':
-        //                 document.getElementById('text').innerHTML = 'Text';
-        //                 break;
-        //         }
-        //     }
-        // });
+      // document.getElementById("hider").addEventListener("click", () => document.getElementById('text').innerHTML = "");
+      // document.getElementById('hider').onclick = function ()
+      // {
+      //     document.getElementById('text').innerHTML = '';
+      // }
+      // document.getElementById("hider").addEventListener("mousedown", {
+      //     handleEvent(event)
+      //     {
+      //         switch (event.type)
+      //         {
+      //             case 'mousedown':
+      //                 document.getElementById('text').innerHTML = '';
+      //                 break;
+      //             case 'mouseup':
+      //                 document.getElementById('text').innerHTML = 'Text';
+      //                 break;
+      //         }
+      //     }
+      // });
+      // document.getElementById("hider").addEventListener("mouseup", {
+      //     handleEvent(event)
+      //     {
+      //         switch (event.type)
+      //         {
+      //             case 'mousedown':
+      //                 document.getElementById('text').innerHTML = '';
+      //                 break;
+      //             case 'mouseup':
+      //                 document.getElementById('text').innerHTML = 'Text';
+      //                 break;
+      //         }
+      //     }
+      // });
 
-        // document.getElementById('hider').onclick = function () {
-        //     this.hidden = 'true';
-        // };
+      // document.getElementById('hider').onclick = function () {
+      //     this.hidden = 'true';
+      // };
 
-        // let field = document.getElementById('field');
-        // let ball = document.getElementById('ball');
-        // field.onclick = function(event)
-        // {
-        //     let fieldCoords = field.getBoundingClientRect();
-        //     let ballCoords = {
-        //         top: event.clientY - fieldCoords.top - field.clientTop - ball.clientHeight/2,
-        //         left: event.clientX - fieldCoords.left - field.clientLeft - ball.clientWidth/2
-        //     };
-        //     if (ballCoords.top<0) {
-        //         ballCoords.top = 0;
-        //     }
-        //     if (ballCoords.left<0) {
-        //         ballCoords.left = 0;
-        //     }
-        //     if (ballCoords.left+ball.clientWidth>field.clientWidth) {
-        //         ballCoords.left = field.clientWidth - ball.clientWidth;
-        //     }
-        //     if (ballCoords.top+ball.clientHeight>field.clientHeight) {
-        //         ballCoords.top = field.clientHeight - ball.clientHeight;
-        //     }
+      // let field = document.getElementById('field');
+      // let ball = document.getElementById('ball');
+      // field.onclick = function(event)
+      // {
+      //     let fieldCoords = field.getBoundingClientRect();
+      //     let ballCoords = {
+      //         top: event.clientY - fieldCoords.top - field.clientTop - ball.clientHeight/2,
+      //         left: event.clientX - fieldCoords.left - field.clientLeft - ball.clientWidth/2
+      //     };
+      //     if (ballCoords.top<0) {
+      //         ballCoords.top = 0;
+      //     }
+      //     if (ballCoords.left<0) {
+      //         ballCoords.left = 0;
+      //     }
+      //     if (ballCoords.left+ball.clientWidth>field.clientWidth) {
+      //         ballCoords.left = field.clientWidth - ball.clientWidth;
+      //     }
+      //     if (ballCoords.top+ball.clientHeight>field.clientHeight) {
+      //         ballCoords.top = field.clientHeight - ball.clientHeight;
+      //     }
 
-        //     ball.style.left = ballCoords.left+'px';
-        //     ball.style.top = ballCoords.top+'px';
-        // }
+      //     ball.style.left = ballCoords.left+'px';
+      //     ball.style.top = ballCoords.top+'px';
+      // }
 
-        // let menuElem = document.getElementById('sweeties');
-        // let titleElem = document.querySelector('.title');
-        // titleElem.onclick = function ()
-        // {
-        //     menuElem.classList.toggle('open');
-        // }
+      // let menuElem = document.getElementById('sweeties');
+      // let titleElem = document.querySelector('.title');
+      // titleElem.onclick = function ()
+      // {
+      //     menuElem.classList.toggle('open');
+      // }
 
-        // let i = 1;
-        // for (let li of carousel.querySelectorAll('li'))
-        // {
-        //     li.style.position = 'relative';
-        //     li.insertAdjacentHTML('beforeend', `<span style="position:absolute;left:0;top:0">${i}</span>`);
-        //     i++;
-        // }
+      // let i = 1;
+      // for (let li of carousel.querySelectorAll('li'))
+      // {
+      //     li.style.position = 'relative';
+      //     li.insertAdjacentHTML('beforeend', `<span style="position:absolute;left:0;top:0">${i}</span>`);
+      //     i++;
+      // }
 
-        // /* configuration */
-        // let width = 130; // image width
-        // let count = 3; // visible images count
+      // /* configuration */
+      // let width = 130; // image width
+      // let count = 3; // visible images count
 
-        // let list = carousel.querySelector('ul');
-        // let listElems = carousel.querySelectorAll('li');
+      // let list = carousel.querySelector('ul');
+      // let listElems = carousel.querySelectorAll('li');
 
-        // let position = 0; // ribbon scroll position
+      // let position = 0; // ribbon scroll position
 
-        // carousel.querySelector('.prev').onclick = function ()
-        // {
-        //     // shift left
-        //     position += width * count;
-        //     // can't move to the left too much, end of images
-        //     position = Math.min(position, 0)
-        //     list.style.marginLeft = position + 'px';
-        // };
+      // carousel.querySelector('.prev').onclick = function ()
+      // {
+      //     // shift left
+      //     position += width * count;
+      //     // can't move to the left too much, end of images
+      //     position = Math.min(position, 0)
+      //     list.style.marginLeft = position + 'px';
+      // };
 
-        // carousel.querySelector('.next').onclick = function ()
-        // {
-        //     // shift right
-        //     position -= width * count;
-        //     // can only shift the ribbbon for (total ribbon length - visible count) images
-        //     position = Math.max(position, -width * (listElems.length - count));
-        //     list.style.marginLeft = position + 'px';
-        // };
+      // carousel.querySelector('.next').onclick = function ()
+      // {
+      //     // shift right
+      //     position -= width * count;
+      //     // can only shift the ribbbon for (total ribbon length - visible count) images
+      //     position = Math.max(position, -width * (listElems.length - count));
+      //     list.style.marginLeft = position + 'px';
+      // };
 
+      //   alert("version:" + $.fn.jquery);
+
+      let ele1 = jQuery("ul.lang li.lang-javascript").text();
+      let ele2 = jQuery("div.testing li.lang-python").html();
+      let ele3 = jQuery("li.lang-lua");
+      alert(ele1);
+      alert(ele2);
+      ele3.text("Hello Lua!");
     </script>
-
-</body>
-
+  </body>
 </html>
