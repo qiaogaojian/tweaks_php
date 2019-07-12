@@ -1,3 +1,7 @@
+show databases;
+
+use {databasename}
+
 show tables;
 
 desc goods;
