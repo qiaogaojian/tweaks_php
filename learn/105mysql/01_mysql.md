@@ -14,4 +14,6 @@
 
 ```sql
 update mysql.user set authentication_string=password('newpassword') where user='root';
+
+alter user 'root'@'localhost' identified by 'root';
 ```
